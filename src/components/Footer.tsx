@@ -1,5 +1,5 @@
-import cyxorLogo from "@/assets/cyxor-logo.jpg";
-import { Shield, BookOpen, Headphones, Settings } from "lucide-react";
+import cyxorIcon from "@/assets/cyxor-icon.png";
+import { Shield, Headphones } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,12 +11,22 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Logo & Description */}
           <div className="lg:col-span-2">
-            <img 
-              src={cyxorLogo} 
-              alt="CYXOR Learning" 
-              className="h-12 w-auto mb-4"
-            />
-            <p className="text-muted-foreground max-w-md mb-6">
+            <div className="flex items-center gap-3 mb-4">
+              <img 
+                src={cyxorIcon} 
+                alt="CYXOR" 
+                className="h-12 w-auto"
+              />
+              <div className="flex flex-col">
+                <span className="text-xl font-extrabold tracking-tight text-foreground">
+                  CYXOR
+                </span>
+                <span className="text-sm font-semibold tracking-widest uppercase text-primary">
+                  Learning
+                </span>
+              </div>
+            </div>
+            <p className="text-muted-foreground max-w-md mb-6 font-medium">
               Enterprise cybersecurity and compliance training platform with blockchain-verified credentials for regulated industries.
             </p>
             <div className="flex items-center gap-4">
@@ -35,11 +45,11 @@ const Footer = () => {
 
           {/* Standards */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4 flex items-center gap-2">
+            <h4 className="font-bold text-foreground mb-4 flex items-center gap-2">
               <Shield className="w-4 h-4 text-primary" />
               Standards & Compliance
             </h4>
-            <ul className="space-y-3 text-sm text-muted-foreground">
+            <ul className="space-y-3 text-sm text-muted-foreground font-medium">
               <li>UK Cyber Security Council aligned</li>
               <li>NCSC training guidelines</li>
               <li>Government security clearance compatible</li>
@@ -49,11 +59,11 @@ const Footer = () => {
 
           {/* Enterprise Support */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4 flex items-center gap-2">
+            <h4 className="font-bold text-foreground mb-4 flex items-center gap-2">
               <Headphones className="w-4 h-4 text-primary" />
               Enterprise Support
             </h4>
-            <ul className="space-y-3 text-sm text-muted-foreground">
+            <ul className="space-y-3 text-sm text-muted-foreground font-medium">
               <li>Dedicated implementation team</li>
               <li>SSO & LMS integration</li>
               <li>Custom compliance reporting</li>
@@ -66,7 +76,7 @@ const Footer = () => {
         <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             {/* Links */}
-            <div className="flex items-center gap-6 text-sm text-muted-foreground">
+            <div className="flex items-center gap-6 text-sm text-muted-foreground font-medium">
               <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
               <a href="#" className="hover:text-primary transition-colors">Security</a>
@@ -74,14 +84,14 @@ const Footer = () => {
             </div>
 
             {/* Copyright */}
-            <div className="text-sm text-muted-foreground">
+            <div className="text-sm text-muted-foreground font-medium">
               © {currentYear} CYXOR Learning. All rights reserved.
             </div>
           </div>
 
           {/* Powered by */}
           <div className="mt-6 text-center">
-            <span className="text-xs text-muted-foreground/60">
+            <span className="text-xs text-muted-foreground/60 font-medium">
               Powered by Xantum Computing Private Limited
             </span>
           </div>

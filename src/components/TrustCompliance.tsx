@@ -15,13 +15,13 @@ const TrustCompliance = () => {
       
       <div className="section-container relative z-10">
         <div className="text-center mb-12 animate-fade-up">
-          <span className="text-primary font-semibold text-sm tracking-wider uppercase">
+          <span className="text-primary font-bold text-sm tracking-wider uppercase">
             Compliance Ready
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-4 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground mt-4 mb-4">
             Built for Regulated Industries
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
             CYXOR Learning meets the stringent requirements of finance, healthcare, government, and critical infrastructure sectors.
           </p>
         </div>
@@ -35,7 +35,7 @@ const TrustCompliance = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <badge.icon className="w-5 h-5 text-primary" />
-              <span className="font-medium text-foreground">{badge.label}</span>
+              <span className="font-semibold text-foreground">{badge.label}</span>
             </div>
           ))}
         </div>
@@ -43,7 +43,7 @@ const TrustCompliance = () => {
         {/* Trust Statement */}
         <div className="max-w-3xl mx-auto text-center animate-fade-up" style={{ animationDelay: '0.5s' }}>
           <div className="p-8 rounded-2xl bg-card/50 border border-border glow-border">
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed font-medium">
               Our blockchain verification infrastructure ensures training records cannot be altered, backdated, or disputed—providing the evidence base your compliance officers and auditors demand.
             </p>
           </div>
