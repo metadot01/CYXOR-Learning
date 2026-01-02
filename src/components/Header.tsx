@@ -17,7 +17,7 @@ const Header = () => {
               <span className="text-xl lg:text-2xl font-extrabold tracking-tight" style={{ color: '#0B2A3F' }}>
                 CYXOR
               </span>
-              <span className="text-sm lg:text-base font-semibold tracking-widest uppercase" style={{ color: '#4EC3A5' }}>
+              <span className="text-xs lg:text-sm font-semibold tracking-widest uppercase" style={{ color: '#4EC3A5' }}>
                 Learning
               </span>
             </div>
