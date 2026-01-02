@@ -1,16 +1,15 @@
 import { Button } from "@/components/ui/button";
 import BlockchainVisualization from "./BlockchainVisualization";
+import AnimatedBackground from "./AnimatedBackground";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 blockchain-grid" />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
+      {/* Animated Background */}
+      <AnimatedBackground />
       
-      {/* Floating Elements */}
-      <div className="absolute top-1/4 right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-1/4 left-10 w-48 h-48 bg-secondary/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+      {/* Gradient Overlay for Readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background z-[1]" />
 
       <div className="section-container relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -18,11 +17,11 @@ const Hero = () => {
           <div className="space-y-8 animate-fade-up">
             <div className="space-y-6">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-secondary leading-tight">
-                Blockchain-Verified Skills{" "}
-                <span className="text-primary">for the UK</span>
+                Learn Digital Skills.{" "}
+                <span className="text-primary">Prove Your Expertise.</span>
               </h1>
               <p className="text-lg sm:text-xl text-accent max-w-xl leading-relaxed">
-                Empowering professionals to learn, verify, and showcase skills with confidence.
+                Blockchain-verified credentials for AI, platform engineering, and emerging tech—trusted by forward-thinking UK employers.
               </p>
             </div>
 
