@@ -1,8 +1,11 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ValueProposition from "@/components/ValueProposition";
-import TrustSection from "@/components/TrustSection";
+import TrustCompliance from "@/components/TrustCompliance";
+import UseCases from "@/components/UseCases";
+import ROISection from "@/components/ROISection";
 import TechnologyCredibility from "@/components/TechnologyCredibility";
+import CourseFocus from "@/components/CourseFocus";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
@@ -13,8 +16,11 @@ const Index = () => {
       <main>
         <Hero />
         <ValueProposition />
-        <TrustSection />
+        <TrustCompliance />
+        <UseCases />
+        <ROISection />
         <TechnologyCredibility />
+        <CourseFocus />
         <FinalCTA />
       </main>
       <Footer />
