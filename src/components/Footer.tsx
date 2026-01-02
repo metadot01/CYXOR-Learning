@@ -6,6 +6,30 @@ const Footer = () => {
   return (
     <footer className="py-16 bg-card border-t border-border">
       <div className="section-container">
+        {/* Enterprise Support Banner */}
+        <div className="mb-12 p-6 rounded-2xl bg-secondary/50 border border-border">
+          <div className="grid md:grid-cols-3 gap-6 text-center md:text-left">
+            <div>
+              <h4 className="font-bold text-foreground text-sm mb-2">Enterprise Support</h4>
+              <p className="text-xs text-muted-foreground font-medium">
+                Dedicated implementation team | SSO & LMS integration | Custom compliance reporting | Priority technical support
+              </p>
+            </div>
+            <div>
+              <h4 className="font-bold text-foreground text-sm mb-2">Compliance Alignment</h4>
+              <p className="text-xs text-muted-foreground font-medium">
+                Built to support UK Cyber Security Council professional standards | Aligned with NCSC training guidelines | Compatible with government security frameworks
+              </p>
+            </div>
+            <div>
+              <h4 className="font-bold text-foreground text-sm mb-2">Company Information</h4>
+              <p className="text-xs text-muted-foreground font-medium">
+                Powered by Xantum Computing Private Limited | Transforming professional cybersecurity training with blockchain verification technology
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Main Footer Content - 4 Columns */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-12">
           {/* Column 1: Logo & Description */}
@@ -65,10 +89,24 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 3: Compliance */}
+          {/* Column 3: Industries */}
           <div>
             <h4 className="font-bold text-foreground mb-5 text-sm uppercase tracking-wider">
-              Compliance
+              Industries
+            </h4>
+            <ul className="space-y-3 text-sm text-muted-foreground font-medium">
+              <li><a href="#" className="hover:text-primary transition-colors">Financial Services</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">Healthcare</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">Government</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">Critical Infrastructure</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">Technology</a></li>
+            </ul>
+          </div>
+
+          {/* Column 4: Compliance Standards */}
+          <div>
+            <h4 className="font-bold text-foreground mb-5 text-sm uppercase tracking-wider">
+              Compliance Standards
             </h4>
             <ul className="space-y-3 text-sm text-muted-foreground font-medium">
               <li><a href="#" className="hover:text-primary transition-colors">ISO 27001</a></li>
@@ -76,20 +114,6 @@ const Footer = () => {
               <li><a href="#" className="hover:text-primary transition-colors">NIS2 Directive</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">UK Cyber Essentials</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">SOC 2 Framework</a></li>
-            </ul>
-          </div>
-
-          {/* Column 4: Company */}
-          <div>
-            <h4 className="font-bold text-foreground mb-5 text-sm uppercase tracking-wider">
-              Company
-            </h4>
-            <ul className="space-y-3 text-sm text-muted-foreground font-medium">
-              <li><a href="#" className="hover:text-primary transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Contact</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Careers</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Blog</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Press Kit</a></li>
             </ul>
           </div>
         </div>

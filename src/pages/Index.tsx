@@ -1,11 +1,14 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ValueProposition from "@/components/ValueProposition";
-import TrustCompliance from "@/components/TrustCompliance";
-import UseCases from "@/components/UseCases";
-import ROISection from "@/components/ROISection";
-import TechnologyCredibility from "@/components/TechnologyCredibility";
-import CourseFocus from "@/components/CourseFocus";
+import TrainingWasteProblem from "@/components/TrainingWasteProblem";
+import CourseCatalog from "@/components/CourseCatalog";
+import CaseStudy from "@/components/CaseStudy";
+import EnterpriseDashboard from "@/components/EnterpriseDashboard";
+import WhyTraditionalFails from "@/components/WhyTraditionalFails";
+import BlockchainAdvantage from "@/components/BlockchainAdvantage";
+import ComplianceStandards from "@/components/ComplianceStandards";
+import APIIntegration from "@/components/APIIntegration";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
@@ -16,11 +19,14 @@ const Index = () => {
       <main>
         <Hero />
         <ValueProposition />
-        <TrustCompliance />
-        <UseCases />
-        <ROISection />
-        <TechnologyCredibility />
-        <CourseFocus />
+        <TrainingWasteProblem />
+        <CourseCatalog />
+        <CaseStudy />
+        <EnterpriseDashboard />
+        <WhyTraditionalFails />
+        <BlockchainAdvantage />
+        <ComplianceStandards />
+        <APIIntegration />
         <FinalCTA />
       </main>
       <Footer />
