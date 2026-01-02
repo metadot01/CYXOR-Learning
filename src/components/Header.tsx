@@ -60,17 +60,17 @@ const Header = () => {
       <div className="section-container">
         <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <img 
               src={cyxorIcon} 
               alt="CYXOR" 
-              className="h-10 sm:h-12 lg:h-14 w-auto"
+              className="h-9 sm:h-10 lg:h-12 w-auto"
             />
-            <div className="flex flex-col">
+            <div className="flex items-baseline gap-1.5">
               <span className="text-lg sm:text-xl lg:text-2xl font-extrabold tracking-tight" style={{ color: '#0B2A3F' }}>
                 CYXOR
               </span>
-              <span className="text-[10px] sm:text-xs lg:text-sm font-semibold tracking-widest uppercase" style={{ color: '#4EC3A5' }}>
+              <span className="text-lg sm:text-xl lg:text-2xl font-semibold tracking-tight" style={{ color: '#4EC3A5' }}>
                 Learning
               </span>
             </div>
@@ -148,17 +148,17 @@ const Header = () => {
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <div className="flex flex-col h-full">
                 {/* Mobile Header */}
-                <div className="flex items-center gap-3 p-6 border-b border-gray-100">
+                <div className="flex items-center gap-2 p-6 border-b border-gray-100">
                   <img 
                     src={cyxorIcon} 
                     alt="CYXOR" 
-                    className="h-10 w-auto"
+                    className="h-9 w-auto"
                   />
-                  <div className="flex flex-col">
+                  <div className="flex items-baseline gap-1.5">
                     <span className="text-lg font-extrabold tracking-tight" style={{ color: '#0B2A3F' }}>
                       CYXOR
                     </span>
-                    <span className="text-[10px] font-semibold tracking-widest uppercase" style={{ color: '#4EC3A5' }}>
+                    <span className="text-lg font-semibold tracking-tight" style={{ color: '#4EC3A5' }}>
                       Learning
                     </span>
                   </div>

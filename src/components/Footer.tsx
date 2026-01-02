@@ -34,17 +34,17 @@ const Footer = () => {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-12">
           {/* Column 1: Logo & Description */}
           <div className="col-span-2 lg:col-span-1">
-            <div className="flex items-center gap-3 mb-3">
+            <div className="flex items-center gap-2 mb-3">
               <img 
                 src={cyxorIcon} 
                 alt="CYXOR" 
-                className="h-10 w-auto"
+                className="h-9 w-auto"
               />
-              <div className="flex flex-col">
+              <div className="flex items-baseline gap-1.5">
                 <span className="text-lg font-extrabold tracking-tight text-foreground">
                   CYXOR
                 </span>
-                <span className="text-xs font-semibold tracking-widest uppercase text-primary">
+                <span className="text-lg font-semibold tracking-tight text-primary">
                   Learning
                 </span>
               </div>
