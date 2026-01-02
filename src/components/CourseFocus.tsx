@@ -50,13 +50,13 @@ const CourseFocus = () => {
       
       <div className="section-container relative z-10">
         <div className="text-center mb-16 animate-fade-up">
-          <span className="text-primary font-semibold text-sm tracking-wider uppercase">
+          <span className="text-primary font-bold text-sm tracking-wider uppercase">
             Curriculum
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-4 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground mt-4 mb-4">
             Cybersecurity & Governance Curriculum
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
             Comprehensive training programs aligned with industry frameworks and regulatory requirements
           </p>
         </div>
@@ -72,14 +72,14 @@ const CourseFocus = () => {
                 <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                   <category.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground">
+                <h3 className="text-xl font-bold text-foreground">
                   {category.title}
                 </h3>
               </div>
               
               <ul className="space-y-3">
                 {category.courses.map((course) => (
-                  <li key={course} className="flex items-start gap-3 text-muted-foreground">
+                  <li key={course} className="flex items-start gap-3 text-muted-foreground font-medium">
                     <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>

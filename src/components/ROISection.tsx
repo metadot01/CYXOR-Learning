@@ -31,10 +31,10 @@ const ROISection = () => {
       
       <div className="section-container relative z-10">
         <div className="text-center mb-16 animate-fade-up">
-          <span className="text-primary font-semibold text-sm tracking-wider uppercase">
+          <span className="text-primary font-bold text-sm tracking-wider uppercase">
             Business Value
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-4 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground mt-4 mb-4">
             Reduce Risk. Prove Compliance. Protect Reputation.
           </h2>
         </div>
@@ -51,15 +51,15 @@ const ROISection = () => {
                   <benefit.icon className="w-6 h-6 text-primary" />
                 </div>
                 <div className="text-right">
-                  <div className="text-3xl font-bold text-primary">{benefit.stat}</div>
-                  <div className="text-xs text-muted-foreground uppercase tracking-wider">{benefit.statLabel}</div>
+                  <div className="text-3xl font-extrabold text-primary">{benefit.stat}</div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">{benefit.statLabel}</div>
                 </div>
               </div>
               
-              <h3 className="text-xl font-semibold text-foreground mb-3">
+              <h3 className="text-xl font-bold text-foreground mb-3">
                 {benefit.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed font-medium">
                 {benefit.description}
               </p>
             </div>

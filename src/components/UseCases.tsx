@@ -23,10 +23,10 @@ const UseCases = () => {
     <section className="py-24 relative">
       <div className="section-container">
         <div className="text-center mb-16 animate-fade-up">
-          <span className="text-primary font-semibold text-sm tracking-wider uppercase">
+          <span className="text-primary font-bold text-sm tracking-wider uppercase">
             Industry Solutions
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-4 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground mt-4 mb-4">
             Trusted by Security-First Organizations
           </h2>
         </div>
@@ -42,10 +42,10 @@ const UseCases = () => {
                 <useCase.icon className="w-8 h-8 text-primary" />
               </div>
               
-              <h3 className="text-xl font-semibold text-foreground mb-4">
+              <h3 className="text-xl font-bold text-foreground mb-4">
                 {useCase.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed font-medium">
                 {useCase.description}
               </p>
             </div>

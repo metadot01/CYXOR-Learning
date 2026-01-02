@@ -2,50 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 @layer base {
   :root {
-    /* CYXOR Dark Theme - Enterprise Cybersecurity */
+    /* CYXOR Brand Colors */
     --mint-teal: 160 52% 53%;
-    --mint-teal-soft: 160 52% 60%;
-    --navy-deep: 200 73% 8%;
-    --navy-medium: 200 60% 12%;
-    --charcoal-navy: 210 30% 10%;
-    --slate-blue: 200 29% 45%;
-    --cool-grey: 200 20% 20%;
-    --cool-grey-text: 200 15% 60%;
+    --mint-teal-soft: 160 45% 60%;
+    --navy-deep: 207 73% 14%;
+    --navy-medium: 207 60% 18%;
+    --charcoal-navy: 207 50% 12%;
+    --slate-blue: 207 29% 45%;
+    --cool-grey: 207 20% 20%;
+    --cool-grey-text: 207 15% 55%;
     
     /* Dark theme as default */
-    --background: 200 73% 6%;
-    --foreground: 200 20% 95%;
+    --background: 207 73% 8%;
+    --foreground: 207 20% 95%;
 
-    --card: 200 60% 10%;
-    --card-foreground: 200 20% 95%;
+    --card: 207 60% 12%;
+    --card-foreground: 207 20% 95%;
 
-    --popover: 200 60% 10%;
-    --popover-foreground: 200 20% 95%;
+    --popover: 207 60% 12%;
+    --popover-foreground: 207 20% 95%;
 
     --primary: 160 52% 53%;
-    --primary-foreground: 200 73% 6%;
+    --primary-foreground: 207 73% 8%;
 
-    --secondary: 200 60% 15%;
-    --secondary-foreground: 200 20% 95%;
+    --secondary: 207 60% 16%;
+    --secondary-foreground: 207 20% 95%;
 
-    --muted: 200 40% 15%;
-    --muted-foreground: 200 15% 60%;
+    --muted: 207 40% 16%;
+    --muted-foreground: 207 15% 55%;
 
     --accent: 160 52% 53%;
-    --accent-foreground: 200 73% 6%;
+    --accent-foreground: 207 73% 8%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 200 40% 18%;
-    --input: 200 40% 18%;
+    --border: 207 40% 20%;
+    --input: 207 40% 20%;
     --ring: 160 52% 53%;
 
     --radius: 0.5rem;
+    
+    /* Header specific */
+    --header-bg: 0 0% 100%;
+    --header-text: 207 73% 14%;
   }
 }
 
@@ -55,12 +59,13 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', sans-serif;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold tracking-tight;
+    @apply font-bold tracking-tight;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
   }
 }
 

@@ -14,14 +14,14 @@ const TechnologyCredibility = () => {
       <div className="section-container">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12 animate-fade-up">
-            <span className="text-muted-foreground font-medium text-sm tracking-wider uppercase">
+            <span className="text-muted-foreground font-semibold text-sm tracking-wider uppercase">
               Powered by Xantum Computing Private Limited
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-4 mb-6">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground mt-4 mb-6">
               Enterprise-Grade{" "}
               <span className="text-primary">Security Architecture</span>
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto font-medium">
               CYXOR Learning delivers institutional-grade blockchain verification infrastructure designed for regulated enterprises requiring the highest levels of data integrity and auditability.
             </p>
           </div>
@@ -38,8 +38,8 @@ const TechnologyCredibility = () => {
                   <feature.icon className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">{feature.title}</h3>
-                  <p className="text-sm text-muted-foreground">{feature.description}</p>
+                  <h3 className="font-bold text-foreground mb-1">{feature.title}</h3>
+                  <p className="text-sm text-muted-foreground font-medium">{feature.description}</p>
                 </div>
               </div>
             ))}
@@ -52,8 +52,8 @@ const TechnologyCredibility = () => {
                 <Shield className="w-6 h-6 text-primary" />
               </div>
               <div className="text-left">
-                <div className="font-semibold text-foreground">SOC 2 Type II Compliant</div>
-                <div className="text-sm text-muted-foreground">Enterprise-ready security infrastructure</div>
+                <div className="font-bold text-foreground">SOC 2 Type II Compliant</div>
+                <div className="text-sm text-muted-foreground font-medium">Enterprise-ready security infrastructure</div>
               </div>
             </div>
           </div>

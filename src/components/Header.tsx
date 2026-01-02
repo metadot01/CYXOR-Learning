@@ -1,18 +1,26 @@
 import { Button } from "@/components/ui/button";
-import cyxorLogo from "@/assets/cyxor-logo.jpg";
+import cyxorIcon from "@/assets/cyxor-icon.png";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 shadow-sm">
       <div className="section-container">
         <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center gap-3">
             <img 
-              src={cyxorLogo} 
-              alt="CYXOR Learning" 
-              className="h-14 lg:h-16 w-auto"
+              src={cyxorIcon} 
+              alt="CYXOR" 
+              className="h-12 lg:h-14 w-auto"
             />
+            <div className="flex flex-col">
+              <span className="text-xl lg:text-2xl font-extrabold tracking-tight" style={{ color: '#0B2A3F' }}>
+                CYXOR
+              </span>
+              <span className="text-sm lg:text-base font-semibold tracking-widest uppercase" style={{ color: '#4EC3A5' }}>
+                Learning
+              </span>
+            </div>
           </div>
 
           {/* CTA */}
