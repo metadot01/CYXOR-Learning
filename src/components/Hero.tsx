@@ -30,9 +30,9 @@ const Hero = () => {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10 animate-fade-up" style={{ animationDelay: '0.2s' }}>
+          <div className="flex items-center justify-center mt-10 animate-fade-up" style={{ animationDelay: '0.2s' }}>
             <Button variant="hero" size="lg">
-              Explore the Platform
+              Explore Platform
               <svg
                 className="w-5 h-5 ml-1"
                 fill="none"
@@ -46,9 +46,6 @@ const Hero = () => {
                   d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               </svg>
-            </Button>
-            <Button variant="outline" size="lg">
-              Request a Demo
             </Button>
           </div>
 
