@@ -20,7 +20,7 @@ const features = [
 
 const ValueProposition = () => {
   return (
-    <section className="py-24 relative">
+    <section id="value" className="py-24 relative scroll-mt-24">
       <div className="absolute inset-0 blockchain-grid" />
       
       <div className="section-container relative z-10">
