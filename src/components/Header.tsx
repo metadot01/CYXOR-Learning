@@ -5,16 +5,27 @@ import cyxorIcon from "@/assets/cyxor-icon.png";
 
 const navItems = [
   {
-    label: "Solutions",
+    label: "Platform",
     items: [
-      { label: "Cybersecurity Training", href: "#" },
-      { label: "Compliance Programs", href: "#" },
+      { label: "Courses", href: "#" },
+      { label: "Certifications", href: "#" },
       { label: "Credential Verification", href: "#" },
       { label: "Enterprise Dashboard", href: "#" },
+      { label: "API Access", href: "#" },
     ],
   },
   {
-    label: "Compliance",
+    label: "Industries",
+    items: [
+      { label: "Financial Services", href: "#" },
+      { label: "Healthcare", href: "#" },
+      { label: "Government", href: "#" },
+      { label: "Critical Infrastructure", href: "#" },
+      { label: "Technology", href: "#" },
+    ],
+  },
+  {
+    label: "Compliance Standards",
     items: [
       { label: "ISO 27001", href: "#" },
       { label: "GDPR Training", href: "#" },
@@ -24,21 +35,12 @@ const navItems = [
     ],
   },
   {
-    label: "For Enterprise",
+    label: "Company",
     items: [
-      { label: "API Access", href: "#" },
-      { label: "Integration Partners", href: "#" },
-      { label: "Custom Programs", href: "#" },
-      { label: "Volume Licensing", href: "#" },
-    ],
-  },
-  {
-    label: "Resources",
-    items: [
-      { label: "Blog", href: "#" },
-      { label: "Whitepapers", href: "#" },
-      { label: "Case Studies", href: "#" },
-      { label: "Documentation", href: "#" },
+      { label: "About Us", href: "#" },
+      { label: "Careers", href: "#" },
+      { label: "Press Kit", href: "#" },
+      { label: "Contact", href: "#" },
     ],
   },
 ];

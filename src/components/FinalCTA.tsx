@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, FileText, Phone } from "lucide-react";
+import { ArrowRight, FileText, Phone, Users } from "lucide-react";
 
 const FinalCTA = () => {
   return (
@@ -20,12 +20,12 @@ const FinalCTA = () => {
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mb-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
-            Secure Your Workforce.{" "}
-            <span className="text-primary">Verify Your Compliance.</span>
+            Stop Wasting Resources on{" "}
+            <span className="text-primary">Unverifiable Training</span>
           </h2>
 
           <p className="text-lg sm:text-xl text-muted-foreground mb-10 animate-fade-up font-medium" style={{ animationDelay: '0.2s' }}>
-            Request a demo to see how blockchain-verified credentials strengthen your security posture and compliance framework.
+            See how blockchain-verified cybersecurity training eliminates redundant certifications while strengthening your compliance posture.
           </p>
 
           <div className="flex items-center justify-center animate-fade-up" style={{ animationDelay: '0.3s' }}>
@@ -39,13 +39,25 @@ const FinalCTA = () => {
           <div className="flex flex-wrap items-center justify-center gap-6 mt-8 animate-fade-up" style={{ animationDelay: '0.4s' }}>
             <a href="#" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors font-medium">
               <FileText className="w-4 h-4" />
-              <span className="text-sm">Download Enterprise Whitepaper</span>
+              <span className="text-sm">Download Training Catalog</span>
+            </a>
+            <span className="text-muted-foreground/30">|</span>
+            <a href="#" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors font-medium">
+              <Users className="w-4 h-4" />
+              <span className="text-sm">Request Enterprise Demo</span>
             </a>
             <span className="text-muted-foreground/30">|</span>
             <a href="#" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors font-medium">
               <Phone className="w-4 h-4" />
-              <span className="text-sm">Speak with Compliance Specialist</span>
+              <span className="text-sm">Speak with Training Specialist</span>
             </a>
+          </div>
+
+          {/* Trust Statement */}
+          <div className="mt-12 animate-fade-up" style={{ animationDelay: '0.5s' }}>
+            <p className="text-sm text-muted-foreground font-medium">
+              Trusted by UK organizations managing ISO 27001, GDPR, NIS2, and Cyber Essentials compliance requirements.
+            </p>
           </div>
         </div>
       </div>
