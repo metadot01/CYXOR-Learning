@@ -35,7 +35,7 @@ const standards = [
 
 const ComplianceStandards = () => {
   return (
-    <section className="py-24 bg-secondary/30 relative overflow-hidden">
+    <section id="compliance" className="py-24 bg-secondary/30 relative overflow-hidden scroll-mt-24">
       <div className="absolute inset-0 circuit-pattern" />
       
       <div className="section-container relative z-10">

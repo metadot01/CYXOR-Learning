@@ -25,7 +25,7 @@ const problems = [
 
 const WhyTraditionalFails = () => {
   return (
-    <section className="py-24 bg-secondary/30 relative overflow-hidden">
+    <section id="traditional" className="py-24 bg-secondary/30 relative overflow-hidden scroll-mt-24">
       <div className="absolute inset-0 blockchain-grid opacity-50" />
       
       <div className="section-container relative z-10">

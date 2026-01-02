@@ -3,7 +3,7 @@ import { ArrowRight, FileText, Phone, Users } from "lucide-react";
 
 const FinalCTA = () => {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section id="cta" className="py-24 relative overflow-hidden scroll-mt-24">
       {/* Background Elements */}
       <div className="absolute inset-0 blockchain-grid opacity-30" />
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />

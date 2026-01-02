@@ -2,7 +2,7 @@ import { Quote, TrendingUp, Shield, Clock } from "lucide-react";
 
 const CaseStudy = () => {
   return (
-    <section className="py-24 relative">
+    <section id="case-study" className="py-24 relative scroll-mt-24">
       <div className="section-container">
         <div className="text-center mb-12 animate-fade-up">
           <span className="text-primary font-bold text-sm tracking-wider uppercase">

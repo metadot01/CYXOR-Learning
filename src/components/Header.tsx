@@ -8,40 +8,37 @@ const navItems = [
   {
     label: "Platform",
     items: [
-      { label: "Courses", href: "#" },
-      { label: "Certifications", href: "#" },
-      { label: "Credential Verification", href: "#" },
-      { label: "Enterprise Dashboard", href: "#" },
-      { label: "API Access", href: "#" },
+      { label: "Courses", href: "#courses" },
+      { label: "Training Catalog", href: "#courses" },
+      { label: "Enterprise Dashboard", href: "#enterprise" },
+      { label: "API Access", href: "#integrations" },
     ],
   },
   {
-    label: "Industries",
+    label: "Why CYXOR",
     items: [
-      { label: "Financial Services", href: "#" },
-      { label: "Healthcare", href: "#" },
-      { label: "Government", href: "#" },
-      { label: "Critical Infrastructure", href: "#" },
-      { label: "Technology", href: "#" },
+      { label: "Value Proposition", href: "#value" },
+      { label: "The Training Problem", href: "#problem" },
+      { label: "Blockchain Advantage", href: "#blockchain" },
+      { label: "Case Study", href: "#case-study" },
     ],
   },
   {
-    label: "Compliance Standards",
+    label: "Compliance",
     items: [
-      { label: "ISO 27001", href: "#" },
-      { label: "GDPR Training", href: "#" },
-      { label: "NIS2 Directive", href: "#" },
-      { label: "UK Cyber Essentials", href: "#" },
-      { label: "SOC 2 Framework", href: "#" },
+      { label: "ISO 27001", href: "#compliance" },
+      { label: "GDPR Training", href: "#compliance" },
+      { label: "NIS2 Directive", href: "#compliance" },
+      { label: "UK Cyber Essentials", href: "#compliance" },
+      { label: "SOC 2 Framework", href: "#compliance" },
     ],
   },
   {
-    label: "Company",
+    label: "Enterprise",
     items: [
-      { label: "About Us", href: "#" },
-      { label: "Careers", href: "#" },
-      { label: "Press Kit", href: "#" },
-      { label: "Contact", href: "#" },
+      { label: "Dashboard", href: "#enterprise" },
+      { label: "Integrations", href: "#integrations" },
+      { label: "Why Traditional Fails", href: "#traditional" },
     ],
   },
 ];
@@ -117,22 +114,24 @@ const Header = () => {
           </nav>
 
           {/* Desktop CTA */}
-          <Button variant="hero" size="default" className="hidden lg:flex">
-            Get Started
-            <svg
-              className="w-4 h-4 ml-1"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </Button>
+          <a href="#cta">
+            <Button variant="hero" size="default" className="hidden lg:flex">
+              Get Started
+              <svg
+                className="w-4 h-4 ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </Button>
+          </a>
 
           {/* Mobile Menu */}
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
