@@ -57,21 +57,27 @@ const Header = () => {
       <div className="section-container">
         <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo */}
-          <div className="flex items-center gap-2 sm:gap-3">
+          <a href="#" className="flex items-center gap-2.5 sm:gap-3">
             <img 
               src={cyxorIcon} 
               alt="CYXOR" 
-              className="h-9 sm:h-10 lg:h-12 w-auto"
+              className="h-9 sm:h-10 lg:h-11 w-auto"
             />
-            <div className="flex items-baseline gap-1.5">
-              <span className="text-lg sm:text-xl lg:text-2xl font-extrabold tracking-tight" style={{ color: '#0B2A3F' }}>
+            <div className="flex items-center">
+              <span 
+                className="text-xl sm:text-2xl lg:text-[1.65rem] font-bold tracking-[-0.02em]" 
+                style={{ color: '#0B2A3F', fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+              >
                 CYXOR
               </span>
-              <span className="text-lg sm:text-xl lg:text-2xl font-semibold tracking-tight" style={{ color: '#4EC3A5' }}>
+              <span 
+                className="text-xl sm:text-2xl lg:text-[1.65rem] font-medium tracking-[-0.01em] ml-1.5" 
+                style={{ color: '#4EC3A5', fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+              >
                 Learning
               </span>
             </div>
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-1">
@@ -147,17 +153,23 @@ const Header = () => {
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <div className="flex flex-col h-full">
                 {/* Mobile Header */}
-                <div className="flex items-center gap-2 p-6 border-b border-gray-100">
+                <div className="flex items-center gap-2.5 p-6 border-b border-gray-100">
                   <img 
                     src={cyxorIcon} 
                     alt="CYXOR" 
                     className="h-9 w-auto"
                   />
-                  <div className="flex items-baseline gap-1.5">
-                    <span className="text-lg font-extrabold tracking-tight" style={{ color: '#0B2A3F' }}>
+                  <div className="flex items-center">
+                    <span 
+                      className="text-xl font-bold tracking-[-0.02em]" 
+                      style={{ color: '#0B2A3F', fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+                    >
                       CYXOR
                     </span>
-                    <span className="text-lg font-semibold tracking-tight" style={{ color: '#4EC3A5' }}>
+                    <span 
+                      className="text-xl font-medium tracking-[-0.01em] ml-1.5" 
+                      style={{ color: '#4EC3A5', fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+                    >
                       Learning
                     </span>
                   </div>
