@@ -28,9 +28,9 @@ const FinalCTA = () => {
             Request a demo to see how blockchain-verified credentials strengthen your security posture and compliance framework.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up" style={{ animationDelay: '0.3s' }}>
+          <div className="flex items-center justify-center animate-fade-up" style={{ animationDelay: '0.3s' }}>
             <Button variant="hero" size="lg" className="min-w-[240px]">
-              Explore the Platform
+              Explore Platform
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </div>
