@@ -1,6 +1,7 @@
 import { Brain, Cloud, Link2, Shield, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import type { LucideIcon } from "lucide-react";
+import { AnimatedSection } from "@/hooks/useScrollAnimation";
 
 interface Category {
   icon: LucideIcon;
@@ -57,7 +58,7 @@ const CourseCatalog = () => {
       <div className="absolute inset-0 circuit-pattern" />
       
       <div className="section-container relative z-10">
-        <div className="text-center mb-16 animate-fade-up">
+        <AnimatedSection className="text-center mb-16">
           <span className="inline-block text-cyan font-bold text-sm tracking-wider uppercase mb-4 px-4 py-1.5 bg-cyan/10 rounded-full border border-cyan/20">
             Course Categories
           </span>
@@ -68,45 +69,47 @@ const CourseCatalog = () => {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Microlearning modules with hands-on labs and blockchain-verified certificates
           </p>
-        </div>
+        </AnimatedSection>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {categories.map((category, index) => (
-            <div
+            <AnimatedSection
               key={category.title}
-              className="group relative p-7 rounded-2xl bg-card border border-border hover:border-cyan/30 transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 animate-fade-up overflow-hidden"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              delay={index * 100}
+              animation="fade-up"
             >
-              {/* Gradient overlay */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-              
-              <div className="relative">
-                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-105 transition-transform ${category.tagClass}`}>
-                  <category.icon className={`w-7 h-7 ${category.iconColor}`} />
-                </div>
+              <div className="group relative p-7 rounded-2xl bg-card border border-border hover:border-cyan/30 transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 overflow-hidden h-full">
+                {/* Gradient overlay */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
                 
-                <h3 className="text-lg font-bold text-foreground mb-5">
-                  {category.title}
-                </h3>
-                
-                <ul className="space-y-3 mb-6">
-                  {category.courses.map((course) => (
-                    <li key={course} className="flex items-center gap-2.5 text-sm text-muted-foreground">
-                      <div className={`w-1.5 h-1.5 rounded-full ${category.iconColor.replace('text-', 'bg-')} flex-shrink-0`} />
-                      {course}
-                    </li>
-                  ))}
-                </ul>
+                <div className="relative">
+                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-105 transition-transform ${category.tagClass}`}>
+                    <category.icon className={`w-7 h-7 ${category.iconColor}`} />
+                  </div>
+                  
+                  <h3 className="text-lg font-bold text-foreground mb-5">
+                    {category.title}
+                  </h3>
+                  
+                  <ul className="space-y-3 mb-6">
+                    {category.courses.map((course) => (
+                      <li key={course} className="flex items-center gap-2.5 text-sm text-muted-foreground">
+                        <div className={`w-1.5 h-1.5 rounded-full ${category.iconColor.replace('text-', 'bg-')} flex-shrink-0`} />
+                        {course}
+                      </li>
+                    ))}
+                  </ul>
 
-                <Link 
-                  to={category.href} 
-                  className={`inline-flex items-center gap-2 text-sm ${category.iconColor} font-semibold group/link`}
-                >
-                  <span className="link-underline">View Courses</span>
-                  <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                </Link>
+                  <Link 
+                    to={category.href} 
+                    className={`inline-flex items-center gap-2 text-sm ${category.iconColor} font-semibold group/link`}
+                  >
+                    <span className="link-underline">View Courses</span>
+                    <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
               </div>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
       </div>
