@@ -16,50 +16,47 @@ html {
 
 @layer base {
   :root {
-    /* CYXOR Brand Colors */
-    --mint-teal: 160 52% 53%;
-    --mint-teal-soft: 160 45% 60%;
-    --navy-deep: 207 73% 14%;
-    --navy-medium: 207 60% 18%;
-    --charcoal-navy: 207 50% 12%;
-    --slate-blue: 207 29% 45%;
-    --cool-grey: 207 20% 20%;
-    --cool-grey-text: 207 15% 55%;
+    /* CYXOR Brand Colors - Professional B2B Light Theme */
+    --navy-deep: 210 40% 15%;
+    --navy-medium: 210 35% 25%;
+    --slate-professional: 210 20% 40%;
+    --teal-professional: 168 45% 40%;
+    --teal-soft: 168 40% 50%;
     
-    /* Dark theme as default */
-    --background: 207 73% 8%;
-    --foreground: 207 20% 95%;
+    /* Light theme */
+    --background: 0 0% 100%;
+    --foreground: 210 40% 15%;
 
-    --card: 207 60% 12%;
-    --card-foreground: 207 20% 95%;
+    --card: 210 20% 98%;
+    --card-foreground: 210 40% 15%;
 
-    --popover: 207 60% 12%;
-    --popover-foreground: 207 20% 95%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 40% 15%;
 
-    --primary: 160 52% 53%;
-    --primary-foreground: 207 73% 8%;
+    --primary: 168 45% 40%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 207 60% 16%;
-    --secondary-foreground: 207 20% 95%;
+    --secondary: 210 15% 95%;
+    --secondary-foreground: 210 40% 15%;
 
-    --muted: 207 40% 16%;
-    --muted-foreground: 207 15% 55%;
+    --muted: 210 15% 92%;
+    --muted-foreground: 210 15% 45%;
 
-    --accent: 160 52% 53%;
-    --accent-foreground: 207 73% 8%;
+    --accent: 168 45% 40%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 207 40% 20%;
-    --input: 207 40% 20%;
-    --ring: 160 52% 53%;
+    --border: 210 15% 88%;
+    --input: 210 15% 88%;
+    --ring: 168 45% 40%;
 
     --radius: 0.5rem;
     
     /* Header specific */
     --header-bg: 0 0% 100%;
-    --header-text: 207 73% 14%;
+    --header-text: 210 40% 15%;
   }
 }
 
@@ -85,30 +82,39 @@ html {
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-primary to-mint-soft bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary to-teal-soft bg-clip-text text-transparent;
   }
 
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
   }
 
   .circuit-pattern {
     background-image: 
-      radial-gradient(circle at 25% 25%, hsl(var(--primary) / 0.03) 1px, transparent 1px),
-      radial-gradient(circle at 75% 75%, hsl(var(--primary) / 0.03) 1px, transparent 1px);
+      radial-gradient(circle at 25% 25%, hsl(var(--primary) / 0.04) 1px, transparent 1px),
+      radial-gradient(circle at 75% 75%, hsl(var(--primary) / 0.04) 1px, transparent 1px);
     background-size: 50px 50px;
   }
 
   .blockchain-grid {
     background-image: 
-      linear-gradient(to right, hsl(var(--primary) / 0.02) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(var(--primary) / 0.02) 1px, transparent 1px);
+      linear-gradient(to right, hsl(var(--primary) / 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--primary) / 0.03) 1px, transparent 1px);
     background-size: 60px 60px;
   }
 
   .glow-border {
     @apply border border-primary/20;
-    box-shadow: 0 0 20px hsl(var(--primary) / 0.1), inset 0 0 20px hsl(var(--primary) / 0.05);
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.08);
+  }
+
+  /* Professional shadow utilities */
+  .shadow-professional {
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.08), 0 1px 2px -1px rgb(0 0 0 / 0.08);
+  }
+
+  .shadow-professional-lg {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.08);
   }
 }
 
@@ -136,7 +142,7 @@ html {
   @keyframes fadeUp {
     from {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(20px);
     }
     to {
       opacity: 1;
@@ -151,15 +157,15 @@ html {
 
   @keyframes float {
     0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+    50% { transform: translateY(-10px); }
   }
 
   @keyframes glow {
     from {
-      box-shadow: 0 0 20px hsl(var(--primary) / 0.2);
+      box-shadow: 0 0 10px hsl(var(--primary) / 0.1);
     }
     to {
-      box-shadow: 0 0 40px hsl(var(--primary) / 0.4);
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.2);
     }
   }
 }

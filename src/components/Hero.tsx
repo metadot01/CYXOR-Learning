@@ -5,12 +5,12 @@ import AnimatedBackground from "./AnimatedBackground";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-24 overflow-hidden">
+    <section className="relative min-h-[85vh] flex items-center pt-24 overflow-hidden bg-gradient-to-b from-secondary/50 to-background">
       {/* Animated Background */}
       <AnimatedBackground />
       
-      {/* Gradient Overlay for Readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background z-[1]" />
+      {/* Subtle gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/30 to-background z-[1]" />
 
       <div className="section-container relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -23,7 +23,7 @@ const Hero = () => {
           </div>
 
           <div className="space-y-5 animate-fade-up" style={{ animationDelay: '0.1s' }}>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-foreground leading-[1.08]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-foreground leading-[1.1]">
               Learn. Compete.{" "}
               <span className="text-primary">Verify.</span>
             </h1>
@@ -43,13 +43,13 @@ const Hero = () => {
 
           {/* Industries */}
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 pt-10 animate-fade-up" style={{ animationDelay: '0.3s' }}>
-            <p className="w-full text-xs text-muted-foreground uppercase tracking-wider mb-2">Designed for regulated industries</p>
+            <p className="w-full text-xs text-muted-foreground uppercase tracking-wider mb-2 font-medium">Designed for regulated industries</p>
             {["BFSI", "Healthcare", "Government", "Critical Infrastructure", "Technology"].map((item) => (
               <div key={item} className="flex items-center gap-2 text-muted-foreground">
                 <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span className="text-sm font-semibold">{item}</span>
+                <span className="text-sm font-medium">{item}</span>
               </div>
             ))}
           </div>
