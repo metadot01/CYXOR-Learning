@@ -13,51 +13,51 @@ const expertise = [
 
 const FeaturedInstructor = () => {
   return (
-    <section className="py-24 gradient-section">
+    <section className="py-20 lg:py-28 gradient-section">
       <div className="section-container">
-        <AnimatedSection className="text-center mb-12">
-          <span className="inline-block text-cyan font-bold text-base tracking-wider uppercase mb-4 px-5 py-2 bg-cyan/10 rounded-full border border-cyan/20">
+        <AnimatedSection className="text-center mb-10">
+          <span className="inline-block text-cyan font-bold text-sm tracking-wider uppercase mb-4 px-4 py-2 bg-cyan/10 rounded-full border border-cyan/20">
             Learn From The Best
           </span>
-          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-foreground leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-foreground leading-tight">
             Featured
             <br />
             <span className="text-emerald">Instructor</span>
           </h2>
         </AnimatedSection>
 
-        <AnimatedSection delay={200} animation="scale" className="max-w-4xl mx-auto">
-          <div className="relative p-10 rounded-3xl bg-card border border-border shadow-xl overflow-hidden">
+        <AnimatedSection delay={200} animation="scale" className="max-w-3xl mx-auto">
+          <div className="relative p-6 lg:p-8 rounded-2xl bg-card border border-border shadow-lg overflow-hidden">
             {/* Decorative gradient */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-cyan/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-lavender/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+            <div className="absolute top-0 right-0 w-48 h-48 bg-cyan/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+            <div className="absolute bottom-0 left-0 w-36 h-36 bg-lavender/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
             
-            <div className="relative flex flex-col lg:flex-row items-center lg:items-start gap-8">
+            <div className="relative flex flex-col lg:flex-row items-center lg:items-start gap-6">
               {/* Profile section */}
               <div className="flex flex-col items-center text-center lg:w-1/3">
-                <div className="w-28 h-28 rounded-full bg-gradient-to-br from-cyan/20 to-lavender/20 border-2 border-cyan/30 flex items-center justify-center mb-4">
-                  <GraduationCap className="w-14 h-14 text-cyan" />
+                <div className="w-20 h-20 lg:w-24 lg:h-24 rounded-full bg-gradient-to-br from-cyan/20 to-lavender/20 border-2 border-cyan/30 flex items-center justify-center mb-3">
+                  <GraduationCap className="w-10 h-10 lg:w-12 lg:h-12 text-cyan" />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground">Bharath Shivaram</h3>
-                <p className="text-cyan font-semibold mb-1">Founder & AI Platform Architect</p>
-                <p className="text-sm text-muted-foreground mb-4">Defantra UK Ltd.</p>
+                <h3 className="text-xl lg:text-2xl font-bold text-foreground">Bharath Shivaram</h3>
+                <p className="text-cyan font-semibold text-sm mb-1">Founder & AI Platform Architect</p>
+                <p className="text-xs text-muted-foreground mb-3">Defantra UK Ltd.</p>
                 
-                <div className="flex gap-3">
+                <div className="flex gap-2">
                   <Link to="/resources#instructors">
-                    <Button variant="hero" size="sm">
+                    <Button variant="hero" size="sm" className="text-sm h-9 px-4">
                       <BookOpen className="w-4 h-4 mr-1" />
                       View Courses
                     </Button>
                   </Link>
-                  <Button variant="outline" size="sm">
+                  <Button variant="outline" size="sm" className="h-9 w-9 p-0">
                     <Linkedin className="w-4 h-4" />
                   </Button>
                 </div>
               </div>
 
               {/* Details section */}
-              <div className="lg:w-2/3 lg:pl-8 lg:border-l border-border">
-                <div className="grid sm:grid-cols-2 gap-6 mb-6">
+              <div className="lg:w-2/3 lg:pl-6 lg:border-l border-border">
+                <div className="grid sm:grid-cols-2 gap-4 mb-4">
                   <div>
                     <h4 className="text-xs font-bold text-cyan uppercase tracking-wider mb-2">Education</h4>
                     <ul className="space-y-1 text-sm text-muted-foreground">
@@ -80,12 +80,12 @@ const FeaturedInstructor = () => {
                 </div>
 
                 <div>
-                  <h4 className="text-xs font-bold text-cyan uppercase tracking-wider mb-3">Expertise</h4>
-                  <div className="flex flex-wrap gap-2">
+                  <h4 className="text-xs font-bold text-cyan uppercase tracking-wider mb-2">Expertise</h4>
+                  <div className="flex flex-wrap gap-1.5">
                     {expertise.map((skill) => (
                       <span 
                         key={skill.name} 
-                        className={`px-3 py-1.5 text-sm rounded-full font-medium ${skill.color}`}
+                        className={`px-2.5 py-1 text-xs rounded-full font-medium ${skill.color}`}
                       >
                         {skill.name}
                       </span>
