@@ -20,39 +20,40 @@ html {
     --navy-deep: 210 40% 15%;
     --navy-medium: 210 35% 25%;
     --slate-professional: 210 20% 40%;
-    --teal-professional: 168 45% 40%;
-    --teal-soft: 168 40% 50%;
+    --teal-professional: 168 50% 38%;
+    --teal-soft: 168 45% 45%;
+    --teal-light: 168 40% 92%;
     
     /* Light theme */
     --background: 0 0% 100%;
     --foreground: 210 40% 15%;
 
-    --card: 210 20% 98%;
+    --card: 0 0% 100%;
     --card-foreground: 210 40% 15%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 210 40% 15%;
 
-    --primary: 168 45% 40%;
+    --primary: 168 50% 38%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 15% 95%;
+    --secondary: 210 20% 97%;
     --secondary-foreground: 210 40% 15%;
 
-    --muted: 210 15% 92%;
+    --muted: 210 15% 94%;
     --muted-foreground: 210 15% 45%;
 
-    --accent: 168 45% 40%;
+    --accent: 168 50% 38%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 15% 88%;
-    --input: 210 15% 88%;
-    --ring: 168 45% 40%;
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 168 50% 38%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
     
     /* Header specific */
     --header-bg: 0 0% 100%;
@@ -86,20 +87,20 @@ html {
   }
 
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
   }
 
   .circuit-pattern {
     background-image: 
-      radial-gradient(circle at 25% 25%, hsl(var(--primary) / 0.04) 1px, transparent 1px),
-      radial-gradient(circle at 75% 75%, hsl(var(--primary) / 0.04) 1px, transparent 1px);
+      radial-gradient(circle at 25% 25%, hsl(var(--primary) / 0.03) 1px, transparent 1px),
+      radial-gradient(circle at 75% 75%, hsl(var(--primary) / 0.03) 1px, transparent 1px);
     background-size: 50px 50px;
   }
 
   .blockchain-grid {
     background-image: 
-      linear-gradient(to right, hsl(var(--primary) / 0.03) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(var(--primary) / 0.03) 1px, transparent 1px);
+      linear-gradient(to right, hsl(var(--primary) / 0.02) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--primary) / 0.02) 1px, transparent 1px);
     background-size: 60px 60px;
   }
 
@@ -108,13 +109,39 @@ html {
     box-shadow: 0 0 20px hsl(var(--primary) / 0.08);
   }
 
-  /* Professional shadow utilities */
-  .shadow-professional {
-    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.08), 0 1px 2px -1px rgb(0 0 0 / 0.08);
+  /* Professional card styles */
+  .card-professional {
+    @apply bg-card rounded-2xl border border-border;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.04), 0 1px 2px -1px rgb(0 0 0 / 0.04);
   }
 
-  .shadow-professional-lg {
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.08);
+  .card-professional:hover {
+    box-shadow: 0 10px 40px -10px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+  }
+
+  /* Gradient backgrounds */
+  .gradient-hero {
+    background: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--background)) 50%, hsl(168 40% 98%) 100%);
+  }
+
+  .gradient-section {
+    background: linear-gradient(180deg, hsl(var(--secondary)) 0%, hsl(var(--background)) 100%);
+  }
+
+  .gradient-cta {
+    background: linear-gradient(135deg, hsl(168 50% 95%) 0%, hsl(var(--background)) 50%, hsl(210 20% 98%) 100%);
+  }
+
+  /* Icon container styles */
+  .icon-container {
+    @apply w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-300;
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.1) 0%, hsl(var(--primary) / 0.05) 100%);
+    border: 1px solid hsl(var(--primary) / 0.15);
+  }
+
+  .icon-container:hover {
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.15) 0%, hsl(var(--primary) / 0.08) 100%);
+    transform: scale(1.05);
   }
 }
 
@@ -137,6 +164,10 @@ html {
 
   .animate-glow {
     animation: glow 3s ease-in-out infinite alternate;
+  }
+
+  .animate-gradient {
+    animation: gradientShift 8s ease-in-out infinite;
   }
 
   @keyframes fadeUp {
@@ -167,5 +198,24 @@ html {
     to {
       box-shadow: 0 0 20px hsl(var(--primary) / 0.2);
     }
+  }
+
+  @keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* Subtle hover underline for links */
+  .link-underline {
+    @apply relative;
+  }
+
+  .link-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+  }
+
+  .link-underline:hover::after {
+    @apply w-full;
   }
 }
