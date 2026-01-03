@@ -39,10 +39,9 @@ const navItems = [
     ],
   },
   {
-    label: "Resources",
+    label: "About",
     href: "/resources",
     items: [
-      { label: "About Us", href: "/resources#about" },
       { label: "Our Instructors", href: "/resources#instructors" },
       { label: "Technology Stack", href: "/resources#tech" },
       { label: "Documentation", href: "/resources#docs" },
