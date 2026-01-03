@@ -54,47 +54,47 @@ const categories: Category[] = [
 
 const CourseCatalog = () => {
   return (
-    <section id="courses" className="py-24 gradient-section relative overflow-hidden scroll-mt-24">
+    <section id="courses" className="py-20 lg:py-28 gradient-section relative overflow-hidden scroll-mt-24">
       <div className="absolute inset-0 circuit-pattern" />
       
       <div className="section-container relative z-10">
-        <AnimatedSection className="text-center mb-16">
-          <span className="inline-block text-cyan font-bold text-base tracking-wider uppercase mb-4 px-5 py-2 bg-cyan/10 rounded-full border border-cyan/20">
+        <AnimatedSection className="text-center mb-12 lg:mb-16">
+          <span className="inline-block text-cyan font-bold text-sm tracking-wider uppercase mb-4 px-4 py-2 bg-cyan/10 rounded-full border border-cyan/20">
             Course Categories
           </span>
-          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-foreground mt-4 mb-5 leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-foreground mt-4 mb-4 leading-tight">
             Enterprise Technology &
             <br />
             <span className="text-emerald">Compliance</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base lg:text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
             Microlearning modules with hands-on labs and blockchain-verified certificates
           </p>
         </AnimatedSection>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
           {categories.map((category, index) => (
             <AnimatedSection
               key={category.title}
               delay={index * 100}
               animation="fade-up"
             >
-              <div className="group relative p-7 rounded-2xl bg-card border border-border hover:border-cyan/30 transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 overflow-hidden h-full">
+              <div className="group relative p-5 lg:p-6 rounded-2xl bg-card border border-border hover:border-cyan/30 transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 overflow-hidden h-full">
                 {/* Gradient overlay */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
                 
                 <div className="relative">
-                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-105 transition-transform ${category.tagClass}`}>
-                    <category.icon className={`w-7 h-7 ${category.iconColor}`} />
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform ${category.tagClass}`}>
+                    <category.icon className={`w-6 h-6 ${category.iconColor}`} />
                   </div>
                   
-                  <h3 className="text-lg font-bold text-foreground mb-5">
+                  <h3 className="text-base lg:text-lg font-bold text-foreground mb-4">
                     {category.title}
                   </h3>
                   
-                  <ul className="space-y-3 mb-6">
+                  <ul className="space-y-2 mb-5">
                     {category.courses.map((course) => (
-                      <li key={course} className="flex items-center gap-2.5 text-sm text-muted-foreground">
+                      <li key={course} className="flex items-center gap-2 text-sm text-muted-foreground">
                         <div className={`w-1.5 h-1.5 rounded-full ${category.iconColor.replace('text-', 'bg-')} flex-shrink-0`} />
                         {course}
                       </li>
