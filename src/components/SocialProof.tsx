@@ -48,7 +48,7 @@ const SocialProof = () => {
 
         {/* Testimonials */}
         <AnimatedSection className="text-center mb-10">
-          <span className="inline-block text-cyan font-bold text-sm tracking-wider uppercase mb-4 px-4 py-1.5 bg-cyan/10 rounded-full border border-cyan/20">
+          <span className="inline-block text-cyan font-bold text-base tracking-wider uppercase mb-4 px-5 py-2 bg-cyan/10 rounded-full border border-cyan/20">
             What Learners Say
           </span>
         </AnimatedSection>
