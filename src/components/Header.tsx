@@ -70,22 +70,18 @@ const Header = () => {
       <div className="section-container">
         <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2.5 sm:gap-3">
+          <Link to="/" className="flex items-center gap-3">
             <img 
               src={cyxorIcon} 
               alt="CYXOR" 
-              className="h-9 sm:h-10 lg:h-12 w-auto"
+              className="h-10 sm:h-11 lg:h-12 w-auto"
             />
-            <div className="flex flex-col justify-center">
-              <div className="flex items-center">
-                <span className="text-xl sm:text-2xl lg:text-[1.65rem] font-bold tracking-[-0.02em] text-foreground leading-none">
-                  CYXOR
-                </span>
-                <span className="text-xl sm:text-2xl lg:text-[1.65rem] font-bold tracking-[-0.01em] ml-1.5 text-emerald leading-none">
-                  LEARNING
-                </span>
-              </div>
-              <span className="text-[10px] sm:text-xs text-muted-foreground tracking-wide mt-0.5">
+            <div className="flex flex-col justify-center h-10 sm:h-11 lg:h-12">
+              <span className="text-lg sm:text-xl lg:text-2xl font-bold tracking-tight leading-tight">
+                <span className="text-foreground">CYXOR</span>
+                <span className="text-emerald ml-1">LEARNING</span>
+              </span>
+              <span className="text-[9px] sm:text-[10px] lg:text-xs text-muted-foreground tracking-wide leading-none">
                 Building Digital and GRC Skills
               </span>
             </div>
@@ -149,22 +145,18 @@ const Header = () => {
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <div className="flex flex-col h-full">
                 {/* Mobile Header */}
-                <div className="flex items-center gap-2.5 p-6 border-b border-border">
+                <div className="flex items-center gap-3 p-6 border-b border-border">
                   <img 
                     src={cyxorIcon} 
                     alt="CYXOR" 
                     className="h-10 w-auto"
                   />
-                  <div className="flex flex-col justify-center">
-                    <div className="flex items-center">
-                      <span className="text-xl font-bold tracking-[-0.02em] text-foreground leading-none">
-                        CYXOR
-                      </span>
-                      <span className="text-xl font-bold tracking-[-0.01em] ml-1.5 text-emerald leading-none">
-                        LEARNING
-                      </span>
-                    </div>
-                    <span className="text-[10px] text-muted-foreground tracking-wide mt-0.5">
+                  <div className="flex flex-col justify-center h-10">
+                    <span className="text-lg font-bold tracking-tight leading-tight">
+                      <span className="text-foreground">CYXOR</span>
+                      <span className="text-emerald ml-1">LEARNING</span>
+                    </span>
+                    <span className="text-[9px] text-muted-foreground tracking-wide leading-none">
                       Building Digital and GRC Skills
                     </span>
                   </div>
