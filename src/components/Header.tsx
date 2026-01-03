@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown, Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import cyxorIcon from "@/assets/cyxor-icon.png";
+import ContactDialog from "@/components/ContactDialog";
 
 const navItems = [
   {
@@ -125,24 +126,14 @@ const Header = () => {
           </nav>
 
           {/* Desktop CTA */}
-          <Link to="/courses">
-            <Button variant="hero" size="default" className="hidden lg:flex">
-              Browse Courses
-              <svg
-                className="w-4 h-4 ml-1"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </Button>
-          </Link>
+          <div className="hidden lg:flex items-center gap-3">
+            <Link to="/courses">
+              <Button variant="outline" size="default">
+                Browse Courses
+              </Button>
+            </Link>
+            <ContactDialog />
+          </div>
 
           {/* Mobile Menu */}
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
@@ -212,25 +203,19 @@ const Header = () => {
                 </nav>
 
                 {/* Mobile CTA */}
-                <div className="p-6 border-t border-border">
+                <div className="p-6 border-t border-border space-y-3">
                   <Link to="/courses" onClick={() => setMobileOpen(false)}>
-                    <Button variant="hero" size="lg" className="w-full">
+                    <Button variant="outline" size="lg" className="w-full">
                       Browse Courses
-                      <svg
-                        className="w-4 h-4 ml-1"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M17 8l4 4m0 0l-4 4m4-4H3"
-                        />
-                      </svg>
                     </Button>
                   </Link>
+                  <ContactDialog 
+                    trigger={
+                      <Button variant="hero" size="lg" className="w-full">
+                        Start Conversation
+                      </Button>
+                    }
+                  />
                 </div>
               </div>
             </SheetContent>
