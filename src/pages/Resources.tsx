@@ -1,7 +1,22 @@
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Target, Users, GraduationCap, Linkedin, BookOpen, FileText, HelpCircle, Mail, MapPin, ArrowRight } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Target, GraduationCap, Linkedin, BookOpen, FileText, HelpCircle, Mail, MapPin, Send, CheckCircle } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import { z } from "zod";
+
+const contactSchema = z.object({
+  name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
+  email: z.string().trim().email("Please enter a valid email address").max(255, "Email must be less than 255 characters"),
+  company: z.string().trim().max(100, "Company name must be less than 100 characters").optional(),
+  message: z.string().trim().min(1, "Message is required").max(1000, "Message must be less than 1000 characters"),
+});
+
+type ContactFormData = z.infer<typeof contactSchema>;
 
 const approach = [
   { title: "Microlearning", description: "5-15 minute focused modules" },
@@ -29,6 +44,54 @@ const resources = [
 ];
 
 const Resources = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [formData, setFormData] = useState<ContactFormData>({
+    name: "",
+    email: "",
+    company: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState<Partial<Record<keyof ContactFormData, string>>>({});
+
+  const handleInputChange = (field: keyof ContactFormData, value: string) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+    // Clear error when user starts typing
+    if (errors[field]) {
+      setErrors((prev) => ({ ...prev, [field]: undefined }));
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setErrors({});
+
+    const result = contactSchema.safeParse(formData);
+    
+    if (!result.success) {
+      const fieldErrors: Partial<Record<keyof ContactFormData, string>> = {};
+      result.error.errors.forEach((error) => {
+        const field = error.path[0] as keyof ContactFormData;
+        fieldErrors[field] = error.message;
+      });
+      setErrors(fieldErrors);
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    toast({
+      title: "Message sent!",
+      description: "We'll get back to you within 24 hours.",
+    });
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -202,8 +265,143 @@ const Resources = () => {
           </div>
         </section>
 
+        {/* Contact Form */}
+        <section id="contact" className="py-16 scroll-mt-24">
+          <div className="section-container">
+            <div className="max-w-2xl mx-auto">
+              <div className="text-center mb-10">
+                <h2 className="text-3xl font-bold text-foreground mb-4">Get In Touch</h2>
+                <p className="text-muted-foreground">
+                  Have questions about our courses or enterprise solutions? We'd love to hear from you.
+                </p>
+              </div>
+
+              <div className="p-8 rounded-2xl bg-card border border-border">
+                {isSubmitted ? (
+                  <div className="text-center py-8">
+                    <div className="w-16 h-16 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center mx-auto mb-4">
+                      <CheckCircle className="w-8 h-8 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-bold text-foreground mb-2">Thank You!</h3>
+                    <p className="text-muted-foreground mb-6">
+                      Your message has been sent successfully. We'll get back to you within 24 hours.
+                    </p>
+                    <Button 
+                      variant="outline" 
+                      onClick={() => {
+                        setIsSubmitted(false);
+                        setFormData({ name: "", email: "", company: "", message: "" });
+                      }}
+                    >
+                      Send Another Message
+                    </Button>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid sm:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <Label htmlFor="name" className="text-foreground">
+                          Name <span className="text-destructive">*</span>
+                        </Label>
+                        <Input
+                          id="name"
+                          placeholder="Your name"
+                          value={formData.name}
+                          onChange={(e) => handleInputChange("name", e.target.value)}
+                          className={errors.name ? "border-destructive" : ""}
+                          maxLength={100}
+                        />
+                        {errors.name && (
+                          <p className="text-xs text-destructive">{errors.name}</p>
+                        )}
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label htmlFor="email" className="text-foreground">
+                          Email <span className="text-destructive">*</span>
+                        </Label>
+                        <Input
+                          id="email"
+                          type="email"
+                          placeholder="your@email.com"
+                          value={formData.email}
+                          onChange={(e) => handleInputChange("email", e.target.value)}
+                          className={errors.email ? "border-destructive" : ""}
+                          maxLength={255}
+                        />
+                        {errors.email && (
+                          <p className="text-xs text-destructive">{errors.email}</p>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="company" className="text-foreground">
+                        Company
+                      </Label>
+                      <Input
+                        id="company"
+                        placeholder="Your company (optional)"
+                        value={formData.company}
+                        onChange={(e) => handleInputChange("company", e.target.value)}
+                        className={errors.company ? "border-destructive" : ""}
+                        maxLength={100}
+                      />
+                      {errors.company && (
+                        <p className="text-xs text-destructive">{errors.company}</p>
+                      )}
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="message" className="text-foreground">
+                        Message <span className="text-destructive">*</span>
+                      </Label>
+                      <Textarea
+                        id="message"
+                        placeholder="How can we help you?"
+                        rows={5}
+                        value={formData.message}
+                        onChange={(e) => handleInputChange("message", e.target.value)}
+                        className={errors.message ? "border-destructive" : ""}
+                        maxLength={1000}
+                      />
+                      <div className="flex justify-between">
+                        {errors.message ? (
+                          <p className="text-xs text-destructive">{errors.message}</p>
+                        ) : (
+                          <span />
+                        )}
+                        <p className="text-xs text-muted-foreground">
+                          {formData.message.length}/1000
+                        </p>
+                      </div>
+                    </div>
+
+                    <Button 
+                      type="submit" 
+                      variant="hero" 
+                      size="lg" 
+                      className="w-full"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? (
+                        "Sending..."
+                      ) : (
+                        <>
+                          Send Message
+                          <Send className="w-4 h-4 ml-2" />
+                        </>
+                      )}
+                    </Button>
+                  </form>
+                )}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Company Info */}
-        <section className="py-12">
+        <section className="py-12 bg-secondary/30">
           <div className="section-container">
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-foreground mb-6">Company Information</h2>
