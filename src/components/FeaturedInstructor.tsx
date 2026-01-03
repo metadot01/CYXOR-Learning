@@ -43,7 +43,8 @@ const FeaturedInstructor = () => {
                   />
                 </div>
                 <h3 className="text-xl lg:text-2xl font-bold text-foreground">Bharath Shivaram</h3>
-                <p className="text-emerald font-semibold text-sm mb-3">Founder and Director of AI Platforms at Xantum Computing.</p>
+                <p className="text-emerald font-semibold text-sm mb-1">Founder and AI Platform Architect</p>
+                <p className="text-xs text-muted-foreground mb-3">Defantra UK Ltd.</p>
                 
                 <div className="flex gap-2">
                   <Link to="/resources#instructors">
@@ -76,14 +77,14 @@ const FeaturedInstructor = () => {
                       </li>
                       <li className="flex items-start gap-2">
                         <Award className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" />
-                        Bachelor of Computer Science and Engineering, BIT, India
+                        Bachelor of Engineering (Computer Science), BIT, India
                       </li>
                     </ul>
                   </div>
                   <div>
                     <h4 className="text-xs font-bold text-emerald uppercase tracking-wider mb-2">Experience</h4>
                     <p className="text-sm text-muted-foreground">
-                      Senior engineering roles at Dell Technologies, EMC. Founder of Xantum Computing.
+                      Senior engineering roles at Dell Technologies, EMC. Founder and Director of AI Platforms at Xantum Computing.
                     </p>
                   </div>
                 </div>
