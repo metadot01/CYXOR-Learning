@@ -82,7 +82,7 @@ const Footer = () => {
                 <p className="text-xs text-cyan font-semibold mb-2">About</p>
                 <ul className="space-y-2 text-sm text-white/70">
                   <li><Link to="/resources#about" className="hover:text-cyan transition-colors">Vision/Mission</Link></li>
-                  <li><Link to="/resources#about" className="hover:text-cyan transition-colors">Why Cyxor</Link></li>
+                  <li><Link to="/resources#about" className="hover:text-cyan transition-colors">Why CYXOR LEARNING</Link></li>
                   <li><Link to="/resources#instructors" className="hover:text-cyan transition-colors">Featured Instructors</Link></li>
                   <li><Link to="/resources#tech" className="hover:text-cyan transition-colors">Tech Stack</Link></li>
                 </ul>
@@ -143,7 +143,7 @@ const Footer = () => {
               </div>
               <div className="pt-4">
                 <p className="text-xs text-white/50">
-                  Cyxor Learning UK is a unit of Xantum Computing Private Limited
+                  CYXOR LEARNING UK is a unit of Xantum Computing Private Limited
                 </p>
               </div>
             </div>
@@ -169,10 +169,10 @@ const Footer = () => {
                     CYXOR
                   </span>
                   <span 
-                    className="text-lg font-medium tracking-[-0.01em] ml-1.5 text-cyan"
+                    className="text-lg font-bold tracking-[-0.01em] ml-1.5 text-emerald"
                     style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
                   >
-                    Learning
+                    LEARNING
                   </span>
                 </div>
               </div>
@@ -185,7 +185,7 @@ const Footer = () => {
 
             {/* Copyright */}
             <div className="text-sm text-white/50">
-              © {currentYear} CYXOR Learning. All rights reserved.
+              © {currentYear} CYXOR LEARNING. All rights reserved.
             </div>
           </div>
         </div>
