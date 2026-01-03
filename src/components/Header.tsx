@@ -8,18 +8,8 @@ const navItems = [
   {
     label: "Platform",
     items: [
-      { label: "Courses", href: "#courses" },
+      { label: "How It Works", href: "#value" },
       { label: "Training Catalog", href: "#courses" },
-      { label: "Enterprise Dashboard", href: "#enterprise" },
-      { label: "API Access", href: "#integrations" },
-    ],
-  },
-  {
-    label: "Why CYXOR",
-    items: [
-      { label: "Value Proposition", href: "#value" },
-      { label: "The Training Problem", href: "#problem" },
-      { label: "Blockchain Advantage", href: "#blockchain" },
       { label: "Case Study", href: "#case-study" },
     ],
   },
@@ -27,18 +17,9 @@ const navItems = [
     label: "Compliance",
     items: [
       { label: "ISO 27001", href: "#compliance" },
-      { label: "GDPR Training", href: "#compliance" },
-      { label: "NIS2 Directive", href: "#compliance" },
-      { label: "UK Cyber Essentials", href: "#compliance" },
-      { label: "SOC 2 Framework", href: "#compliance" },
-    ],
-  },
-  {
-    label: "Enterprise",
-    items: [
-      { label: "Dashboard", href: "#enterprise" },
-      { label: "Integrations", href: "#integrations" },
-      { label: "Why Traditional Fails", href: "#traditional" },
+      { label: "GDPR", href: "#compliance" },
+      { label: "NIS2", href: "#compliance" },
+      { label: "Cyber Essentials", href: "#compliance" },
     ],
   },
 ];

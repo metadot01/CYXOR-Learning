@@ -1,46 +1,55 @@
-import { RotateCcw, ShieldCheck, Target } from "lucide-react";
+import { RotateCcw, ShieldCheck, Target, Zap } from "lucide-react";
 
 const features = [
   {
     icon: RotateCcw,
     title: "Train Once, Verify Forever",
-    description: "Blockchain credentials follow employees across roles and organizations. When someone joins your team with verified GDPR training from their previous employer, auditors accept the cryptographic proof. No more paying to re-train people on skills they've already demonstrated—redirect that investment to advanced capabilities your workforce actually needs.",
+    description: "Credentials follow employees across organizations. Accept verified training from previous employers with confidence.",
+    highlight: "Eliminate duplicate costs",
   },
   {
     icon: ShieldCheck,
-    title: "Instant Compliance Verification",
-    description: "Auditors verify any employee's complete cybersecurity training history via blockchain in seconds, not days. ICO inspectors, cyber insurers, and enterprise clients receive tamper-proof evidence of workforce competency. No more digging through LMS exports, tracking down certificates, or reconstructing paper trails during high-pressure audits.",
+    title: "Instant Audit Verification",
+    description: "Auditors verify training in 60 seconds via blockchain. No more scrambling for certificates or LMS exports.",
+    highlight: "Pass audits with ease",
   },
   {
     icon: Target,
-    title: "Train for Skills Gaps, Not Compliance Theatre",
-    description: "Enterprise dashboards reveal exactly who needs ISO 27001 updates, who's current on NIS2, and who requires advanced threat intelligence training. Stop forcing entire departments through annual refreshers they don't need. Target development where it drives real security posture improvement while maintaining continuous compliance.",
+    title: "Smart Skills Gap Analysis",
+    description: "See exactly who needs training and who's current. Stop forcing refreshers on already-competent staff.",
+    highlight: "Target real gaps",
+  },
+  {
+    icon: Zap,
+    title: "Tamper-Proof Records",
+    description: "Cryptographic proof that can't be forged or altered. The gold standard in compliance evidence.",
+    highlight: "Bulletproof compliance",
   },
 ];
 
 const ValueProposition = () => {
   return (
-    <section id="value" className="py-24 relative scroll-mt-24">
+    <section id="value" className="py-20 relative scroll-mt-24">
       <div className="absolute inset-0 blockchain-grid" />
       
       <div className="section-container relative z-10">
-        <div className="text-center mb-16 animate-fade-up">
+        <div className="text-center mb-12 animate-fade-up">
           <span className="text-primary font-bold text-sm tracking-wider uppercase">
-            Stop Redundant Re-Certifications
+            The Solution
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground mt-4 mb-4">
-            End Training Waste. Start Verifying.
+            Blockchain Verification That Works
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
-            Transform how your organization approaches cybersecurity training investment
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Enterprise-grade training credentials trusted by auditors, insurers, and regulators.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <div
               key={feature.title}
-              className="group relative bg-card rounded-2xl p-8 border border-border hover:border-primary/30 card-hover animate-fade-up"
+              className="group relative bg-card rounded-2xl p-6 border border-border hover:border-primary/30 card-hover animate-fade-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Glow Effect */}
@@ -48,17 +57,20 @@ const ValueProposition = () => {
               
               <div className="relative">
                 {/* Icon */}
-                <div className="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                  <feature.icon className="w-7 h-7 text-primary" />
+                <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                  <feature.icon className="w-6 h-6 text-primary" />
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-foreground mb-3">
+                <h3 className="text-lg font-bold text-foreground mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed font-medium text-sm">
+                <p className="text-sm text-muted-foreground leading-relaxed mb-3">
                   {feature.description}
                 </p>
+                <span className="text-xs font-semibold text-primary uppercase tracking-wide">
+                  {feature.highlight}
+                </span>
               </div>
             </div>
           ))}
