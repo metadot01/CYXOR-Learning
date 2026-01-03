@@ -43,8 +43,7 @@ const FeaturedInstructor = () => {
                   />
                 </div>
                 <h3 className="text-xl lg:text-2xl font-bold text-foreground">Bharath Shivaram</h3>
-                <p className="text-emerald font-semibold text-sm mb-1">Founder & AI Platform Architect</p>
-                <p className="text-xs text-muted-foreground mb-3">Defantra UK Ltd.</p>
+                <p className="text-emerald font-semibold text-sm mb-3">Founder and Director of AI Platforms at Xantum Computing.</p>
                 
                 <div className="flex gap-2">
                   <Link to="/resources#instructors">
