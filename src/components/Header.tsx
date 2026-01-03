@@ -66,7 +66,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 shadow-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border shadow-sm">
       <div className="section-container">
         <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo */}
@@ -77,16 +77,10 @@ const Header = () => {
               className="h-9 sm:h-10 lg:h-11 w-auto"
             />
             <div className="flex items-center">
-              <span 
-                className="text-xl sm:text-2xl lg:text-[1.65rem] font-bold tracking-[-0.02em]" 
-                style={{ color: '#0B2A3F', fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-              >
+              <span className="text-xl sm:text-2xl lg:text-[1.65rem] font-bold tracking-[-0.02em] text-foreground">
                 CYXOR
               </span>
-              <span 
-                className="text-xl sm:text-2xl lg:text-[1.65rem] font-medium tracking-[-0.01em] ml-1.5" 
-                style={{ color: '#4EC3A5', fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-              >
+              <span className="text-xl sm:text-2xl lg:text-[1.65rem] font-medium tracking-[-0.01em] ml-1.5 text-primary">
                 Learning
               </span>
             </div>
@@ -104,9 +98,8 @@ const Header = () => {
                 <Link
                   to={item.href}
                   className={`flex items-center gap-1 px-4 py-2 text-sm font-semibold rounded-lg transition-colors ${
-                    isActiveRoute(item.href) ? 'text-[#4EC3A5]' : ''
+                    isActiveRoute(item.href) ? 'text-primary' : 'text-foreground hover:text-primary'
                   }`}
-                  style={{ color: isActiveRoute(item.href) ? '#4EC3A5' : '#0B2A3F' }}
                 >
                   {item.label}
                   <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === item.label ? 'rotate-180' : ''}`} />
@@ -115,15 +108,12 @@ const Header = () => {
                 {/* Dropdown Menu */}
                 {openDropdown === item.label && (
                   <div className="absolute top-full left-0 pt-2 z-50">
-                    <div className="bg-white rounded-xl shadow-xl border border-gray-100 py-2 min-w-[220px]">
+                    <div className="bg-background rounded-xl shadow-lg border border-border py-2 min-w-[220px]">
                       {item.items.map((subItem) => (
                         <Link
                           key={subItem.label}
                           to={subItem.href}
-                          className="block px-4 py-2.5 text-sm font-medium transition-colors hover:bg-gray-50"
-                          style={{ color: '#3A5A6B' }}
-                          onMouseEnter={(e) => e.currentTarget.style.color = '#4EC3A5'}
-                          onMouseLeave={(e) => e.currentTarget.style.color = '#3A5A6B'}
+                          className="block px-4 py-2.5 text-sm font-medium text-muted-foreground hover:text-primary hover:bg-muted transition-colors"
                         >
                           {subItem.label}
                         </Link>
@@ -162,30 +152,24 @@ const Header = () => {
                 className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
                 aria-label="Open menu"
               >
-                <Menu className="w-6 h-6" style={{ color: '#0B2A3F' }} />
+                <Menu className="w-6 h-6 text-foreground" />
               </button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[350px] bg-white p-0">
+            <SheetContent side="right" className="w-[300px] sm:w-[350px] bg-background p-0">
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <div className="flex flex-col h-full">
                 {/* Mobile Header */}
-                <div className="flex items-center gap-2.5 p-6 border-b border-gray-100">
+                <div className="flex items-center gap-2.5 p-6 border-b border-border">
                   <img 
                     src={cyxorIcon} 
                     alt="CYXOR" 
                     className="h-9 w-auto"
                   />
                   <div className="flex items-center">
-                    <span 
-                      className="text-xl font-bold tracking-[-0.02em]" 
-                      style={{ color: '#0B2A3F', fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-                    >
+                    <span className="text-xl font-bold tracking-[-0.02em] text-foreground">
                       CYXOR
                     </span>
-                    <span 
-                      className="text-xl font-medium tracking-[-0.01em] ml-1.5" 
-                      style={{ color: '#4EC3A5', fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-                    >
+                    <span className="text-xl font-medium tracking-[-0.01em] ml-1.5 text-primary">
                       Learning
                     </span>
                   </div>
@@ -194,32 +178,30 @@ const Header = () => {
                 {/* Mobile Navigation */}
                 <nav className="flex-1 overflow-y-auto py-4">
                   {navItems.map((item) => (
-                    <div key={item.label} className="border-b border-gray-50">
+                    <div key={item.label} className="border-b border-border/50">
                       <button
                         onClick={() => toggleMobileSection(item.label)}
                         className="w-full flex items-center justify-between px-6 py-4 text-left"
                       >
-                        <span className="font-semibold" style={{ color: '#0B2A3F' }}>
+                        <span className="font-semibold text-foreground">
                           {item.label}
                         </span>
                         <ChevronDown 
-                          className={`w-5 h-5 transition-transform duration-200 ${
+                          className={`w-5 h-5 text-primary transition-transform duration-200 ${
                             expandedMobileSection === item.label ? 'rotate-180' : ''
                           }`} 
-                          style={{ color: '#4EC3A5' }}
                         />
                       </button>
                       
                       {/* Expandable Sub-items */}
                       {expandedMobileSection === item.label && (
-                        <div className="bg-gray-50 py-2">
+                        <div className="bg-muted py-2">
                           {item.items.map((subItem) => (
                             <Link
                               key={subItem.label}
                               to={subItem.href}
                               onClick={() => setMobileOpen(false)}
-                              className="block px-8 py-3 text-sm font-medium transition-colors hover:bg-gray-100"
-                              style={{ color: '#3A5A6B' }}
+                              className="block px-8 py-3 text-sm font-medium text-muted-foreground hover:text-primary hover:bg-background transition-colors"
                             >
                               {subItem.label}
                             </Link>
@@ -231,7 +213,7 @@ const Header = () => {
                 </nav>
 
                 {/* Mobile CTA */}
-                <div className="p-6 border-t border-gray-100">
+                <div className="p-6 border-t border-border">
                   <Link to="/courses" onClick={() => setMobileOpen(false)}>
                     <Button variant="hero" size="lg" className="w-full">
                       Browse Courses

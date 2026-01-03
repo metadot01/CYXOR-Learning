@@ -33,10 +33,10 @@ const AnimatedBackground = () => {
       constructor() {
         this.x = Math.random() * canvas!.width;
         this.y = Math.random() * canvas!.height;
-        this.size = Math.random() * 2 + 1;
-        this.speedX = (Math.random() - 0.5) * 0.3;
-        this.speedY = (Math.random() - 0.5) * 0.3;
-        this.opacity = Math.random() * 0.3 + 0.1;
+        this.size = Math.random() * 1.5 + 0.5;
+        this.speedX = (Math.random() - 0.5) * 0.2;
+        this.speedY = (Math.random() - 0.5) * 0.2;
+        this.opacity = Math.random() * 0.15 + 0.05;
         this.connections = [];
       }
 
@@ -53,19 +53,20 @@ const AnimatedBackground = () => {
       draw() {
         ctx!.beginPath();
         ctx!.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx!.fillStyle = `hsla(160, 52%, 53%, ${this.opacity})`;
+        // Professional teal color for light theme
+        ctx!.fillStyle = `hsla(168, 45%, 40%, ${this.opacity})`;
         ctx!.fill();
       }
     }
 
-    // Create particles
-    const particleCount = Math.min(50, Math.floor((canvas.width * canvas.height) / 20000));
+    // Create particles - fewer for cleaner look
+    const particleCount = Math.min(35, Math.floor((canvas.width * canvas.height) / 30000));
     for (let i = 0; i < particleCount; i++) {
       particles.push(new Particle());
     }
 
     const connectParticles = () => {
-      const maxDistance = 150;
+      const maxDistance = 120;
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
@@ -73,10 +74,11 @@ const AnimatedBackground = () => {
           const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < maxDistance) {
-            const opacity = (1 - distance / maxDistance) * 0.15;
+            const opacity = (1 - distance / maxDistance) * 0.08;
             ctx!.beginPath();
-            ctx!.strokeStyle = `hsla(160, 52%, 53%, ${opacity})`;
-            ctx!.lineWidth = 1;
+            // Professional teal color for connections
+            ctx!.strokeStyle = `hsla(168, 45%, 40%, ${opacity})`;
+            ctx!.lineWidth = 0.8;
             ctx!.moveTo(particles[i].x, particles[i].y);
             ctx!.lineTo(particles[j].x, particles[j].y);
             ctx!.stroke();
@@ -110,7 +112,7 @@ const AnimatedBackground = () => {
     <canvas
       ref={canvasRef}
       className="absolute inset-0 w-full h-full pointer-events-none"
-      style={{ opacity: 0.6 }}
+      style={{ opacity: 0.5 }}
     />
   );
 };
