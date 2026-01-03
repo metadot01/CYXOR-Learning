@@ -16,11 +16,11 @@ const FeaturedInstructor = () => {
     <section className="py-20 lg:py-28 gradient-section">
       <div className="section-container">
         <AnimatedSection className="text-center mb-10">
-          <span className="inline-block text-cyan font-bold text-sm tracking-wider uppercase mb-4 px-4 py-2 bg-cyan/10 rounded-full border border-cyan/20">
-            Learn From The Best
+          <span className="inline-block text-white font-bold text-sm tracking-wider uppercase mb-4 px-4 py-2 bg-ocean rounded-full">
+            Our Experts
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-foreground leading-tight">
-            Featured
+            Meet Your
             <br />
             <span className="text-emerald">Instructor</span>
           </h2>

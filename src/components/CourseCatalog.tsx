@@ -59,7 +59,7 @@ const CourseCatalog = () => {
       
       <div className="section-container relative z-10">
         <AnimatedSection className="text-center mb-12 lg:mb-16">
-          <span className="inline-block text-cyan font-bold text-sm tracking-wider uppercase mb-4 px-4 py-2 bg-cyan/10 rounded-full border border-cyan/20">
+          <span className="inline-block text-white font-bold text-sm tracking-wider uppercase mb-4 px-4 py-2 bg-ocean rounded-full">
             Course Categories
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-foreground mt-4 mb-4 leading-tight">

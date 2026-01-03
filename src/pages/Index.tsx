@@ -4,7 +4,6 @@ import ValueProposition from "@/components/ValueProposition";
 import CourseCatalog from "@/components/CourseCatalog";
 import SocialProof from "@/components/SocialProof";
 import FeaturedInstructor from "@/components/FeaturedInstructor";
-import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -17,7 +16,6 @@ const Index = () => {
         <CourseCatalog />
         <SocialProof />
         <FeaturedInstructor />
-        <FinalCTA />
       </main>
       <Footer />
     </div>
