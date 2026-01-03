@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import cyxorIcon from "@/assets/cyxor-icon.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -83,7 +82,7 @@ const Footer = () => {
                 <ul className="space-y-2 text-sm text-white/70">
                   <li><Link to="/resources#about" className="hover:text-cyan transition-colors">Vision/Mission</Link></li>
                   <li><Link to="/resources#about" className="hover:text-cyan transition-colors">Why CYXOR LEARNING</Link></li>
-                  <li><Link to="/resources#instructors" className="hover:text-cyan transition-colors">Featured Instructors</Link></li>
+                  <li><Link to="/resources#instructors" className="hover:text-cyan transition-colors">Our Experts</Link></li>
                   <li><Link to="/resources#tech" className="hover:text-cyan transition-colors">Tech Stack</Link></li>
                 </ul>
               </div>
@@ -141,11 +140,6 @@ const Footer = () => {
                   </a>
                 </div>
               </div>
-              <div className="pt-4">
-                <p className="text-xs text-white/50">
-                  CYXOR LEARNING UK is a unit of Xantum Computing Private Limited
-                </p>
-              </div>
             </div>
           </div>
         </div>
@@ -153,28 +147,19 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            {/* Logo & Tagline */}
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-2.5">
-                <img 
-                  src={cyxorIcon} 
-                  alt="CYXOR" 
-                  className="h-8 w-auto"
-                />
-                <div className="flex items-center">
-                  <span 
-                    className="text-lg font-bold tracking-[-0.02em] text-white"
-                    style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-                  >
-                    CYXOR
-                  </span>
-                  <span 
-                    className="text-lg font-bold tracking-[-0.01em] ml-1.5 text-emerald"
-                    style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-                  >
-                    LEARNING
-                  </span>
-                </div>
+            {/* Brand Name & Tagline */}
+            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6">
+              <div className="flex items-center">
+                <span 
+                  className="text-lg font-bold tracking-[-0.02em] text-white"
+                  style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+                >
+                  CYXOR LEARNING UK
+                </span>
+                <span className="text-white/50 mx-2">•</span>
+                <span className="text-sm text-white/50">
+                  A unit of XCPL
+                </span>
               </div>
               <span className="text-sm hidden sm:inline">
                 <span className="text-cyan">Learn.</span>{" "}
@@ -185,7 +170,7 @@ const Footer = () => {
 
             {/* Copyright */}
             <div className="text-sm text-white/50">
-              © {currentYear} CYXOR LEARNING. All rights reserved.
+              © {currentYear} CYXOR LEARNING UK. All rights reserved.
             </div>
           </div>
         </div>
