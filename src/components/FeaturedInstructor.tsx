@@ -74,6 +74,10 @@ const FeaturedInstructor = () => {
                         <Award className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" />
                         MS Analytics, University of Connecticut
                       </li>
+                      <li className="flex items-start gap-2">
+                        <Award className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" />
+                        Bachelor of Computer Science and Engineering, BIT, India
+                      </li>
                     </ul>
                   </div>
                   <div>
