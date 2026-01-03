@@ -27,8 +27,9 @@ const FinalCTA = () => {
           </AnimatedSection>
 
           <AnimatedSection delay={50}>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-foreground mb-6 leading-tight">
-              Ready to Transform{" "}
+            <h2 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-foreground mb-6 leading-tight">
+              Ready to Transform
+              <br />
               <span className="text-emerald">Your Team?</span>
             </h2>
           </AnimatedSection>

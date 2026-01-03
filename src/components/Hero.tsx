@@ -47,21 +47,20 @@ const Hero = () => {
             </h1>
             
             <p className="text-xl sm:text-2xl lg:text-3xl text-white/70 max-w-3xl mx-auto leading-relaxed font-light">
-              Enterprise technology and compliance courses with{" "}
-              <span className="text-white font-medium">blockchain-verified credentials</span>
+              Enterprise technology and compliance courses
             </p>
           </div>
 
           {/* CTAs */}
-          <div className="flex flex-wrap items-center justify-center gap-5 mt-12 animate-fade-up" style={{ animationDelay: '0.2s' }}>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 mt-12 animate-fade-up" style={{ animationDelay: '0.2s' }}>
             <Link to="/courses">
-              <Button variant="hero" size="lg" className="text-lg px-10 h-16 shadow-[0_0_40px_rgba(0,200,150,0.3)] hover:shadow-[0_0_60px_rgba(0,200,150,0.5)] transition-all duration-300 group">
+              <Button variant="hero" size="lg" className="text-lg px-10 h-14 shadow-[0_0_40px_rgba(0,200,150,0.3)] hover:shadow-[0_0_60px_rgba(0,200,150,0.5)] transition-all duration-300 group">
                 Browse Courses
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
             <Link to="/solutions">
-              <Button variant="outline" size="lg" className="text-lg px-10 h-16 border-2 border-cyan/50 text-cyan hover:bg-cyan/10 hover:border-cyan bg-white/5 backdrop-blur-sm transition-all duration-300">
+              <Button variant="outline" size="lg" className="text-lg px-10 h-14 border-2 border-cyan/50 text-cyan hover:bg-cyan/10 hover:border-cyan bg-white/5 backdrop-blur-sm transition-all duration-300">
                 Enterprise Solutions
               </Button>
             </Link>
