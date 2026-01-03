@@ -53,7 +53,7 @@ const solutions = [
   {
     icon: Plug,
     title: "Learning Management Integration",
-    description: "Connect Cyxor with your existing learning infrastructure",
+    description: "Connect CYXOR LEARNING with your existing learning infrastructure",
     features: [
       "SCORM, xAPI, and LTI support",
       "HR system integration (Workday, SAP, BambooHR)",

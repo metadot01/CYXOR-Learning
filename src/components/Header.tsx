@@ -80,8 +80,8 @@ const Header = () => {
               <span className="text-xl sm:text-2xl lg:text-[1.65rem] font-bold tracking-[-0.02em] text-foreground">
                 CYXOR
               </span>
-              <span className="text-xl sm:text-2xl lg:text-[1.65rem] font-medium tracking-[-0.01em] ml-1.5 text-cyan">
-                Learning
+              <span className="text-xl sm:text-2xl lg:text-[1.65rem] font-bold tracking-[-0.01em] ml-1.5 text-emerald">
+                LEARNING
               </span>
             </div>
           </Link>
@@ -169,8 +169,8 @@ const Header = () => {
                     <span className="text-xl font-bold tracking-[-0.02em] text-foreground">
                       CYXOR
                     </span>
-                    <span className="text-xl font-medium tracking-[-0.01em] ml-1.5 text-cyan">
-                      Learning
+                    <span className="text-xl font-bold tracking-[-0.01em] ml-1.5 text-emerald">
+                      LEARNING
                     </span>
                   </div>
                 </div>
