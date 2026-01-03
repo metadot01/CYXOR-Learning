@@ -10,13 +10,15 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm",
-        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border-2 border-border bg-transparent text-foreground hover:bg-muted hover:border-primary/30",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-muted hover:text-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200",
-        nav: "text-muted-foreground hover:text-primary transition-colors",
+        destructive: "bg-orange text-white hover:bg-orange/90 shadow-sm",
+        outline: "border-2 border-slate bg-background hover:bg-muted hover:text-foreground text-foreground",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-sm",
+        ghost: "hover:bg-accent/10 hover:text-accent",
+        link: "text-cyan underline-offset-4 hover:underline",
+        hero: "bg-emerald text-white hover:bg-emerald/90 shadow-cta hover:shadow-cta-hover transform hover:-translate-y-0.5",
+        nav: "text-foreground hover:text-cyan hover:bg-cyan/5",
+        ocean: "bg-ocean text-white hover:bg-ocean/90 shadow-sm",
+        cyan: "bg-cyan text-navy hover:bg-cyan/90 shadow-card hover:shadow-card-hover",
       },
       size: {
         default: "h-11 px-6 py-2",

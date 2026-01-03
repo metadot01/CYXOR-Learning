@@ -80,7 +80,7 @@ const Header = () => {
               <span className="text-xl sm:text-2xl lg:text-[1.65rem] font-bold tracking-[-0.02em] text-foreground">
                 CYXOR
               </span>
-              <span className="text-xl sm:text-2xl lg:text-[1.65rem] font-medium tracking-[-0.01em] ml-1.5 text-primary">
+              <span className="text-xl sm:text-2xl lg:text-[1.65rem] font-medium tracking-[-0.01em] ml-1.5 text-cyan">
                 Learning
               </span>
             </div>
@@ -98,7 +98,7 @@ const Header = () => {
                 <Link
                   to={item.href}
                   className={`flex items-center gap-1 px-4 py-2 text-sm font-semibold rounded-lg transition-colors ${
-                    isActiveRoute(item.href) ? 'text-primary' : 'text-foreground hover:text-primary'
+                    isActiveRoute(item.href) ? 'text-cyan' : 'text-foreground hover:text-cyan'
                   }`}
                 >
                   {item.label}
@@ -113,7 +113,7 @@ const Header = () => {
                         <Link
                           key={subItem.label}
                           to={subItem.href}
-                          className="block px-4 py-2.5 text-sm font-medium text-muted-foreground hover:text-primary hover:bg-muted transition-colors"
+                          className="block px-4 py-2.5 text-sm font-medium text-muted-foreground hover:text-cyan hover:bg-cyan/5 transition-colors"
                         >
                           {subItem.label}
                         </Link>
@@ -149,7 +149,7 @@ const Header = () => {
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
             <SheetTrigger asChild>
               <button 
-                className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+                className="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors"
                 aria-label="Open menu"
               >
                 <Menu className="w-6 h-6 text-foreground" />
@@ -169,7 +169,7 @@ const Header = () => {
                     <span className="text-xl font-bold tracking-[-0.02em] text-foreground">
                       CYXOR
                     </span>
-                    <span className="text-xl font-medium tracking-[-0.01em] ml-1.5 text-primary">
+                    <span className="text-xl font-medium tracking-[-0.01em] ml-1.5 text-cyan">
                       Learning
                     </span>
                   </div>
@@ -187,7 +187,7 @@ const Header = () => {
                           {item.label}
                         </span>
                         <ChevronDown 
-                          className={`w-5 h-5 text-primary transition-transform duration-200 ${
+                          className={`w-5 h-5 text-cyan transition-transform duration-200 ${
                             expandedMobileSection === item.label ? 'rotate-180' : ''
                           }`} 
                         />
@@ -201,7 +201,7 @@ const Header = () => {
                               key={subItem.label}
                               to={subItem.href}
                               onClick={() => setMobileOpen(false)}
-                              className="block px-8 py-3 text-sm font-medium text-muted-foreground hover:text-primary hover:bg-background transition-colors"
+                              className="block px-8 py-3 text-sm font-medium text-muted-foreground hover:text-cyan hover:bg-background transition-colors"
                             >
                               {subItem.label}
                             </Link>

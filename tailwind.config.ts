@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -50,22 +50,16 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // CYXOR Brand Colors
-        mint: {
-          DEFAULT: "hsl(var(--mint-teal))",
-          soft: "hsl(var(--mint-teal-soft))",
-        },
-        navy: {
-          DEFAULT: "hsl(var(--navy-deep))",
-          charcoal: "hsl(var(--charcoal-navy))",
-        },
-        slate: {
-          blue: "hsl(var(--slate-blue))",
-        },
-        cool: {
-          grey: "hsl(var(--cool-grey))",
-          text: "hsl(var(--cool-grey-text))",
-        },
+        // Trust Tech Brand Colors
+        ocean: "hsl(var(--ocean-blue))",
+        cyan: "hsl(var(--electric-cyan))",
+        emerald: "hsl(var(--emerald-green))",
+        navy: "hsl(var(--space-navy))",
+        slate: "hsl(var(--slate-gray))",
+        soft: "hsl(var(--soft-white))",
+        gold: "hsl(var(--amber-gold))",
+        orange: "hsl(var(--sunset-orange))",
+        lavender: "hsl(var(--lavender-purple))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -87,10 +81,11 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       boxShadow: {
-        'card': '0 4px 6px -1px rgba(11, 42, 63, 0.05), 0 2px 4px -1px rgba(11, 42, 63, 0.03)',
-        'card-hover': '0 20px 25px -5px rgba(11, 42, 63, 0.08), 0 10px 10px -5px rgba(11, 42, 63, 0.04)',
-        'cta': '0 4px 14px 0 rgba(78, 195, 165, 0.35)',
-        'cta-hover': '0 6px 20px 0 rgba(78, 195, 165, 0.5)',
+        'card': '0 4px 20px hsla(189, 100%, 50%, 0.1)',
+        'card-hover': '0 8px 30px hsla(189, 100%, 50%, 0.2)',
+        'verified': '0 0 20px hsla(165, 100%, 39%, 0.3)',
+        'cta': '0 4px 14px hsla(165, 100%, 39%, 0.35)',
+        'cta-hover': '0 6px 20px hsla(165, 100%, 39%, 0.5)',
       },
     },
   },
