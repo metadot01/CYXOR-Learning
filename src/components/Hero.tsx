@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Building2, Heart, Landmark, Server, Cpu, Sparkles } from "lucide-react";
+import { ArrowRight, Building2, Heart, Landmark, Server, Cpu } from "lucide-react";
 import { Link } from "react-router-dom";
 import AnimatedBackground from "./AnimatedBackground";
 
@@ -27,17 +27,6 @@ const Hero = () => {
 
       <div className="section-container relative z-10">
         <div className="max-w-5xl mx-auto text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-emerald/20 to-cyan/10 border border-emerald/40 backdrop-blur-sm mb-10 animate-fade-up group hover:border-emerald/60 transition-all duration-300 cursor-default">
-            <div className="relative">
-              <Shield className="w-5 h-5 text-emerald" />
-              <Sparkles className="w-3 h-3 text-gold absolute -top-1 -right-1 animate-pulse" />
-            </div>
-            <span className="text-emerald font-bold text-sm tracking-wide">Blockchain-Verified Credentials</span>
-            <div className="w-2 h-2 rounded-full bg-emerald animate-pulse" />
-          </div>
-
-          {/* Main headline */}
           <div className="space-y-8 animate-fade-up" style={{ animationDelay: '0.1s' }}>
             <h1 className="text-5xl sm:text-6xl lg:text-8xl font-black text-white leading-[1] tracking-tight">
               <span className="relative inline-block text-cyan drop-shadow-[0_0_30px_rgba(0,217,255,0.5)]">
