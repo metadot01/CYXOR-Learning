@@ -13,7 +13,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-24 pb-20 overflow-hidden gradient-hero">
+    <section className="relative min-h-[85vh] flex items-center pt-24 pb-16 overflow-hidden gradient-hero">
       {/* Animated Background */}
       <AnimatedBackground />
       
@@ -26,7 +26,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(0,217,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,217,255,0.03)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
 
       <div className="section-container relative z-10">
-        <div className="max-w-5xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center">
           {/* Main Heading */}
           <div className="space-y-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-[1.1] tracking-tight">
@@ -68,7 +68,7 @@ const Hero = () => {
           </div>
 
           {/* Industries */}
-          <div className="pt-16 animate-fade-up" style={{ animationDelay: '0.3s' }}>
+          <div className="pt-14 animate-fade-up" style={{ animationDelay: '0.3s' }}>
             <div className="flex items-center justify-center gap-3 mb-6">
               <div className="h-px w-10 bg-gradient-to-r from-transparent to-white/30" />
               <p className="text-xs text-white/50 uppercase tracking-[0.2em] font-medium">
@@ -88,23 +88,6 @@ const Hero = () => {
                     <item.icon className="w-4 h-4 text-white" />
                   </div>
                   <span className="text-sm font-medium text-white/80 group-hover:text-white transition-colors">{item.name}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Stats */}
-          <div className="mt-14 pt-10 border-t border-white/10 animate-fade-up" style={{ animationDelay: '0.5s' }}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12">
-              {[
-                { value: "50+", label: "Enterprise Courses" },
-                { value: "10K+", label: "Professionals Trained" },
-                { value: "98%", label: "Completion Rate" },
-                { value: "100%", label: "Verifiable" },
-              ].map((stat) => (
-                <div key={stat.label} className="text-center">
-                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1">{stat.value}</div>
-                  <div className="text-xs sm:text-sm text-white/50">{stat.label}</div>
                 </div>
               ))}
             </div>
