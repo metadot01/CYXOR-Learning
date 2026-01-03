@@ -43,7 +43,7 @@ const FeaturedInstructor = () => {
                   />
                 </div>
                 <h3 className="text-xl lg:text-2xl font-bold text-foreground">Bharath Shivaram</h3>
-                <p className="text-cyan font-semibold text-sm mb-1">Founder & AI Platform Architect</p>
+                <p className="text-emerald font-semibold text-sm mb-1">Founder & AI Platform Architect</p>
                 <p className="text-xs text-muted-foreground mb-3">Defantra UK Ltd.</p>
                 
                 <div className="flex gap-2">
@@ -65,7 +65,7 @@ const FeaturedInstructor = () => {
               <div className="lg:w-2/3 lg:pl-6 lg:border-l border-border">
                 <div className="grid sm:grid-cols-2 gap-4 mb-4">
                   <div>
-                    <h4 className="text-xs font-bold text-cyan uppercase tracking-wider mb-2">Education</h4>
+                    <h4 className="text-xs font-bold text-emerald uppercase tracking-wider mb-2">Education</h4>
                     <ul className="space-y-1 text-sm text-muted-foreground">
                       <li className="flex items-start gap-2">
                         <Award className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" />
@@ -78,7 +78,7 @@ const FeaturedInstructor = () => {
                     </ul>
                   </div>
                   <div>
-                    <h4 className="text-xs font-bold text-cyan uppercase tracking-wider mb-2">Experience</h4>
+                    <h4 className="text-xs font-bold text-emerald uppercase tracking-wider mb-2">Experience</h4>
                     <p className="text-sm text-muted-foreground">
                       Senior engineering roles at Dell Technologies, EMC. Founder of Xantum Computing.
                     </p>
