@@ -44,7 +44,7 @@ const FeaturedInstructor = () => {
                 </div>
                 <h3 className="text-xl lg:text-2xl font-bold text-foreground">Bharath Shivaram</h3>
                 <p className="text-emerald font-semibold text-sm mb-1">Founder and AI Platform Architect</p>
-                <p className="text-xs text-muted-foreground mb-3">Defantra UK Ltd.</p>
+                <a href="https://www.defantra.com/#/research-partnerships" target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground mb-3 hover:text-emerald transition-colors">Defantra UK Ltd.</a>
                 
                 <div className="flex gap-2">
                   <Link to="/resources#instructors">
