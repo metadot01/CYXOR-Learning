@@ -86,7 +86,7 @@ const FeaturedInstructor = () => {
                 </div>
 
                 <div>
-                  <h4 className="text-xs font-bold text-cyan uppercase tracking-wider mb-2">Expertise</h4>
+                  <h4 className="text-xs font-bold text-emerald uppercase tracking-wider mb-2">Expertise</h4>
                   <div className="flex flex-wrap gap-1.5">
                     {expertise.map((skill) => (
                       <span 
