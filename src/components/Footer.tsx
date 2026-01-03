@@ -149,8 +149,15 @@ const Footer = () => {
                   className="text-lg font-bold tracking-[-0.02em] text-white"
                   style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
                 >
-                  CYXOR LEARNING UK
+                  CYXOR
                 </span>
+                <span 
+                  className="text-lg font-bold tracking-[-0.01em] ml-1.5 text-emerald"
+                  style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+                >
+                  LEARNING
+                </span>
+                <span className="text-lg font-bold text-white ml-1">UK</span>
                 <span className="text-white/50 mx-2">•</span>
                 <span className="text-sm text-white/50">
                   A unit of XCPL
