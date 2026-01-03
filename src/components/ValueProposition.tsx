@@ -1,4 +1,4 @@
-import { Clock, Beaker, Gamepad2, Link2, Users, Award } from "lucide-react";
+import { Users, Clock, FlaskConical, ClipboardCheck } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
 
@@ -6,7 +6,6 @@ interface Benefit {
   icon: LucideIcon;
   title: string;
   description: string;
-  highlight: string;
   color: string;
 }
 
@@ -14,44 +13,26 @@ const benefits: Benefit[] = [
   {
     icon: Users,
     title: "Expert-Led",
-    description: "Practitioners building production systems",
-    highlight: "Industry Leaders",
+    description: "Training designed and delivered by industry practitioners with real-world experience, ensuring credible, practical judgement—not theory alone.",
     color: "text-ocean",
   },
   {
     icon: Clock,
     title: "Microlearning",
-    description: "5-15 min focused modules, maximum retention",
-    highlight: "Learn Faster",
+    description: "Short, focused modules that fit into working schedules, improving retention, completion rates, and speed to compliance.",
     color: "text-cyan",
   },
   {
-    icon: Beaker,
-    title: "Hands-On",
-    description: "Interactive labs, live environments",
-    highlight: "Real Practice",
-    color: "text-lavender",
-  },
-  {
-    icon: Gamepad2,
-    title: "Gamified",
-    description: "Leaderboards, challenges, competitions",
-    highlight: "Stay Engaged",
-    color: "text-gold",
-  },
-  {
-    icon: Link2,
-    title: "Blockchain-Verified",
-    description: "Immutable, independently verifiable credentials",
-    highlight: "Trusted Proof",
+    icon: FlaskConical,
+    title: "Hands-On Practice",
+    description: "Interactive, real-world exercises that build demonstrable, applied competence regulators and employers can trust.",
     color: "text-emerald",
   },
   {
-    icon: Award,
+    icon: ClipboardCheck,
     title: "Audit-Ready",
-    description: "Meets regulatory requirements",
-    highlight: "Compliance Ready",
-    color: "text-ocean",
+    description: "Built-in evidence, tracking, and reporting aligned to UK regulatory and audit requirements—clear proof when it matters most.",
+    color: "text-gold",
   },
 ];
 
@@ -75,7 +56,7 @@ const ValueProposition = () => {
           </p>
         </AnimatedSection>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 gap-8">
           {benefits.map((benefit, index) => (
             <AnimatedSection
               key={benefit.title}
@@ -86,20 +67,21 @@ const ValueProposition = () => {
                 {/* Gradient background on hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan/5 via-transparent to-emerald/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 
-                <div className="relative">
+                <div className="relative flex gap-6">
                   {/* Icon */}
-                  <div className="icon-container w-14 h-14 mb-5 group-hover:scale-105">
+                  <div className="icon-container w-14 h-14 flex-shrink-0 group-hover:scale-105">
                     <benefit.icon className={`w-7 h-7 ${benefit.color}`} />
                   </div>
 
                   {/* Content */}
-                  <span className={`text-xs font-bold ${benefit.color} uppercase tracking-wider`}>{benefit.highlight}</span>
-                  <h3 className="text-xl font-bold text-foreground mt-2 mb-2">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {benefit.description}
-                  </p>
+                  <div>
+                    <h3 className="text-xl font-bold text-foreground mb-3">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {benefit.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             </AnimatedSection>
