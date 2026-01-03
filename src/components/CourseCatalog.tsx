@@ -1,162 +1,86 @@
-import { useState } from "react";
-import { Shield, FileCheck, Building, Cpu, ChevronDown } from "lucide-react";
+import { Shield, FileCheck, Building, Cpu } from "lucide-react";
 
 const categories = [
   {
     icon: Shield,
     title: "Compliance Foundations",
-    courses: [
-      {
-        name: "ISO 27001 Implementation Training",
-        description: "Comprehensive information security management system training covering all Annex A controls. Prepares teams for certification audits with blockchain-verified completion recognized by accreditation bodies.",
-      },
-      {
-        name: "GDPR for IT Professionals",
-        description: "Role-specific data protection training meeting ICO enforcement guidelines. From awareness-level to Data Protection Officer expertise with immutable compliance records.",
-      },
-      {
-        name: "NIS2 Directive Essentials",
-        description: "Essential infrastructure security training for organizations in scope. Covers director-level accountability requirements with cryptographic proof of completion.",
-      },
-      {
-        name: "UK Cyber Essentials Preparation",
-        description: "NCSC-aligned training preparing technical teams for Cyber Essentials and Cyber Essentials Plus assessment. Blockchain credentials accepted in government procurement processes.",
-      },
-    ],
+    courses: ["ISO 27001", "GDPR", "NIS2", "Cyber Essentials"],
+    color: "primary",
   },
   {
     icon: FileCheck,
     title: "Security Operations",
-    courses: [
-      {
-        name: "Incident Response & Recovery",
-        description: "Hands-on training in security incident detection, containment, eradication, and recovery. Develops muscle memory for high-pressure scenarios with verifiable competency demonstration.",
-      },
-      {
-        name: "Threat Intelligence Analysis",
-        description: "Practical threat hunting, indicator analysis, and intelligence-driven defense. Blockchain-verified skills that prove capability to security operations leadership.",
-      },
-      {
-        name: "Security Operations Center (SOC) Skills",
-        description: "Comprehensive SOC analyst training covering SIEM platforms, log analysis, alert triage, and investigation workflows. Verifiable evidence of technical proficiency.",
-      },
-      {
-        name: "Vulnerability Management",
-        description: "Asset discovery, risk assessment, patch management, and remediation prioritization. Demonstrates systematic approach to vulnerability lifecycle management.",
-      },
-    ],
+    courses: ["Incident Response", "Threat Intelligence", "SOC Skills", "Vulnerability Management"],
+    color: "primary",
   },
   {
     icon: Building,
     title: "Risk & Governance",
-    courses: [
-      {
-        name: "Third-Party Risk Assessment",
-        description: "Vendor security evaluation, contract review, and supply chain risk management. Critical for NIS2 compliance and cyber insurance requirements.",
-      },
-      {
-        name: "Security Policy Development",
-        description: "Creating enforceable, auditable security policies aligned to ISO 27001, NIST, and industry frameworks. Blockchain-verified expertise in governance documentation.",
-      },
-      {
-        name: "Business Continuity Planning",
-        description: "Disaster recovery, continuity of operations, and resilience planning for critical infrastructure. Verifiable training that satisfies board-level due diligence.",
-      },
-      {
-        name: "Cyber Risk Quantification",
-        description: "Translating technical risks into business impact metrics. Communicate security investments in language that CFOs and boards understand.",
-      },
-    ],
+    courses: ["Third-Party Risk", "Policy Development", "Business Continuity", "Risk Quantification"],
+    color: "primary",
   },
   {
     icon: Cpu,
-    title: "Advanced Technical Training",
-    courses: [
-      {
-        name: "Cloud Security Architecture",
-        description: "Multi-cloud security controls for AWS, Azure, and GCP. Zero-trust implementation, identity federation, and cloud-native security services.",
-      },
-      {
-        name: "Zero Trust Implementation",
-        description: "Moving beyond perimeter security to identity-centric access control. Practical implementation with blockchain-verified architectural expertise.",
-      },
-      {
-        name: "AI Security & Governance",
-        description: "Securing AI/ML systems, addressing algorithmic risks, and implementing responsible AI frameworks. Critical emerging competency with verifiable credentials.",
-      },
-      {
-        name: "Blockchain Security Fundamentals",
-        description: "Understanding distributed ledger security, smart contract vulnerabilities, and cryptographic principles. Technical foundation for organizations adopting blockchain.",
-      },
-    ],
+    title: "Advanced Technical",
+    courses: ["Cloud Security", "Zero Trust", "AI Security", "Blockchain Security"],
+    color: "primary",
   },
 ];
 
 const CourseCatalog = () => {
-  const [expandedCategory, setExpandedCategory] = useState<string | null>(categories[0].title);
-
   return (
-    <section id="courses" className="py-24 bg-secondary/30 relative overflow-hidden scroll-mt-24">
+    <section id="courses" className="py-20 bg-secondary/30 relative overflow-hidden scroll-mt-24">
       <div className="absolute inset-0 circuit-pattern" />
       
       <div className="section-container relative z-10">
-        <div className="text-center mb-16 animate-fade-up">
+        <div className="text-center mb-12 animate-fade-up">
           <span className="text-primary font-bold text-sm tracking-wider uppercase">
             Training Catalog
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground mt-4 mb-4">
-            Enterprise Cybersecurity & Compliance Training Catalog
+            Enterprise Cybersecurity Training
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto font-medium">
-            Blockchain-verified courses designed for regulated UK industries. Every completion generates immutable credentials that auditors, insurers, and regulatory bodies trust.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Every course generates blockchain-verified credentials that auditors trust.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto space-y-4">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {categories.map((category, index) => (
             <div
               key={category.title}
-              className="rounded-2xl bg-card border border-border overflow-hidden animate-fade-up"
+              className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 animate-fade-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Category Header */}
-              <button
-                onClick={() => setExpandedCategory(expandedCategory === category.title ? null : category.title)}
-                className="w-full flex items-center justify-between p-6 hover:bg-secondary/50 transition-colors"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
-                    <category.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground text-left">
-                    {category.title}
-                  </h3>
-                </div>
-                <ChevronDown 
-                  className={`w-6 h-6 text-muted-foreground transition-transform duration-300 ${
-                    expandedCategory === category.title ? 'rotate-180' : ''
-                  }`} 
-                />
-              </button>
+              <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                <category.icon className="w-6 h-6 text-primary" />
+              </div>
               
-              {/* Courses */}
-              {expandedCategory === category.title && (
-                <div className="px-6 pb-6 space-y-4">
-                  {category.courses.map((course) => (
-                    <div
-                      key={course.name}
-                      className="p-5 rounded-xl bg-secondary/50 border border-border hover:border-primary/30 transition-colors"
-                    >
-                      <h4 className="font-bold text-foreground mb-2">{course.name}</h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed font-medium">
-                        {course.description}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              )}
+              <h3 className="text-lg font-bold text-foreground mb-4">
+                {category.title}
+              </h3>
+              
+              <ul className="space-y-2">
+                {category.courses.map((course) => (
+                  <li key={course} className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <svg className="w-4 h-4 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    {course}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
+        </div>
+
+        <div className="text-center mt-10 animate-fade-up" style={{ animationDelay: '0.4s' }}>
+          <a href="#cta" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline">
+            View Full Training Catalog
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
         </div>
       </div>
     </section>
