@@ -22,6 +22,16 @@ const navItems = [
       { label: "Cyber Essentials", href: "#compliance" },
     ],
   },
+  {
+    label: "Resources",
+    items: [
+      { label: "Blog", href: "#" },
+      { label: "Whitepapers", href: "#" },
+      { label: "Webinars", href: "#" },
+      { label: "Documentation", href: "#" },
+      { label: "Help Center", href: "#" },
+    ],
+  },
 ];
 
 const Header = () => {
