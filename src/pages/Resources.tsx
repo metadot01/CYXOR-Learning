@@ -406,7 +406,7 @@ const Resources = () => {
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-foreground mb-6">Company Information</h2>
               <div className="p-6 rounded-2xl bg-card border border-border">
-                <p className="font-bold text-foreground mb-2">Cyxor Learning UK</p>
+                <p className="font-bold text-foreground mb-2">CYXOR LEARNING UK</p>
                 <p className="text-sm text-muted-foreground mb-4">A unit of Xantum Computing Private Limited</p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-muted-foreground">
                   <div className="flex items-center gap-2">
