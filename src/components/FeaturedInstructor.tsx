@@ -1,6 +1,7 @@
 import { GraduationCap, Linkedin, BookOpen, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { AnimatedSection } from "@/hooks/useScrollAnimation";
 
 const expertise = [
   { name: "AI Agent Architecture", color: "tag-ai" },
@@ -14,16 +15,16 @@ const FeaturedInstructor = () => {
   return (
     <section className="py-24 gradient-section">
       <div className="section-container">
-        <div className="text-center mb-12 animate-fade-up">
+        <AnimatedSection className="text-center mb-12">
           <span className="inline-block text-lavender font-bold text-sm tracking-wider uppercase mb-4 px-4 py-1.5 bg-lavender/10 rounded-full border border-lavender/20">
             Learn From The Best
           </span>
           <h2 className="text-4xl sm:text-5xl font-extrabold text-foreground">
             Featured <span className="text-cyan">Instructor</span>
           </h2>
-        </div>
+        </AnimatedSection>
 
-        <div className="max-w-4xl mx-auto animate-fade-up" style={{ animationDelay: '0.1s' }}>
+        <AnimatedSection delay={200} animation="scale" className="max-w-4xl mx-auto">
           <div className="relative p-10 rounded-3xl bg-card border border-border shadow-xl overflow-hidden">
             {/* Decorative gradient */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-cyan/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
@@ -92,7 +93,7 @@ const FeaturedInstructor = () => {
               </div>
             </div>
           </div>
-        </div>
+        </AnimatedSection>
       </div>
     </section>
   );

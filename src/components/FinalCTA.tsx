@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { AnimatedSection } from "@/hooks/useScrollAnimation";
 
 const benefits = [
   "Blockchain-verified certificates",
@@ -19,44 +20,52 @@ const FinalCTA = () => {
 
       <div className="section-container relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="animate-fade-up">
+          <AnimatedSection>
             <span className="inline-block text-gold font-bold text-sm tracking-wider uppercase mb-4 px-4 py-1.5 bg-gold/10 rounded-full border border-gold/20">
               Get Started Today
             </span>
-          </div>
+          </AnimatedSection>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-foreground mb-6 animate-fade-up leading-tight" style={{ animationDelay: '0.05s' }}>
-            Ready to Transform{" "}
-            <span className="text-emerald">Your Team?</span>
-          </h2>
+          <AnimatedSection delay={50}>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-foreground mb-6 leading-tight">
+              Ready to Transform{" "}
+              <span className="text-emerald">Your Team?</span>
+            </h2>
+          </AnimatedSection>
 
-          <p className="text-xl text-muted-foreground mb-10 animate-fade-up leading-relaxed" style={{ animationDelay: '0.1s' }}>
-            Join leading enterprises transforming their workforce with our blockchain-verified training programs.
-          </p>
+          <AnimatedSection delay={100}>
+            <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
+              Join leading enterprises transforming their workforce with our blockchain-verified training programs.
+            </p>
+          </AnimatedSection>
 
           {/* Benefits */}
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 mb-10 animate-fade-up" style={{ animationDelay: '0.15s' }}>
-            {benefits.map((benefit) => (
-              <div key={benefit} className="flex items-center gap-2 text-muted-foreground">
-                <CheckCircle2 className="w-5 h-5 text-emerald" />
-                <span className="text-sm font-medium">{benefit}</span>
-              </div>
-            ))}
-          </div>
+          <AnimatedSection delay={150}>
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 mb-10">
+              {benefits.map((benefit) => (
+                <div key={benefit} className="flex items-center gap-2 text-muted-foreground">
+                  <CheckCircle2 className="w-5 h-5 text-emerald" />
+                  <span className="text-sm font-medium">{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </AnimatedSection>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 animate-fade-up" style={{ animationDelay: '0.2s' }}>
-            <Link to="/courses">
-              <Button variant="hero" size="lg" className="text-base px-10 h-14 shadow-lg hover:shadow-xl">
-                Browse All Courses
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-            </Link>
-            <Link to="/resources#contact">
-              <Button variant="outline" size="lg" className="text-base px-10 h-14">
-                Contact Sales
-              </Button>
-            </Link>
-          </div>
+          <AnimatedSection delay={200}>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <Link to="/courses">
+                <Button variant="hero" size="lg" className="text-base px-10 h-14 shadow-lg hover:shadow-xl">
+                  Browse All Courses
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
+              <Link to="/resources#contact">
+                <Button variant="outline" size="lg" className="text-base px-10 h-14">
+                  Contact Sales
+                </Button>
+              </Link>
+            </div>
+          </AnimatedSection>
         </div>
       </div>
     </section>

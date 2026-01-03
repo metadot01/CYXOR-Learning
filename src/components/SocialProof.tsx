@@ -1,4 +1,5 @@
 import { Quote, Star } from "lucide-react";
+import { AnimatedSection } from "@/hooks/useScrollAnimation";
 
 const testimonials = [
   {
@@ -29,10 +30,11 @@ const SocialProof = () => {
         {/* Stats */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => (
-            <div 
-              key={stat.label} 
-              className="text-center animate-fade-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
+            <AnimatedSection
+              key={stat.label}
+              delay={index * 100}
+              animation="scale"
+              className="text-center"
             >
               <div className={`text-4xl sm:text-5xl font-extrabold ${stat.color} mb-2`}>
                 {stat.value}
@@ -40,54 +42,56 @@ const SocialProof = () => {
               <div className="text-sm text-muted-foreground font-medium uppercase tracking-wider">
                 {stat.label}
               </div>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
 
         {/* Testimonials */}
-        <div className="text-center mb-10 animate-fade-up">
+        <AnimatedSection className="text-center mb-10">
           <span className="inline-block text-cyan font-bold text-sm tracking-wider uppercase mb-4 px-4 py-1.5 bg-cyan/10 rounded-full border border-cyan/20">
             What Learners Say
           </span>
-        </div>
+        </AnimatedSection>
 
         <div className="grid md:grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div
+            <AnimatedSection
               key={testimonial.author}
-              className="relative p-8 rounded-2xl bg-gradient-to-br from-secondary to-background border border-border animate-fade-up group hover:shadow-card-hover hover:border-cyan/20 transition-all"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              delay={index * 150}
+              animation={index === 0 ? "slide-left" : "slide-right"}
             >
-              {/* Quote icon */}
-              <div className="absolute -top-4 left-8">
-                <div className="w-8 h-8 rounded-full bg-ocean flex items-center justify-center shadow-lg">
-                  <Quote className="w-4 h-4 text-white" />
+              <div className="relative p-8 rounded-2xl bg-gradient-to-br from-secondary to-background border border-border group hover:shadow-card-hover hover:border-cyan/20 transition-all h-full">
+                {/* Quote icon */}
+                <div className="absolute -top-4 left-8">
+                  <div className="w-8 h-8 rounded-full bg-ocean flex items-center justify-center shadow-lg">
+                    <Quote className="w-4 h-4 text-white" />
+                  </div>
+                </div>
+
+                {/* Rating */}
+                <div className="flex gap-1 mb-4 pt-2">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-gold text-gold" />
+                  ))}
+                </div>
+
+                <p className="text-foreground font-medium mb-6 leading-relaxed text-lg">
+                  "{testimonial.quote}"
+                </p>
+
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-cyan/10 flex items-center justify-center border border-cyan/20">
+                    <span className="text-cyan font-bold text-lg">
+                      {testimonial.author.charAt(0)}
+                    </span>
+                  </div>
+                  <div>
+                    <p className="font-bold text-foreground">{testimonial.author}</p>
+                    <p className="text-sm text-muted-foreground">{testimonial.company}</p>
+                  </div>
                 </div>
               </div>
-
-              {/* Rating */}
-              <div className="flex gap-1 mb-4 pt-2">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-gold text-gold" />
-                ))}
-              </div>
-
-              <p className="text-foreground font-medium mb-6 leading-relaxed text-lg">
-                "{testimonial.quote}"
-              </p>
-
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-cyan/10 flex items-center justify-center border border-cyan/20">
-                  <span className="text-cyan font-bold text-lg">
-                    {testimonial.author.charAt(0)}
-                  </span>
-                </div>
-                <div>
-                  <p className="font-bold text-foreground">{testimonial.author}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.company}</p>
-                </div>
-              </div>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
       </div>
