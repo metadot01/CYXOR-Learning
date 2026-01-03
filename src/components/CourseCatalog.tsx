@@ -62,8 +62,9 @@ const CourseCatalog = () => {
           <span className="inline-block text-cyan font-bold text-base tracking-wider uppercase mb-4 px-5 py-2 bg-cyan/10 rounded-full border border-cyan/20">
             Course Categories
           </span>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-foreground mt-4 mb-5">
-            Enterprise Technology &{" "}
+          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-foreground mt-4 mb-5 leading-tight">
+            Enterprise Technology &
+            <br />
             <span className="text-emerald">Compliance</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
