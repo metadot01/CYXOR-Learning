@@ -71,36 +71,29 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Column 3: Company */}
+          {/* Column 3: About */}
           <div>
             <h4 className="font-bold text-white mb-5 text-sm uppercase tracking-wider">
-              Company
+              About
             </h4>
             <div className="space-y-4">
               <div>
-                <p className="text-xs text-cyan font-semibold mb-2">About</p>
+                <p className="text-xs text-cyan font-semibold mb-2">Learn More</p>
                 <ul className="space-y-2 text-sm text-white/70">
-                  <li><Link to="/resources#about" className="hover:text-cyan transition-colors">Vision/Mission</Link></li>
-                  <li><Link to="/resources#about" className="hover:text-cyan transition-colors">Why CYXOR LEARNING</Link></li>
-                  <li><Link to="/resources#instructors" className="hover:text-cyan transition-colors">Our Experts</Link></li>
-                  <li><Link to="/resources#tech" className="hover:text-cyan transition-colors">Tech Stack</Link></li>
+                  <li><Link to="/resources#instructors" className="hover:text-cyan transition-colors">Our Instructors</Link></li>
+                  <li><Link to="/resources#tech" className="hover:text-cyan transition-colors">Technology Stack</Link></li>
+                  <li><Link to="/resources#docs" className="hover:text-cyan transition-colors">Documentation</Link></li>
+                  <li><Link to="/resources#contact" className="hover:text-cyan transition-colors">Contact</Link></li>
                 </ul>
               </div>
               <div>
                 <p className="text-xs text-cyan font-semibold mb-2">Resources</p>
                 <ul className="space-y-2 text-sm text-white/70">
                   <li><Link to="/courses" className="hover:text-cyan transition-colors">Catalog</Link></li>
-                  <li><Link to="/resources#docs" className="hover:text-cyan transition-colors">Verification Guide</Link></li>
-                  <li><Link to="/resources#docs" className="hover:text-cyan transition-colors">Documentation</Link></li>
                   <li><a href="#" className="hover:text-cyan transition-colors">Case Studies</a></li>
                   <li><a href="#" className="hover:text-cyan transition-colors">Blog</a></li>
                   <li><a href="#" className="hover:text-cyan transition-colors">FAQs</a></li>
                 </ul>
-              </div>
-              <div>
-                <p className="text-xs text-cyan font-semibold mb-2">Contact</p>
-                <p className="text-sm text-white/70">contact@cyxorlearning.co.uk</p>
-                <p className="text-xs text-white/50 mt-1">University of Stirling Innovation Park</p>
               </div>
             </div>
           </div>
