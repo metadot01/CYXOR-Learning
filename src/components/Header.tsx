@@ -126,12 +126,7 @@ const Header = () => {
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center gap-3">
-            <Link to="/courses">
-              <Button variant="outline" size="default">
-                Browse Courses
-              </Button>
-            </Link>
+          <div className="hidden lg:flex">
             <ContactDialog />
           </div>
 
@@ -203,12 +198,7 @@ const Header = () => {
                 </nav>
 
                 {/* Mobile CTA */}
-                <div className="p-6 border-t border-border space-y-3">
-                  <Link to="/courses" onClick={() => setMobileOpen(false)}>
-                    <Button variant="outline" size="lg" className="w-full">
-                      Browse Courses
-                    </Button>
-                  </Link>
+                <div className="p-6 border-t border-border">
                   <ContactDialog 
                     trigger={
                       <Button variant="hero" size="lg" className="w-full">
