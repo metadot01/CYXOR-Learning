@@ -74,14 +74,19 @@ const Header = () => {
             <img 
               src={cyxorIcon} 
               alt="CYXOR" 
-              className="h-9 sm:h-10 lg:h-11 w-auto"
+              className="h-9 sm:h-10 lg:h-12 w-auto"
             />
-            <div className="flex items-center">
-              <span className="text-xl sm:text-2xl lg:text-[1.65rem] font-bold tracking-[-0.02em] text-foreground">
-                CYXOR
-              </span>
-              <span className="text-xl sm:text-2xl lg:text-[1.65rem] font-bold tracking-[-0.01em] ml-1.5 text-emerald">
-                LEARNING
+            <div className="flex flex-col justify-center">
+              <div className="flex items-center">
+                <span className="text-xl sm:text-2xl lg:text-[1.65rem] font-bold tracking-[-0.02em] text-foreground leading-none">
+                  CYXOR
+                </span>
+                <span className="text-xl sm:text-2xl lg:text-[1.65rem] font-bold tracking-[-0.01em] ml-1.5 text-emerald leading-none">
+                  LEARNING
+                </span>
+              </div>
+              <span className="text-[10px] sm:text-xs text-muted-foreground tracking-wide mt-0.5">
+                Building Digital and GRC Skills
               </span>
             </div>
           </Link>
@@ -148,14 +153,19 @@ const Header = () => {
                   <img 
                     src={cyxorIcon} 
                     alt="CYXOR" 
-                    className="h-9 w-auto"
+                    className="h-10 w-auto"
                   />
-                  <div className="flex items-center">
-                    <span className="text-xl font-bold tracking-[-0.02em] text-foreground">
-                      CYXOR
-                    </span>
-                    <span className="text-xl font-bold tracking-[-0.01em] ml-1.5 text-emerald">
-                      LEARNING
+                  <div className="flex flex-col justify-center">
+                    <div className="flex items-center">
+                      <span className="text-xl font-bold tracking-[-0.02em] text-foreground leading-none">
+                        CYXOR
+                      </span>
+                      <span className="text-xl font-bold tracking-[-0.01em] ml-1.5 text-emerald leading-none">
+                        LEARNING
+                      </span>
+                    </div>
+                    <span className="text-[10px] text-muted-foreground tracking-wide mt-0.5">
+                      Building Digital and GRC Skills
                     </span>
                   </div>
                 </div>
