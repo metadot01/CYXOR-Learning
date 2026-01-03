@@ -21,7 +21,7 @@ const FinalCTA = () => {
       <div className="section-container relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <AnimatedSection>
-            <span className="inline-block text-gold font-bold text-sm tracking-wider uppercase mb-4 px-4 py-1.5 bg-gold/10 rounded-full border border-gold/20">
+            <span className="inline-block text-cyan font-bold text-base tracking-wider uppercase mb-4 px-5 py-2 bg-cyan/10 rounded-full border border-cyan/20">
               Get Started Today
             </span>
           </AnimatedSection>

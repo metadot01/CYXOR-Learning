@@ -59,12 +59,12 @@ const CourseCatalog = () => {
       
       <div className="section-container relative z-10">
         <AnimatedSection className="text-center mb-16">
-          <span className="inline-block text-cyan font-bold text-sm tracking-wider uppercase mb-4 px-4 py-1.5 bg-cyan/10 rounded-full border border-cyan/20">
+          <span className="inline-block text-cyan font-bold text-base tracking-wider uppercase mb-4 px-5 py-2 bg-cyan/10 rounded-full border border-cyan/20">
             Course Categories
           </span>
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-foreground mt-4 mb-5">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-foreground mt-4 mb-5">
             Enterprise Technology &{" "}
-            <span className="text-ocean">Compliance</span>
+            <span className="text-emerald">Compliance</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Microlearning modules with hands-on labs and blockchain-verified certificates
