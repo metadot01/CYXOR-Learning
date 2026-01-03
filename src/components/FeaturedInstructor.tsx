@@ -69,11 +69,11 @@ const FeaturedInstructor = () => {
                     <ul className="space-y-1 text-sm text-muted-foreground">
                       <li className="flex items-start gap-2">
                         <Award className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" />
-                        MSc Artificial Intelligence, University of Stirling
+                        MSc Artificial Intelligence, University of Stirling, UK
                       </li>
                       <li className="flex items-start gap-2">
                         <Award className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" />
-                        MS Analytics, University of Connecticut
+                        MS Analytics, University of Connecticut, USA
                       </li>
                       <li className="flex items-start gap-2">
                         <Award className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" />
