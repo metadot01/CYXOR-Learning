@@ -1,29 +1,30 @@
-import { Shield, FileCheck, Building, Cpu } from "lucide-react";
+import { Brain, Cloud, Link2, Shield, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const categories = [
   {
+    icon: Brain,
+    title: "AI & Machine Learning",
+    courses: ["Enterprise GenAI & RAG", "LLM Fine-Tuning", "Multi-Agent Systems"],
+    href: "/courses#ai",
+  },
+  {
+    icon: Cloud,
+    title: "Cloud & MLOps",
+    courses: ["MLOps Infrastructure", "Kubernetes", "Vector Databases"],
+    href: "/courses#cloud",
+  },
+  {
+    icon: Link2,
+    title: "Blockchain & Web3",
+    courses: ["Smart Contracts", "DeFi Engineering", "Web3 Backend"],
+    href: "/courses#blockchain",
+  },
+  {
     icon: Shield,
-    title: "Compliance Foundations",
-    courses: ["ISO 27001", "GDPR", "NIS2", "Cyber Essentials"],
-    color: "primary",
-  },
-  {
-    icon: FileCheck,
-    title: "Security Operations",
-    courses: ["Incident Response", "Threat Intelligence", "SOC Skills", "Vulnerability Management"],
-    color: "primary",
-  },
-  {
-    icon: Building,
-    title: "Risk & Governance",
-    courses: ["Third-Party Risk", "Policy Development", "Business Continuity", "Risk Quantification"],
-    color: "primary",
-  },
-  {
-    icon: Cpu,
-    title: "Advanced Technical",
-    courses: ["Cloud Security", "Zero Trust", "AI Security", "Blockchain Security"],
-    color: "primary",
+    title: "Compliance & Regulatory",
+    courses: ["ISO 27001", "GDPR", "NIS2", "Cyber Essentials", "SOC 2"],
+    href: "/courses#compliance",
   },
 ];
 
@@ -35,13 +36,13 @@ const CourseCatalog = () => {
       <div className="section-container relative z-10">
         <div className="text-center mb-12 animate-fade-up">
           <span className="text-primary font-bold text-sm tracking-wider uppercase">
-            Training Catalog
+            Course Categories
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground mt-4 mb-4">
-            Enterprise Cybersecurity Training
+            Enterprise Technology & Compliance
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Every course generates blockchain-verified credentials that auditors trust.
+            Microlearning modules with hands-on labs and blockchain-verified certificates
           </p>
         </div>
 
@@ -60,7 +61,7 @@ const CourseCatalog = () => {
                 {category.title}
               </h3>
               
-              <ul className="space-y-2">
+              <ul className="space-y-2 mb-6">
                 {category.courses.map((course) => (
                   <li key={course} className="flex items-center gap-2 text-sm text-muted-foreground">
                     <svg className="w-4 h-4 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -70,17 +71,16 @@ const CourseCatalog = () => {
                   </li>
                 ))}
               </ul>
+
+              <Link 
+                to={category.href} 
+                className="inline-flex items-center gap-2 text-sm text-primary font-semibold hover:underline"
+              >
+                View Courses
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
           ))}
-        </div>
-
-        <div className="text-center mt-10 animate-fade-up" style={{ animationDelay: '0.4s' }}>
-          <a href="#cta" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline">
-            View Full Training Catalog
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
         </div>
       </div>
     </section>

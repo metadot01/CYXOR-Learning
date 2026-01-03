@@ -1,29 +1,35 @@
-import { RotateCcw, ShieldCheck, Target, Zap } from "lucide-react";
+import { Clock, Beaker, Gamepad2, Link2, Users, Award } from "lucide-react";
 
-const features = [
+const benefits = [
   {
-    icon: RotateCcw,
-    title: "Train Once, Verify Forever",
-    description: "Credentials follow employees across organizations. Accept verified training from previous employers with confidence.",
-    highlight: "Eliminate duplicate costs",
+    icon: Users,
+    title: "Expert-Led",
+    description: "Practitioners building production systems",
   },
   {
-    icon: ShieldCheck,
-    title: "Instant Audit Verification",
-    description: "Auditors verify training in 60 seconds via blockchain. No more scrambling for certificates or LMS exports.",
-    highlight: "Pass audits with ease",
+    icon: Clock,
+    title: "Microlearning",
+    description: "5-15 min focused modules, maximum retention",
   },
   {
-    icon: Target,
-    title: "Smart Skills Gap Analysis",
-    description: "See exactly who needs training and who's current. Stop forcing refreshers on already-competent staff.",
-    highlight: "Target real gaps",
+    icon: Beaker,
+    title: "Hands-On",
+    description: "Interactive labs, live environments",
   },
   {
-    icon: Zap,
-    title: "Tamper-Proof Records",
-    description: "Cryptographic proof that can't be forged or altered. The gold standard in compliance evidence.",
-    highlight: "Bulletproof compliance",
+    icon: Gamepad2,
+    title: "Gamified",
+    description: "Leaderboards, challenges, competitions",
+  },
+  {
+    icon: Link2,
+    title: "Blockchain-Verified",
+    description: "Immutable, independently verifiable credentials",
+  },
+  {
+    icon: Award,
+    title: "Audit-Ready",
+    description: "Meets regulatory requirements",
   },
 ];
 
@@ -35,42 +41,41 @@ const ValueProposition = () => {
       <div className="section-container relative z-10">
         <div className="text-center mb-12 animate-fade-up">
           <span className="text-primary font-bold text-sm tracking-wider uppercase">
-            The Solution
+            Why Cyxor Learning
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground mt-4 mb-4">
-            Blockchain Verification That Works
+            Transform Learning Into Competitive Advantage
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Enterprise-grade training credentials trusted by auditors, insurers, and regulators.
+            Interactive, gamified, and verifiable courses designed for enterprise teams
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature, index) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {benefits.map((benefit, index) => (
             <div
-              key={feature.title}
+              key={benefit.title}
               className="group relative bg-card rounded-2xl p-6 border border-border hover:border-primary/30 card-hover animate-fade-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               
-              <div className="relative">
+              <div className="relative flex items-start gap-4">
                 {/* Icon */}
-                <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                  <feature.icon className="w-6 h-6 text-primary" />
+                <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                  <benefit.icon className="w-6 h-6 text-primary" />
                 </div>
 
                 {/* Content */}
-                <h3 className="text-lg font-bold text-foreground mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                  {feature.description}
-                </p>
-                <span className="text-xs font-semibold text-primary uppercase tracking-wide">
-                  {feature.highlight}
-                </span>
+                <div>
+                  <h3 className="text-lg font-bold text-foreground mb-1">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {benefit.description}
+                  </p>
+                </div>
               </div>
             </div>
           ))}

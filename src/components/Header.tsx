@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
@@ -6,30 +7,46 @@ import cyxorIcon from "@/assets/cyxor-icon.png";
 
 const navItems = [
   {
-    label: "Platform",
+    label: "Courses",
+    href: "/courses",
     items: [
-      { label: "How It Works", href: "#value" },
-      { label: "Training Catalog", href: "#courses" },
-      { label: "Case Study", href: "#case-study" },
+      { label: "AI & Machine Learning", href: "/courses#ai" },
+      { label: "Cloud & MLOps", href: "/courses#cloud" },
+      { label: "Blockchain & Web3", href: "/courses#blockchain" },
+      { label: "Compliance & Regulatory", href: "/courses#compliance" },
     ],
   },
   {
-    label: "Compliance",
+    label: "Industries",
+    href: "/industries",
     items: [
-      { label: "ISO 27001", href: "#compliance" },
-      { label: "GDPR", href: "#compliance" },
-      { label: "NIS2", href: "#compliance" },
-      { label: "Cyber Essentials", href: "#compliance" },
+      { label: "Financial Services", href: "/industries#bfsi" },
+      { label: "Healthcare", href: "/industries#healthcare" },
+      { label: "Government", href: "/industries#government" },
+      { label: "Critical Infrastructure", href: "/industries#infrastructure" },
+      { label: "Technology", href: "/industries#technology" },
+    ],
+  },
+  {
+    label: "Solutions",
+    href: "/solutions",
+    items: [
+      { label: "Team Licenses", href: "/solutions#team" },
+      { label: "Enterprise Subscriptions", href: "/solutions#enterprise" },
+      { label: "Custom eLearning", href: "/solutions#custom" },
+      { label: "LMS Integration", href: "/solutions#integration" },
+      { label: "Compliance Management", href: "/solutions#compliance" },
     ],
   },
   {
     label: "Resources",
+    href: "/resources",
     items: [
-      { label: "Blog", href: "#" },
-      { label: "Whitepapers", href: "#" },
-      { label: "Webinars", href: "#" },
-      { label: "Documentation", href: "#" },
-      { label: "Help Center", href: "#" },
+      { label: "About Us", href: "/resources#about" },
+      { label: "Our Instructors", href: "/resources#instructors" },
+      { label: "Technology Stack", href: "/resources#tech" },
+      { label: "Documentation", href: "/resources#docs" },
+      { label: "Contact", href: "/resources#contact" },
     ],
   },
 ];
@@ -38,9 +55,14 @@ const Header = () => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [expandedMobileSection, setExpandedMobileSection] = useState<string | null>(null);
+  const location = useLocation();
 
   const toggleMobileSection = (label: string) => {
     setExpandedMobileSection(expandedMobileSection === label ? null : label);
+  };
+
+  const isActiveRoute = (href: string) => {
+    return location.pathname === href || location.pathname.startsWith(href + "/");
   };
 
   return (
@@ -48,7 +70,7 @@ const Header = () => {
       <div className="section-container">
         <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2.5 sm:gap-3">
+          <Link to="/" className="flex items-center gap-2.5 sm:gap-3">
             <img 
               src={cyxorIcon} 
               alt="CYXOR" 
@@ -68,7 +90,7 @@ const Header = () => {
                 Learning
               </span>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-1">
@@ -79,29 +101,32 @@ const Header = () => {
                 onMouseEnter={() => setOpenDropdown(item.label)}
                 onMouseLeave={() => setOpenDropdown(null)}
               >
-                <button
-                  className="flex items-center gap-1 px-4 py-2 text-sm font-semibold rounded-lg transition-colors"
-                  style={{ color: '#0B2A3F' }}
+                <Link
+                  to={item.href}
+                  className={`flex items-center gap-1 px-4 py-2 text-sm font-semibold rounded-lg transition-colors ${
+                    isActiveRoute(item.href) ? 'text-[#4EC3A5]' : ''
+                  }`}
+                  style={{ color: isActiveRoute(item.href) ? '#4EC3A5' : '#0B2A3F' }}
                 >
                   {item.label}
                   <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === item.label ? 'rotate-180' : ''}`} />
-                </button>
+                </Link>
                 
                 {/* Dropdown Menu */}
                 {openDropdown === item.label && (
                   <div className="absolute top-full left-0 pt-2 z-50">
                     <div className="bg-white rounded-xl shadow-xl border border-gray-100 py-2 min-w-[220px]">
                       {item.items.map((subItem) => (
-                        <a
+                        <Link
                           key={subItem.label}
-                          href={subItem.href}
+                          to={subItem.href}
                           className="block px-4 py-2.5 text-sm font-medium transition-colors hover:bg-gray-50"
                           style={{ color: '#3A5A6B' }}
                           onMouseEnter={(e) => e.currentTarget.style.color = '#4EC3A5'}
                           onMouseLeave={(e) => e.currentTarget.style.color = '#3A5A6B'}
                         >
                           {subItem.label}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   </div>
@@ -111,9 +136,9 @@ const Header = () => {
           </nav>
 
           {/* Desktop CTA */}
-          <a href="#cta">
+          <Link to="/courses">
             <Button variant="hero" size="default" className="hidden lg:flex">
-              Get Started
+              Browse Courses
               <svg
                 className="w-4 h-4 ml-1"
                 fill="none"
@@ -128,7 +153,7 @@ const Header = () => {
                 />
               </svg>
             </Button>
-          </a>
+          </Link>
 
           {/* Mobile Menu */}
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
@@ -189,15 +214,15 @@ const Header = () => {
                       {expandedMobileSection === item.label && (
                         <div className="bg-gray-50 py-2">
                           {item.items.map((subItem) => (
-                            <a
+                            <Link
                               key={subItem.label}
-                              href={subItem.href}
+                              to={subItem.href}
                               onClick={() => setMobileOpen(false)}
                               className="block px-8 py-3 text-sm font-medium transition-colors hover:bg-gray-100"
                               style={{ color: '#3A5A6B' }}
                             >
                               {subItem.label}
-                            </a>
+                            </Link>
                           ))}
                         </div>
                       )}
@@ -207,22 +232,24 @@ const Header = () => {
 
                 {/* Mobile CTA */}
                 <div className="p-6 border-t border-gray-100">
-                  <Button variant="hero" size="lg" className="w-full" onClick={() => setMobileOpen(false)}>
-                    Get Started
-                    <svg
-                      className="w-4 h-4 ml-1"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17 8l4 4m0 0l-4 4m4-4H3"
-                      />
-                    </svg>
-                  </Button>
+                  <Link to="/courses" onClick={() => setMobileOpen(false)}>
+                    <Button variant="hero" size="lg" className="w-full">
+                      Browse Courses
+                      <svg
+                        className="w-4 h-4 ml-1"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M17 8l4 4m0 0l-4 4m4-4H3"
+                        />
+                      </svg>
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </SheetContent>

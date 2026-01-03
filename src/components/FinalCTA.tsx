@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Calendar, FileText } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const FinalCTA = () => {
   return (
@@ -12,29 +13,22 @@ const FinalCTA = () => {
       <div className="section-container relative z-10">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mb-5 animate-fade-up">
-            Ready to Eliminate{" "}
-            <span className="text-primary">Training Waste?</span>
+            Ready to Transform{" "}
+            <span className="text-primary">Your Team?</span>
           </h2>
 
           <p className="text-lg text-muted-foreground mb-8 animate-fade-up" style={{ animationDelay: '0.1s' }}>
-            See how blockchain-verified training can cut costs and simplify compliance.
+            Explore our full catalog of enterprise technology and compliance courses with blockchain-verified credentials.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up" style={{ animationDelay: '0.2s' }}>
-            <Button variant="hero" size="lg" className="w-full sm:w-auto">
-              <Calendar className="w-5 h-5 mr-2" />
-              Book a Demo
-            </Button>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto border-primary/30 text-foreground hover:bg-primary/5">
-              <FileText className="w-5 h-5 mr-2" />
-              Download Catalog
-            </Button>
+          <div className="animate-fade-up" style={{ animationDelay: '0.2s' }}>
+            <Link to="/courses">
+              <Button variant="hero" size="lg">
+                Browse All Courses
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
           </div>
-
-          {/* Trust Statement */}
-          <p className="text-sm text-muted-foreground mt-8 animate-fade-up" style={{ animationDelay: '0.3s' }}>
-            Trusted by UK enterprises managing ISO 27001, GDPR, NIS2, and Cyber Essentials.
-          </p>
         </div>
       </div>
     </section>
