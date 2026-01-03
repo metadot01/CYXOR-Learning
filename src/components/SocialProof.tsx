@@ -3,7 +3,7 @@ import { AnimatedSection } from "@/hooks/useScrollAnimation";
 
 const testimonials = [
   {
-    quote: "Cyxor's AI courses transformed our team's capabilities. Hands-on labs gave us confidence for production deployment.",
+    quote: "CYXOR LEARNING's AI courses transformed our team's capabilities. Hands-on labs gave us confidence for production deployment.",
     author: "Head of AI",
     company: "UK Financial Services",
     rating: 5,

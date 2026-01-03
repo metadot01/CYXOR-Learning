@@ -63,7 +63,7 @@ const ValueProposition = () => {
       <div className="section-container relative z-10">
         <AnimatedSection className="text-center mb-16">
           <span className="inline-block text-cyan font-bold text-sm tracking-wider uppercase mb-4 px-4 py-1.5 bg-cyan/10 rounded-full border border-cyan/20">
-            Why Cyxor Learning
+            Why CYXOR LEARNING
           </span>
           <h2 className="text-4xl sm:text-5xl font-extrabold text-foreground mt-4 mb-5">
             Transform Learning Into{" "}

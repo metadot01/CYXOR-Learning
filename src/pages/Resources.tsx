@@ -104,7 +104,7 @@ const Resources = () => {
               <span className="text-primary">Resources</span> & About
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Learn about Cyxor Learning, our approach, technology experts, and helpful resources
+              Learn about CYXOR LEARNING, our approach, technology experts, and helpful resources
             </p>
           </div>
         </section>
@@ -114,7 +114,7 @@ const Resources = () => {
           <div className="section-container">
             <div className="grid lg:grid-cols-2 gap-12">
               <div>
-                <h2 className="text-3xl font-bold text-foreground mb-6">About Cyxor Learning</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-6">About CYXOR LEARNING</h2>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
                     <span className="font-semibold text-foreground">Vision: </span>
