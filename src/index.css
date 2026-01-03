@@ -16,48 +16,56 @@ html {
 
 @layer base {
   :root {
-    /* CYXOR Brand Colors - Professional B2B Light Theme */
-    --navy-deep: 210 40% 15%;
-    --navy-medium: 210 35% 25%;
-    --slate-professional: 210 20% 40%;
-    --teal-professional: 168 50% 38%;
-    --teal-soft: 168 45% 45%;
-    --teal-light: 168 40% 92%;
+    /* Trust Tech Color Palette */
+    /* Primary Colors */
+    --ocean-blue: 222 82% 21%;        /* #0A2463 - Headers, primary CTAs */
+    --electric-cyan: 189 100% 50%;    /* #00D9FF - Accent, interactive, blockchain */
+    --emerald-green: 165 100% 39%;    /* #00C896 - Success, verification badges */
     
-    /* Light theme */
+    /* Secondary Colors */
+    --space-navy: 213 55% 11%;        /* #0D1B2A - Dark backgrounds, footer */
+    --slate-gray: 216 29% 36%;        /* #415A77 - Secondary text, borders */
+    --soft-white: 210 17% 98%;        /* #F8F9FA - Background, cards */
+    
+    /* Accent Colors */
+    --amber-gold: 43 100% 50%;        /* #FFB703 - Gamification, achievements */
+    --sunset-orange: 33 100% 49%;     /* #FB8500 - Alerts, urgency */
+    --lavender-purple: 274 65% 46%;   /* #7B2CBF - AI/ML category */
+    
+    /* Semantic mappings for light theme */
     --background: 0 0% 100%;
-    --foreground: 210 40% 15%;
+    --foreground: 213 55% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 40% 15%;
+    --card-foreground: 213 55% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 40% 15%;
+    --popover-foreground: 213 55% 11%;
 
-    --primary: 168 50% 38%;
+    --primary: 165 100% 39%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 20% 97%;
-    --secondary-foreground: 210 40% 15%;
+    --secondary: 210 17% 98%;
+    --secondary-foreground: 213 55% 11%;
 
     --muted: 210 15% 94%;
-    --muted-foreground: 210 15% 45%;
+    --muted-foreground: 216 29% 36%;
 
-    --accent: 168 50% 38%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 189 100% 50%;
+    --accent-foreground: 213 55% 11%;
 
-    --destructive: 0 72% 51%;
+    --destructive: 33 100% 49%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 210 20% 90%;
     --input: 210 20% 90%;
-    --ring: 168 50% 38%;
+    --ring: 189 100% 50%;
 
     --radius: 0.75rem;
     
-    /* Header specific */
+    /* Header */
     --header-bg: 0 0% 100%;
-    --header-text: 210 40% 15%;
+    --header-text: 213 55% 11%;
   }
 }
 
@@ -82,66 +90,129 @@ html {
     @apply max-w-7xl mx-auto px-6 lg:px-8;
   }
 
+  /* Trust Tech Gradients */
   .gradient-text {
-    @apply bg-gradient-to-r from-primary to-teal-soft bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-emerald to-cyan bg-clip-text text-transparent;
+  }
+
+  .gradient-text-gold {
+    @apply bg-gradient-to-r from-emerald to-gold bg-clip-text text-transparent;
+  }
+
+  /* Hero gradient - Dark navy to ocean blue */
+  .gradient-hero {
+    background: linear-gradient(135deg, hsl(var(--space-navy)) 0%, hsl(var(--ocean-blue)) 100%);
+  }
+
+  .gradient-hero-light {
+    background: linear-gradient(135deg, hsl(var(--soft-white)) 0%, hsl(0 0% 100%) 50%, hsl(189 100% 98%) 100%);
+  }
+
+  /* Blockchain gradient */
+  .gradient-blockchain {
+    background: linear-gradient(90deg, hsl(var(--emerald-green)) 0%, hsl(var(--electric-cyan)) 100%);
+  }
+
+  /* Achievement gradient */
+  .gradient-achievement {
+    background: linear-gradient(135deg, hsl(var(--emerald-green)) 0%, hsl(var(--amber-gold)) 100%);
+  }
+
+  .gradient-section {
+    background: linear-gradient(180deg, hsl(var(--soft-white)) 0%, hsl(var(--background)) 100%);
+  }
+
+  .gradient-cta {
+    background: linear-gradient(135deg, hsl(189 100% 98%) 0%, hsl(var(--background)) 50%, hsl(165 100% 98%) 100%);
   }
 
   .card-hover {
     @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
   }
 
+  /* Patterns */
   .circuit-pattern {
     background-image: 
-      radial-gradient(circle at 25% 25%, hsl(var(--primary) / 0.03) 1px, transparent 1px),
-      radial-gradient(circle at 75% 75%, hsl(var(--primary) / 0.03) 1px, transparent 1px);
+      radial-gradient(circle at 25% 25%, hsl(var(--electric-cyan) / 0.03) 1px, transparent 1px),
+      radial-gradient(circle at 75% 75%, hsl(var(--electric-cyan) / 0.03) 1px, transparent 1px);
     background-size: 50px 50px;
   }
 
   .blockchain-grid {
     background-image: 
-      linear-gradient(to right, hsl(var(--primary) / 0.02) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(var(--primary) / 0.02) 1px, transparent 1px);
+      linear-gradient(to right, hsl(var(--electric-cyan) / 0.02) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--electric-cyan) / 0.02) 1px, transparent 1px);
     background-size: 60px 60px;
   }
 
+  /* Glow effects */
+  .glow-cyan {
+    box-shadow: 0 0 20px hsl(var(--electric-cyan) / 0.2);
+  }
+
+  .glow-emerald {
+    box-shadow: 0 0 20px hsl(var(--emerald-green) / 0.3);
+  }
+
   .glow-border {
-    @apply border border-primary/20;
-    box-shadow: 0 0 20px hsl(var(--primary) / 0.08);
+    @apply border border-cyan/20;
+    box-shadow: 0 0 20px hsl(var(--electric-cyan) / 0.1);
   }
 
   /* Professional card styles */
   .card-professional {
     @apply bg-card rounded-2xl border border-border;
-    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.04), 0 1px 2px -1px rgb(0 0 0 / 0.04);
+    box-shadow: 0 4px 20px hsl(var(--electric-cyan) / 0.05);
   }
 
   .card-professional:hover {
-    box-shadow: 0 10px 40px -10px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.05);
-  }
-
-  /* Gradient backgrounds */
-  .gradient-hero {
-    background: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--background)) 50%, hsl(168 40% 98%) 100%);
-  }
-
-  .gradient-section {
-    background: linear-gradient(180deg, hsl(var(--secondary)) 0%, hsl(var(--background)) 100%);
-  }
-
-  .gradient-cta {
-    background: linear-gradient(135deg, hsl(168 50% 95%) 0%, hsl(var(--background)) 50%, hsl(210 20% 98%) 100%);
+    box-shadow: 0 8px 30px hsl(var(--electric-cyan) / 0.12);
+    border-color: hsl(var(--electric-cyan) / 0.3);
   }
 
   /* Icon container styles */
   .icon-container {
     @apply w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-300;
-    background: linear-gradient(135deg, hsl(var(--primary) / 0.1) 0%, hsl(var(--primary) / 0.05) 100%);
-    border: 1px solid hsl(var(--primary) / 0.15);
+    background: linear-gradient(135deg, hsl(var(--electric-cyan) / 0.1) 0%, hsl(var(--emerald-green) / 0.05) 100%);
+    border: 1px solid hsl(var(--electric-cyan) / 0.15);
   }
 
   .icon-container:hover {
-    background: linear-gradient(135deg, hsl(var(--primary) / 0.15) 0%, hsl(var(--primary) / 0.08) 100%);
+    background: linear-gradient(135deg, hsl(var(--electric-cyan) / 0.15) 0%, hsl(var(--emerald-green) / 0.1) 100%);
     transform: scale(1.05);
+  }
+
+  /* Verified badge */
+  .verified-badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold;
+    background: hsl(var(--emerald-green) / 0.1);
+    color: hsl(var(--emerald-green));
+    border: 1px solid hsl(var(--emerald-green) / 0.2);
+  }
+
+  /* Category tags */
+  .tag-ai {
+    background: hsl(var(--lavender-purple) / 0.1);
+    color: hsl(var(--lavender-purple));
+    border: 1px solid hsl(var(--lavender-purple) / 0.2);
+  }
+
+  .tag-compliance {
+    background: hsl(var(--ocean-blue) / 0.1);
+    color: hsl(var(--ocean-blue));
+    border: 1px solid hsl(var(--ocean-blue) / 0.2);
+  }
+
+  .tag-blockchain {
+    background: hsl(var(--electric-cyan) / 0.1);
+    color: hsl(var(--electric-cyan));
+    border: 1px solid hsl(var(--electric-cyan) / 0.2);
+  }
+
+  .tag-cloud {
+    background: hsl(var(--slate-gray) / 0.1);
+    color: hsl(var(--slate-gray));
+    border: 1px solid hsl(var(--slate-gray) / 0.2);
   }
 }
 
@@ -193,10 +264,10 @@ html {
 
   @keyframes glow {
     from {
-      box-shadow: 0 0 10px hsl(var(--primary) / 0.1);
+      box-shadow: 0 0 10px hsl(var(--electric-cyan) / 0.1);
     }
     to {
-      box-shadow: 0 0 20px hsl(var(--primary) / 0.2);
+      box-shadow: 0 0 20px hsl(var(--electric-cyan) / 0.25);
     }
   }
 
@@ -205,14 +276,15 @@ html {
     50% { background-position: 100% 50%; }
   }
 
-  /* Subtle hover underline for links */
+  /* Link underline */
   .link-underline {
     @apply relative;
   }
 
   .link-underline::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+    @apply absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300;
+    background: hsl(var(--electric-cyan));
   }
 
   .link-underline:hover::after {

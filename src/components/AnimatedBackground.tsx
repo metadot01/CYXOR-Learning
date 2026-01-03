@@ -21,6 +21,7 @@ const AnimatedBackground = () => {
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
 
+    // Electric Cyan color - #00D9FF in HSL
     class Particle {
       x: number;
       y: number;
@@ -36,7 +37,7 @@ const AnimatedBackground = () => {
         this.size = Math.random() * 1.5 + 0.5;
         this.speedX = (Math.random() - 0.5) * 0.2;
         this.speedY = (Math.random() - 0.5) * 0.2;
-        this.opacity = Math.random() * 0.15 + 0.05;
+        this.opacity = Math.random() * 0.3 + 0.1;
         this.connections = [];
       }
 
@@ -53,20 +54,20 @@ const AnimatedBackground = () => {
       draw() {
         ctx!.beginPath();
         ctx!.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        // Professional teal color for light theme
-        ctx!.fillStyle = `hsla(168, 45%, 40%, ${this.opacity})`;
+        // Electric Cyan - #00D9FF
+        ctx!.fillStyle = `rgba(0, 217, 255, ${this.opacity})`;
         ctx!.fill();
       }
     }
 
-    // Create particles - fewer for cleaner look
-    const particleCount = Math.min(35, Math.floor((canvas.width * canvas.height) / 30000));
+    // Create particles
+    const particleCount = Math.min(45, Math.floor((canvas.width * canvas.height) / 25000));
     for (let i = 0; i < particleCount; i++) {
       particles.push(new Particle());
     }
 
     const connectParticles = () => {
-      const maxDistance = 120;
+      const maxDistance = 130;
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
@@ -74,10 +75,10 @@ const AnimatedBackground = () => {
           const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < maxDistance) {
-            const opacity = (1 - distance / maxDistance) * 0.08;
+            const opacity = (1 - distance / maxDistance) * 0.15;
             ctx!.beginPath();
-            // Professional teal color for connections
-            ctx!.strokeStyle = `hsla(168, 45%, 40%, ${opacity})`;
+            // Electric Cyan for connections
+            ctx!.strokeStyle = `rgba(0, 217, 255, ${opacity})`;
             ctx!.lineWidth = 0.8;
             ctx!.moveTo(particles[i].x, particles[i].y);
             ctx!.lineTo(particles[j].x, particles[j].y);
@@ -112,7 +113,7 @@ const AnimatedBackground = () => {
     <canvas
       ref={canvasRef}
       className="absolute inset-0 w-full h-full pointer-events-none"
-      style={{ opacity: 0.5 }}
+      style={{ opacity: 0.7 }}
     />
   );
 };
