@@ -52,11 +52,11 @@ const IndustryRelevance = () => {
             Industries We Serve
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mt-4 mb-4 leading-tight">
-            Built for{" "}
-            <span className="text-emerald">Highly Regulated Industries</span>
+            Courses Designed for{" "}
+            <span className="text-emerald">Your Industry</span>
           </h2>
           <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Compliance-first training that satisfies auditors, regulators, and risk committees
+            Customizable training solutions that actually get completed
           </p>
         </AnimatedSection>
 
