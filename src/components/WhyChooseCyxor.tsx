@@ -56,12 +56,11 @@ const WhyChooseCyxor = () => {
             Why CYXOR LEARNING
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mt-4 mb-4 leading-tight">
-            Why Teams Choose{" "}
-            <span className="text-foreground">CYXOR</span>{" "}
-            <span className="text-emerald">LEARNING</span>
+            Designed for Your{" "}
+            <span className="text-emerald">Compliance Team</span>
           </h2>
           <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Training that actually works—for your team and your auditors
+            Compliance Training that actually works—for your team and your auditors
           </p>
         </AnimatedSection>
 
