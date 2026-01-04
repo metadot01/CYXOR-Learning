@@ -18,7 +18,7 @@ const Footer = () => {
               <span className="text-xl font-bold ml-1.5 text-emerald">LEARNING</span>
             </div>
             <p className="text-sm text-white/60 mb-6">
-              Enterprise training that counts.
+              Verifiable digital and GRC skills
             </p>
             
             {/* Social Links */}
