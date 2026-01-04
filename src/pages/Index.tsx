@@ -1,8 +1,12 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import ValueProposition from "@/components/ValueProposition";
+import StatsBar from "@/components/StatsBar";
+import IndustryRelevance from "@/components/IndustryRelevance";
+import WhyChooseCyxor from "@/components/WhyChooseCyxor";
 import CourseCatalog from "@/components/CourseCatalog";
-import SocialProof from "@/components/SocialProof";
+import Testimonials from "@/components/Testimonials";
+import HowItWorks from "@/components/HowItWorks";
+import DualCTA from "@/components/DualCTA";
 import FeaturedInstructor from "@/components/FeaturedInstructor";
 import Footer from "@/components/Footer";
 
@@ -12,9 +16,13 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <ValueProposition />
+        <StatsBar />
+        <IndustryRelevance />
+        <WhyChooseCyxor />
         <CourseCatalog />
-        <SocialProof />
+        <Testimonials />
+        <HowItWorks />
+        <DualCTA />
         <FeaturedInstructor />
       </main>
       <Footer />
