@@ -70,21 +70,16 @@ const Header = () => {
       <div className="section-container">
         <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2.5">
+          <Link to="/" className="flex items-center gap-3">
             <img 
               src={cyxorIcon} 
               alt="CYXOR" 
-              className="h-9 sm:h-10 lg:h-11 w-auto"
+              className="h-10 sm:h-11 lg:h-12 w-auto"
             />
-            <div className="flex flex-col justify-between py-px" style={{ height: '36px' }}>
-              <span className="text-base sm:text-lg lg:text-xl font-bold tracking-tight leading-none">
-                <span className="text-foreground">CYXOR</span>
-                <span className="text-emerald ml-0.5">LEARNING</span>
-              </span>
-              <span className="text-[8px] sm:text-[9px] lg:text-[10px] text-muted-foreground tracking-wider leading-none">
-                Verifiable digital and GRC skills
-              </span>
-            </div>
+            <span className="text-lg sm:text-xl lg:text-2xl font-bold tracking-tight">
+              <span className="text-foreground">CYXOR</span>
+              <span className="text-emerald ml-1">LEARNING</span>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -145,21 +140,16 @@ const Header = () => {
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <div className="flex flex-col h-full">
                 {/* Mobile Header */}
-                <div className="flex items-center gap-2.5 p-6 border-b border-border">
+                <div className="flex items-center gap-3 p-6 border-b border-border">
                   <img 
                     src={cyxorIcon} 
                     alt="CYXOR" 
-                    className="h-9 w-auto"
+                    className="h-10 w-auto"
                   />
-                  <div className="flex flex-col justify-between py-px" style={{ height: '36px' }}>
-                    <span className="text-base font-bold tracking-tight leading-none">
-                      <span className="text-foreground">CYXOR</span>
-                      <span className="text-emerald ml-0.5">LEARNING</span>
-                    </span>
-                    <span className="text-[8px] text-muted-foreground tracking-wider leading-none">
-                      Verifiable digital and GRC skills
-                    </span>
-                  </div>
+                  <span className="text-lg font-bold tracking-tight">
+                    <span className="text-foreground">CYXOR</span>
+                    <span className="text-emerald ml-1">LEARNING</span>
+                  </span>
                 </div>
 
                 {/* Mobile Navigation */}
