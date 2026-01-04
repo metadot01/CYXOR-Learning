@@ -1,19 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Building2, Heart, Landmark, Server, Cpu } from "lucide-react";
+import { ArrowRight, Star, CheckCircle, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import AnimatedBackground from "./AnimatedBackground";
 
 const Hero = () => {
-  const industries = [
-    { name: "BFSI", icon: Building2, color: "from-ocean to-ocean/70" },
-    { name: "Healthcare", icon: Heart, color: "from-emerald to-emerald/70" },
-    { name: "Government", icon: Landmark, color: "from-slate to-slate/70" },
-    { name: "Infrastructure", icon: Server, color: "from-gold to-gold/70" },
-    { name: "Technology", icon: Cpu, color: "from-cyan to-cyan/70" },
-  ];
-
   return (
-    <section className="relative min-h-[85vh] flex items-center pt-24 pb-16 overflow-hidden gradient-hero">
+    <section className="relative min-h-[90vh] flex items-center pt-24 pb-16 overflow-hidden gradient-hero">
       {/* Animated Background */}
       <AnimatedBackground />
       
@@ -27,20 +19,20 @@ const Hero = () => {
 
       <div className="section-container relative z-10">
         <div className="max-w-4xl mx-auto text-center">
+          {/* Trust Badge - Overline */}
+          <div className="animate-fade-up" style={{ animationDelay: '0.05s' }}>
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-sm text-white/90 font-medium mb-6">
+              <Shield className="w-4 h-4 text-emerald" />
+              Trusted by 50+ UK Enterprises
+            </span>
+          </div>
+
           {/* Main Heading */}
           <div className="space-y-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-[1.1] tracking-tight">
-              <span className="relative inline-block text-cyan drop-shadow-[0_0_30px_rgba(0,217,255,0.5)]">
-                Learn
-                <span className="text-white/90">.</span>
-              </span>{" "}
-              <span className="relative inline-block text-gold drop-shadow-[0_0_30px_rgba(255,183,3,0.5)]">
-                Compete
-                <span className="text-white/90">.</span>
-              </span>{" "}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[1.1] tracking-tight">
+              Turn Compliance Training Into{" "}
               <span className="relative inline-block text-emerald drop-shadow-[0_0_30px_rgba(0,200,150,0.5)]">
-                Verify
-                <span className="text-white/90">.</span>
+                Competitive Advantage
                 <svg className="absolute -bottom-2 left-0 w-full h-3 text-emerald/60" viewBox="0 0 100 12" preserveAspectRatio="none">
                   <path d="M0 8 Q25 2 50 8 T100 8" stroke="currentColor" strokeWidth="3" fill="none" strokeLinecap="round" />
                 </svg>
@@ -48,48 +40,67 @@ const Hero = () => {
             </h1>
             
             <p className="text-lg sm:text-xl lg:text-2xl text-white/70 max-w-2xl mx-auto leading-relaxed font-light">
-              Enterprise technology and compliance courses
+              Audit-ready courses your team actually completes. Gamified learning for{" "}
+              <span className="text-cyan">GDPR</span>,{" "}
+              <span className="text-cyan">ISO 27001</span>,{" "}
+              <span className="text-cyan">NIS2</span>, and{" "}
+              <span className="text-cyan">enterprise AI</span>.
             </p>
+          </div>
+
+          {/* Social Proof Indicators */}
+          <div className="flex flex-wrap items-center justify-center gap-6 mt-8 animate-fade-up" style={{ animationDelay: '0.15s' }}>
+            <div className="flex items-center gap-2">
+              <div className="flex">
+                {[1, 2, 3, 4, 5].map((i) => (
+                  <Star key={i} className="w-5 h-5 fill-gold text-gold" />
+                ))}
+              </div>
+              <span className="text-white/80 text-sm font-medium">4.9/5 from 2,300+ learners</span>
+            </div>
+            <div className="hidden sm:flex items-center gap-2">
+              <CheckCircle className="w-5 h-5 text-emerald" />
+              <span className="text-white/80 text-sm font-medium">95% completion rate</span>
+            </div>
           </div>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10 animate-fade-up" style={{ animationDelay: '0.2s' }}>
             <Link to="/courses">
               <Button variant="hero" size="lg" className="text-base px-8 h-12 shadow-[0_0_40px_rgba(0,200,150,0.3)] hover:shadow-[0_0_60px_rgba(0,200,150,0.5)] transition-all duration-300 group">
-                Browse Courses
+                View Courses
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
             <Link to="/solutions">
               <Button variant="outline" size="lg" className="text-base px-8 h-12 border-2 border-cyan/50 text-cyan hover:bg-cyan/10 hover:border-cyan bg-white/5 backdrop-blur-sm transition-all duration-300">
-                Enterprise Solutions
+                Book Demo
               </Button>
             </Link>
           </div>
 
-          {/* Industries */}
-          <div className="pt-14 animate-fade-up" style={{ animationDelay: '0.3s' }}>
-            <div className="flex items-center justify-center gap-3 mb-6">
+          {/* Trust Line */}
+          <div className="mt-8 animate-fade-up" style={{ animationDelay: '0.25s' }}>
+            <p className="text-sm text-white/50">
+              <span className="text-emerald">Blockchain-verified certificates</span> | Accepted by UK auditors
+            </p>
+          </div>
+
+          {/* Client Trust */}
+          <div className="pt-12 animate-fade-up" style={{ animationDelay: '0.3s' }}>
+            <div className="flex items-center justify-center gap-3 mb-4">
               <div className="h-px w-10 bg-gradient-to-r from-transparent to-white/30" />
               <p className="text-xs text-white/50 uppercase tracking-[0.2em] font-medium">
-                Designed for regulated industries
+                Trusted by teams at
               </p>
               <div className="h-px w-10 bg-gradient-to-l from-transparent to-white/30" />
             </div>
             
-            <div className="flex flex-wrap items-center justify-center gap-3">
-              {industries.map((item, index) => (
-                <div 
-                  key={item.name}
-                  className="group relative flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 transition-all duration-300 cursor-default"
-                  style={{ animationDelay: `${0.4 + index * 0.05}s` }}
-                >
-                  <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                    <item.icon className="w-4 h-4 text-white" />
-                  </div>
-                  <span className="text-sm font-medium text-white/80 group-hover:text-white transition-colors">{item.name}</span>
-                </div>
-              ))}
+            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/60 font-medium">
+              <span className="px-4 py-2 rounded-lg bg-white/5 border border-white/10">Financial Services</span>
+              <span className="px-4 py-2 rounded-lg bg-white/5 border border-white/10">Healthcare</span>
+              <span className="px-4 py-2 rounded-lg bg-white/5 border border-white/10">Government</span>
+              <span className="px-4 py-2 rounded-lg bg-white/5 border border-white/10">Infrastructure</span>
             </div>
           </div>
         </div>
