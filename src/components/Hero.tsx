@@ -44,7 +44,7 @@ const Hero = () => {
               <span className="text-cyan">GDPR</span>,{" "}
               <span className="text-cyan">ISO 27001</span>,{" "}
               <span className="text-cyan">NIS2</span>, and{" "}
-              <span className="text-cyan">enterprise AI</span>.
+              <span className="text-cyan">Emerging Technologies</span>.
             </p>
           </div>
 
