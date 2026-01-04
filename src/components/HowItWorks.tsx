@@ -54,7 +54,8 @@ const HowItWorks = () => {
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mt-4 mb-4 leading-tight">
             How{" "}
-            <span className="text-emerald">CYXOR LEARNING</span>{" "}
+            <span className="text-foreground">CYXOR</span>{" "}
+            <span className="text-emerald">LEARNING</span>{" "}
             Works
           </h2>
           <p className="text-base lg:text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
