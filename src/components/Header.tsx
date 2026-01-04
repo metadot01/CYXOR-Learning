@@ -81,8 +81,8 @@ const Header = () => {
                 <span className="text-foreground">CYXOR</span>
                 <span className="text-emerald ml-0.5">LEARNING</span>
               </span>
-              <span className="text-[8px] sm:text-[9px] lg:text-[10px] text-muted-foreground tracking-wider leading-none uppercase">
-                Verify Digital and GRC Skills
+              <span className="text-[8px] sm:text-[9px] lg:text-[10px] text-muted-foreground tracking-wider leading-none">
+                Verifiable digital and GRC skills
               </span>
             </div>
           </Link>
@@ -156,8 +156,8 @@ const Header = () => {
                       <span className="text-foreground">CYXOR</span>
                       <span className="text-emerald ml-0.5">LEARNING</span>
                     </span>
-                    <span className="text-[8px] text-muted-foreground tracking-wider leading-none uppercase">
-                      Verify Digital and GRC Skills
+                    <span className="text-[8px] text-muted-foreground tracking-wider leading-none">
+                      Verifiable digital and GRC skills
                     </span>
                   </div>
                 </div>
