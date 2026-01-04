@@ -23,16 +23,16 @@ const Hero = () => {
           <div className="animate-fade-up" style={{ animationDelay: '0.05s' }}>
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-sm text-white/90 font-medium mb-6">
               <Shield className="w-4 h-4 text-emerald" />
-              Trusted by 50+ UK Enterprises
+              Blockchain-verified certificates
             </span>
           </div>
 
           {/* Main Heading */}
           <div className="space-y-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[1.1] tracking-tight">
-              Turn Compliance Training Into{" "}
+              Verify Digital and{" "}
               <span className="relative inline-block text-emerald drop-shadow-[0_0_30px_rgba(0,200,150,0.5)]">
-                Competitive Advantage
+                GRC Skills
                 <svg className="absolute -bottom-2 left-0 w-full h-3 text-emerald/60" viewBox="0 0 100 12" preserveAspectRatio="none">
                   <path d="M0 8 Q25 2 50 8 T100 8" stroke="currentColor" strokeWidth="3" fill="none" strokeLinecap="round" />
                 </svg>
@@ -79,12 +79,6 @@ const Hero = () => {
             </Link>
           </div>
 
-          {/* Trust Line */}
-          <div className="mt-8 animate-fade-up" style={{ animationDelay: '0.25s' }}>
-            <p className="text-sm text-white/50">
-              <span className="text-emerald">Blockchain-verified certificates</span> | Accepted by UK auditors
-            </p>
-          </div>
 
           {/* Client Trust */}
           <div className="pt-12 animate-fade-up" style={{ animationDelay: '0.3s' }}>
