@@ -82,7 +82,7 @@ const Header = () => {
                 <span className="text-emerald ml-1">LEARNING</span>
               </span>
               <span className="text-[9px] sm:text-[10px] lg:text-xs text-muted-foreground tracking-wide leading-none">
-                Building Digital and GRC Skills
+                Verify Digital and GRC Skills
               </span>
             </div>
           </Link>
@@ -157,7 +157,7 @@ const Header = () => {
                       <span className="text-emerald ml-1">LEARNING</span>
                     </span>
                     <span className="text-[9px] text-muted-foreground tracking-wide leading-none">
-                      Building Digital and GRC Skills
+                      Verify Digital and GRC Skills
                     </span>
                   </div>
                 </div>
