@@ -8,16 +8,6 @@ import ContactDialog from "@/components/ContactDialog";
 
 const navItems = [
   {
-    label: "Courses",
-    href: "/courses",
-    items: [
-      { label: "AI & Machine Learning", href: "/courses#ai" },
-      { label: "Cloud & MLOps", href: "/courses#cloud" },
-      { label: "Blockchain & Web3", href: "/courses#blockchain" },
-      { label: "Compliance & Regulatory", href: "/courses#compliance" },
-    ],
-  },
-  {
     label: "Industries",
     href: "/industries",
     items: [
