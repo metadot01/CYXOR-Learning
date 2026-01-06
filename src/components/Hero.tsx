@@ -65,18 +65,13 @@ const Hero = () => {
           </div>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10 animate-fade-up" style={{ animationDelay: '0.2s' }}>
-            <Link to="/courses">
+          <div className="flex items-center justify-center mt-10 animate-fade-up" style={{ animationDelay: '0.2s' }}>
+            <a href="https://cyxorlearning.com/courses" target="_blank" rel="noopener noreferrer">
               <Button variant="hero" size="lg" className="text-base px-8 h-12 shadow-[0_0_40px_rgba(0,200,150,0.3)] hover:shadow-[0_0_60px_rgba(0,200,150,0.5)] transition-all duration-300 group">
                 View Courses
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
-            </Link>
-            <Link to="/solutions">
-              <Button variant="outline" size="lg" className="text-base px-8 h-12 border-2 border-cyan/50 text-cyan hover:bg-cyan/10 hover:border-cyan bg-white/5 backdrop-blur-sm transition-all duration-300">
-                Book Demo
-              </Button>
-            </Link>
+            </a>
           </div>
 
 

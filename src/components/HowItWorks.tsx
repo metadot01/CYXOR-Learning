@@ -97,19 +97,12 @@ const HowItWorks = () => {
         {/* CTA */}
         <AnimatedSection className="text-center">
           <p className="text-muted-foreground mb-6">Ready to get started?</p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link to="/courses">
-              <Button variant="hero" size="lg" className="group">
-                Start Free Trial
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
-            <Link to="/solutions">
-              <Button variant="outline" size="lg">
-                Book Demo
-              </Button>
-            </Link>
-          </div>
+          <a href="https://cyxorlearning.com/courses" target="_blank" rel="noopener noreferrer">
+            <Button variant="hero" size="lg" className="group">
+              View Courses
+              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </a>
         </AnimatedSection>
       </div>
     </section>

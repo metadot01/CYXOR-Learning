@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import StatsBar from "@/components/StatsBar";
 import IndustryRelevance from "@/components/IndustryRelevance";
 import WhyChooseCyxor from "@/components/WhyChooseCyxor";
-import CourseCatalog from "@/components/CourseCatalog";
 import Testimonials from "@/components/Testimonials";
 import HowItWorks from "@/components/HowItWorks";
 import DualCTA from "@/components/DualCTA";
@@ -19,7 +18,6 @@ const Index = () => {
         <StatsBar />
         <IndustryRelevance />
         <WhyChooseCyxor />
-        <CourseCatalog />
         <Testimonials />
         <HowItWorks />
         <DualCTA />
