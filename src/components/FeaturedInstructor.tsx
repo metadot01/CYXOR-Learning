@@ -20,7 +20,7 @@ const FeaturedInstructor = () => {
             Our Experts
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-foreground leading-tight">
-            Meet Your
+            Course
             <br />
             <span className="text-emerald">Instructor</span>
           </h2>
