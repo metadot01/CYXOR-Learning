@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Menu } from "lucide-react";
+import { ChevronDown, Menu, ExternalLink } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import cyxorIcon from "@/assets/cyxor-icon.png";
 import ContactDialog from "@/components/ContactDialog";
@@ -22,11 +22,10 @@ const navItems = [
     label: "Solutions",
     href: "/solutions",
     items: [
-      { label: "Team Licenses", href: "/solutions#team" },
       { label: "Enterprise Subscriptions", href: "/solutions#enterprise" },
       { label: "Custom eLearning", href: "/solutions#custom" },
       { label: "LMS Integration", href: "/solutions#integration" },
-      { label: "Compliance Management", href: "/solutions#compliance" },
+      { label: "Blog", href: "/solutions#blog" },
     ],
   },
   {
@@ -34,7 +33,6 @@ const navItems = [
     href: "/resources",
     items: [
       { label: "Our Instructors", href: "/resources#instructors" },
-      { label: "Technology Stack", href: "/resources#tech" },
       { label: "Documentation", href: "/resources#docs" },
       { label: "Contact", href: "/resources#contact" },
     ],
@@ -74,6 +72,17 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-1">
+            {/* External Courses Link */}
+            <a
+              href="https://cyxorlearning.com/courses/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 px-4 py-2 text-sm font-semibold rounded-lg transition-colors text-foreground hover:text-cyan"
+            >
+              Courses
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+            
             {navItems.map((item) => (
               <div 
                 key={item.label} 
@@ -144,6 +153,18 @@ const Header = () => {
 
                 {/* Mobile Navigation */}
                 <nav className="flex-1 overflow-y-auto py-4">
+                  {/* External Courses Link */}
+                  <a
+                    href="https://cyxorlearning.com/courses/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setMobileOpen(false)}
+                    className="flex items-center justify-between px-6 py-4 border-b border-border/50"
+                  >
+                    <span className="font-semibold text-foreground">Courses</span>
+                    <ExternalLink className="w-4 h-4 text-cyan" />
+                  </a>
+                  
                   {navItems.map((item) => (
                     <div key={item.label} className="border-b border-border/50">
                       <button
