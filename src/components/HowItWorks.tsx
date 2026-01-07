@@ -97,7 +97,7 @@ const HowItWorks = () => {
         {/* CTA */}
         <AnimatedSection className="text-center">
           <p className="text-muted-foreground mb-6">Ready to get started?</p>
-          <a href="https://cyxorlearning.com/courses" target="_blank" rel="noopener noreferrer">
+          <a href="https://cyxorlearning.com/technologyskills" target="_blank" rel="noopener noreferrer">
             <Button variant="hero" size="lg" className="group">
               View Courses
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
