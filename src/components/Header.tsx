@@ -72,16 +72,44 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-1">
-            {/* External Courses Link */}
-            <a
-              href="https://cyxorlearning.com/courses/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1 px-4 py-2 text-sm font-semibold rounded-lg transition-colors text-foreground hover:text-cyan"
+            {/* Learn Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setOpenDropdown("Learn")}
+              onMouseLeave={() => setOpenDropdown(null)}
             >
-              Courses
-              <ExternalLink className="w-3.5 h-3.5" />
-            </a>
+              <button
+                className="flex items-center gap-1 px-4 py-2 text-sm font-semibold rounded-lg transition-colors text-foreground hover:text-cyan"
+              >
+                Learn
+                <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === "Learn" ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {openDropdown === "Learn" && (
+                <div className="absolute top-full left-0 pt-2 z-50">
+                  <div className="bg-background rounded-xl shadow-lg border border-border py-2 min-w-[220px]">
+                    <a
+                      href="https://cyxorlearning.com/technologyskills"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2.5 text-sm font-medium text-muted-foreground hover:text-cyan hover:bg-cyan/5 transition-colors"
+                    >
+                      Technology Skills
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                    <a
+                      href="https://cyxorlearning.com/complianceskills"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2.5 text-sm font-medium text-muted-foreground hover:text-cyan hover:bg-cyan/5 transition-colors"
+                    >
+                      Compliance Skills
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                </div>
+              )}
+            </div>
             
             {navItems.map((item) => (
               <div 
@@ -153,17 +181,45 @@ const Header = () => {
 
                 {/* Mobile Navigation */}
                 <nav className="flex-1 overflow-y-auto py-4">
-                  {/* External Courses Link */}
-                  <a
-                    href="https://cyxorlearning.com/courses/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setMobileOpen(false)}
-                    className="flex items-center justify-between px-6 py-4 border-b border-border/50"
-                  >
-                    <span className="font-semibold text-foreground">Courses</span>
-                    <ExternalLink className="w-4 h-4 text-cyan" />
-                  </a>
+                  {/* Learn Section */}
+                  <div className="border-b border-border/50">
+                    <button
+                      onClick={() => toggleMobileSection("Learn")}
+                      className="w-full flex items-center justify-between px-6 py-4 text-left"
+                    >
+                      <span className="font-semibold text-foreground">Learn</span>
+                      <ChevronDown 
+                        className={`w-5 h-5 text-cyan transition-transform duration-200 ${
+                          expandedMobileSection === "Learn" ? 'rotate-180' : ''
+                        }`} 
+                      />
+                    </button>
+                    
+                    {expandedMobileSection === "Learn" && (
+                      <div className="bg-muted py-2">
+                        <a
+                          href="https://cyxorlearning.com/technologyskills"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => setMobileOpen(false)}
+                          className="flex items-center gap-2 px-8 py-3 text-sm font-medium text-muted-foreground hover:text-cyan hover:bg-background transition-colors"
+                        >
+                          Technology Skills
+                          <ExternalLink className="w-3.5 h-3.5" />
+                        </a>
+                        <a
+                          href="https://cyxorlearning.com/complianceskills"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => setMobileOpen(false)}
+                          className="flex items-center gap-2 px-8 py-3 text-sm font-medium text-muted-foreground hover:text-cyan hover:bg-background transition-colors"
+                        >
+                          Compliance Skills
+                          <ExternalLink className="w-3.5 h-3.5" />
+                        </a>
+                      </div>
+                    )}
+                  </div>
                   
                   {navItems.map((item) => (
                     <div key={item.label} className="border-b border-border/50">
