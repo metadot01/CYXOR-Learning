@@ -56,11 +56,11 @@ const WhyChooseCyxor = () => {
             Why CYXOR LEARNING
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mt-4 mb-4 leading-tight">
-            Designed for Your{" "}
-            <span className="text-emerald">Compliance Team</span>
+            Maximize Compliance and{" "}
+            <span className="text-emerald">ROI</span>
           </h2>
           <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Compliance Training that actually works—for your team and your auditors
+            Expert-led, hands-on courses that your team completes - and your auditors trust.
           </p>
         </AnimatedSection>
 

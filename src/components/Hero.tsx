@@ -30,9 +30,9 @@ const Hero = () => {
           {/* Main Heading */}
           <div className="space-y-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[1.1] tracking-tight">
-              Turn Compliance Training Into{" "}
+              Workforce Learning That Builds Technical Expertise and Turns Compliance Into{" "}
               <span className="relative inline-block text-emerald drop-shadow-[0_0_30px_rgba(0,200,150,0.5)]">
-                Competitive Advantage
+                Advantage
                 <svg className="absolute -bottom-2 left-0 w-full h-3 text-emerald/60" viewBox="0 0 100 12" preserveAspectRatio="none">
                   <path d="M0 8 Q25 2 50 8 T100 8" stroke="currentColor" strokeWidth="3" fill="none" strokeLinecap="round" />
                 </svg>
@@ -40,11 +40,11 @@ const Hero = () => {
             </h1>
             
             <p className="text-lg sm:text-xl lg:text-2xl text-white/70 max-w-2xl mx-auto leading-relaxed font-light">
-              Audit-ready courses your team actually completes. Gamified learning for{" "}
+              Interactive, audit-ready learning for{" "}
               <span className="text-cyan">GDPR</span>,{" "}
               <span className="text-cyan">ISO 27001</span>,{" "}
               <span className="text-cyan">NIS2</span>, and{" "}
-              <span className="text-cyan">Emerging Technologies</span>.
+              <span className="text-cyan">emerging technologies</span>.
             </p>
           </div>
 
