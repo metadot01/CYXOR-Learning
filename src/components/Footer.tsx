@@ -61,7 +61,6 @@ const Footer = () => {
             </h4>
             <div className="space-y-4">
               <div>
-                <p className="text-xs text-cyan font-semibold mb-2">Courses</p>
                 <ul className="space-y-2 text-sm text-white/70">
                   <li><a href="https://cyxorlearning.com/courses/" target="_blank" rel="noopener noreferrer" className="hover:text-cyan transition-colors">All Courses</a></li>
                   <li><Link to="/courses#compliance" className="hover:text-cyan transition-colors">Compliance</Link></li>
