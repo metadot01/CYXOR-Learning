@@ -32,6 +32,7 @@ const navItems = [
     label: "About",
     href: "/resources",
     items: [
+      { label: "Learning That Works", href: "/learning-that-works" },
       { label: "Our Instructors", href: "/resources#instructors" },
       { label: "Documentation", href: "/resources#docs" },
       { label: "Contact", href: "/resources#contact" },
