@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Menu, ExternalLink } from "lucide-react";
+import { ChevronDown, Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import cyxorIcon from "@/assets/cyxor-icon.png";
 import ContactDialog from "@/components/ContactDialog";
@@ -92,19 +92,17 @@ const Header = () => {
                       href="https://cyxorlearning.com/technologyskills"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2.5 text-sm font-medium text-muted-foreground hover:text-cyan hover:bg-cyan/5 transition-colors"
+                      className="block px-4 py-2.5 text-sm font-medium text-muted-foreground hover:text-cyan hover:bg-cyan/5 transition-colors"
                     >
                       Technology Skills
-                      <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                     <a
                       href="https://cyxorlearning.com/complianceskills"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2.5 text-sm font-medium text-muted-foreground hover:text-cyan hover:bg-cyan/5 transition-colors"
+                      className="block px-4 py-2.5 text-sm font-medium text-muted-foreground hover:text-cyan hover:bg-cyan/5 transition-colors"
                     >
                       Compliance Skills
-                      <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   </div>
                 </div>
@@ -202,20 +200,18 @@ const Header = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={() => setMobileOpen(false)}
-                          className="flex items-center gap-2 px-8 py-3 text-sm font-medium text-muted-foreground hover:text-cyan hover:bg-background transition-colors"
+                          className="block px-8 py-3 text-sm font-medium text-muted-foreground hover:text-cyan hover:bg-background transition-colors"
                         >
                           Technology Skills
-                          <ExternalLink className="w-3.5 h-3.5" />
                         </a>
                         <a
                           href="https://cyxorlearning.com/complianceskills"
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={() => setMobileOpen(false)}
-                          className="flex items-center gap-2 px-8 py-3 text-sm font-medium text-muted-foreground hover:text-cyan hover:bg-background transition-colors"
+                          className="block px-8 py-3 text-sm font-medium text-muted-foreground hover:text-cyan hover:bg-background transition-colors"
                         >
                           Compliance Skills
-                          <ExternalLink className="w-3.5 h-3.5" />
                         </a>
                       </div>
                     )}
