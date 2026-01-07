@@ -18,7 +18,7 @@ const Footer = () => {
               <span className="text-xl font-bold ml-1.5 text-emerald">LEARNING</span>
             </div>
             <p className="text-sm text-white/60 mb-6">
-              Verifiable digital and GRC skills
+              Technical Mastery. Compliance Confidence.
             </p>
             
             {/* Social Links */}
@@ -63,7 +63,7 @@ const Footer = () => {
               <div>
                 <p className="text-xs text-cyan font-semibold mb-2">Courses</p>
                 <ul className="space-y-2 text-sm text-white/70">
-                  <li><Link to="/courses" className="hover:text-cyan transition-colors">All Courses</Link></li>
+                  <li><a href="https://cyxorlearning.com/courses/" target="_blank" rel="noopener noreferrer" className="hover:text-cyan transition-colors">All Courses</a></li>
                   <li><Link to="/courses#compliance" className="hover:text-cyan transition-colors">Compliance</Link></li>
                   <li><Link to="/courses#ai" className="hover:text-cyan transition-colors">Technology</Link></li>
                   <li><Link to="/courses" className="hover:text-cyan transition-colors">Free Trial</Link></li>
