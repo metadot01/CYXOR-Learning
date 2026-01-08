@@ -1,5 +1,4 @@
 import { Building2, Heart, Landmark, Server, ArrowRight, CheckCircle } from "lucide-react";
-import { Link } from "react-router-dom";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
 
 const industries = [
@@ -7,7 +6,7 @@ const industries = [
     icon: Building2,
     title: "Financial Services & Banking",
     items: ["FCA SM&CR Compliance", "ISO 27001 for FSI", "GDPR for Banking", "AI Risk Management"],
-    href: "/industries#bfsi",
+    href: "https://cyxorlearning.com/complianceskills",
     color: "from-ocean/10 to-ocean/5",
     iconColor: "text-ocean",
     iconBg: "bg-ocean/10 border-ocean/20",
@@ -16,7 +15,7 @@ const industries = [
     icon: Heart,
     title: "Healthcare & Life Sciences",
     items: ["GDPR for Healthcare", "NIS2 for Health Systems", "Care Quality Commission", "Medical Device Regulation"],
-    href: "/industries#healthcare",
+    href: "https://cyxorlearning.com/complianceskills",
     color: "from-emerald/10 to-emerald/5",
     iconColor: "text-emerald",
     iconBg: "bg-emerald/10 border-emerald/20",
@@ -25,7 +24,7 @@ const industries = [
     icon: Landmark,
     title: "Government & Public Sector",
     items: ["Cyber Essentials Plus", "ISO 27001:2022", "UK GDPR Article 30", "NIS2 Directive"],
-    href: "/industries#government",
+    href: "https://cyxorlearning.com/complianceskills",
     color: "from-slate/10 to-slate/5",
     iconColor: "text-slate",
     iconBg: "bg-slate/10 border-slate/20",
@@ -34,7 +33,7 @@ const industries = [
     icon: Server,
     title: "Critical Infrastructure",
     items: ["NIS2 for Operators", "OT Security Training", "ISO 27001 for CNI", "Incident Response"],
-    href: "/industries#infrastructure",
+    href: "https://cyxorlearning.com/complianceskills",
     color: "from-gold/10 to-gold/5",
     iconColor: "text-gold",
     iconBg: "bg-gold/10 border-gold/20",
@@ -89,13 +88,15 @@ const IndustryRelevance = () => {
                     ))}
                   </ul>
 
-                  <Link 
-                    to={industry.href} 
+                  <a 
+                    href={industry.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`inline-flex items-center gap-2 text-sm ${industry.iconColor} font-semibold group/link`}
                   >
-                    <span className="link-underline">View Solutions</span>
+                    <span className="link-underline">Browse Courses</span>
                     <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                  </Link>
+                  </a>
                 </div>
               </div>
             </AnimatedSection>

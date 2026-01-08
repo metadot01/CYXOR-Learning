@@ -8,17 +8,6 @@ import ContactDialog from "@/components/ContactDialog";
 
 const navItems = [
   {
-    label: "Industries",
-    href: "/industries",
-    items: [
-      { label: "Financial Services", href: "/industries#bfsi" },
-      { label: "Healthcare", href: "/industries#healthcare" },
-      { label: "Government", href: "/industries#government" },
-      { label: "Critical Infrastructure", href: "/industries#infrastructure" },
-      { label: "Technology", href: "/industries#technology" },
-    ],
-  },
-  {
     label: "Solutions",
     href: "/solutions",
     items: [
