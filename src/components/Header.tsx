@@ -23,8 +23,7 @@ const navItems = [
     items: [
       { label: "Learning That Works", href: "/learning-that-works" },
       { label: "Our Instructors", href: "/resources#instructors" },
-      { label: "Documentation", href: "/resources#docs" },
-      { label: "Contact", href: "/resources#contact" },
+      { label: "Contact", href: "contact-dialog", isDialog: true },
     ],
   },
 ];
@@ -33,6 +32,7 @@ const Header = () => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [expandedMobileSection, setExpandedMobileSection] = useState<string | null>(null);
+  const [contactOpen, setContactOpen] = useState(false);
   const location = useLocation();
 
   const toggleMobileSection = (label: string) => {
@@ -41,6 +41,11 @@ const Header = () => {
 
   const isActiveRoute = (href: string) => {
     return location.pathname === href || location.pathname.startsWith(href + "/");
+  };
+
+  const handleContactClick = () => {
+    setOpenDropdown(null);
+    setContactOpen(true);
   };
 
   return (
@@ -121,13 +126,23 @@ const Header = () => {
                   <div className="absolute top-full left-0 pt-2 z-50">
                     <div className="bg-background rounded-xl shadow-lg border border-border py-2 min-w-[220px]">
                       {item.items.map((subItem) => (
-                        <Link
-                          key={subItem.label}
-                          to={subItem.href}
-                          className="block px-4 py-2.5 text-sm font-medium text-muted-foreground hover:text-cyan hover:bg-cyan/5 transition-colors"
-                        >
-                          {subItem.label}
-                        </Link>
+                        'isDialog' in subItem && subItem.isDialog ? (
+                          <button
+                            key={subItem.label}
+                            onClick={handleContactClick}
+                            className="block w-full text-left px-4 py-2.5 text-sm font-medium text-muted-foreground hover:text-cyan hover:bg-cyan/5 transition-colors"
+                          >
+                            {subItem.label}
+                          </button>
+                        ) : (
+                          <Link
+                            key={subItem.label}
+                            to={subItem.href}
+                            className="block px-4 py-2.5 text-sm font-medium text-muted-foreground hover:text-cyan hover:bg-cyan/5 transition-colors"
+                          >
+                            {subItem.label}
+                          </Link>
+                        )
                       ))}
                     </div>
                   </div>
@@ -227,14 +242,27 @@ const Header = () => {
                       {expandedMobileSection === item.label && (
                         <div className="bg-muted py-2">
                           {item.items.map((subItem) => (
-                            <Link
-                              key={subItem.label}
-                              to={subItem.href}
-                              onClick={() => setMobileOpen(false)}
-                              className="block px-8 py-3 text-sm font-medium text-muted-foreground hover:text-cyan hover:bg-background transition-colors"
-                            >
-                              {subItem.label}
-                            </Link>
+                            'isDialog' in subItem && subItem.isDialog ? (
+                              <button
+                                key={subItem.label}
+                                onClick={() => {
+                                  setMobileOpen(false);
+                                  setContactOpen(true);
+                                }}
+                                className="block w-full text-left px-8 py-3 text-sm font-medium text-muted-foreground hover:text-cyan hover:bg-background transition-colors"
+                              >
+                                {subItem.label}
+                              </button>
+                            ) : (
+                              <Link
+                                key={subItem.label}
+                                to={subItem.href}
+                                onClick={() => setMobileOpen(false)}
+                                className="block px-8 py-3 text-sm font-medium text-muted-foreground hover:text-cyan hover:bg-background transition-colors"
+                              >
+                                {subItem.label}
+                              </Link>
+                            )
                           ))}
                         </div>
                       )}
@@ -257,6 +285,9 @@ const Header = () => {
           </Sheet>
         </div>
       </div>
+
+      {/* Controlled Contact Dialog */}
+      <ContactDialog open={contactOpen} onOpenChange={setContactOpen} />
     </header>
   );
 };

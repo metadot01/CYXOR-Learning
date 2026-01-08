@@ -14,11 +14,17 @@ import { useToast } from "@/hooks/use-toast";
 
 interface ContactDialogProps {
   trigger?: React.ReactNode;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
 }
 
-const ContactDialog = ({ trigger }: ContactDialogProps) => {
+const ContactDialog = ({ trigger, open: controlledOpen, onOpenChange }: ContactDialogProps) => {
   const { toast } = useToast();
-  const [open, setOpen] = useState(false);
+  const [internalOpen, setInternalOpen] = useState(false);
+  
+  const isControlled = controlledOpen !== undefined;
+  const open = isControlled ? controlledOpen : internalOpen;
+  const setOpen = isControlled ? (onOpenChange || (() => {})) : setInternalOpen;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
