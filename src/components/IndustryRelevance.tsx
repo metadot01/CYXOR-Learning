@@ -1,10 +1,20 @@
+import { useState } from "react";
 import { Building2, Heart, Landmark, Server, ArrowRight, CheckCircle } from "lucide-react";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
+
+const categories = [
+  { id: "all", label: "All Industries" },
+  { id: "finance", label: "Finance" },
+  { id: "healthcare", label: "Healthcare" },
+  { id: "government", label: "Government" },
+  { id: "infrastructure", label: "Infrastructure" },
+];
 
 const industries = [
   {
     icon: Building2,
     title: "Financial Services & Banking",
+    category: "finance",
     items: ["FCA SM&CR Compliance", "ISO 27001 for FSI", "GDPR for Banking", "AI Risk Management"],
     href: "https://cyxorlearning.com/complianceskills",
     color: "from-ocean/10 to-ocean/5",
@@ -14,6 +24,7 @@ const industries = [
   {
     icon: Heart,
     title: "Healthcare & Life Sciences",
+    category: "healthcare",
     items: ["GDPR for Healthcare", "NIS2 for Health Systems", "Care Quality Commission", "Medical Device Regulation"],
     href: "https://cyxorlearning.com/complianceskills",
     color: "from-emerald/10 to-emerald/5",
@@ -23,6 +34,7 @@ const industries = [
   {
     icon: Landmark,
     title: "Government & Public Sector",
+    category: "government",
     items: ["Cyber Essentials Plus", "ISO 27001:2022", "UK GDPR Article 30", "NIS2 Directive"],
     href: "https://cyxorlearning.com/complianceskills",
     color: "from-slate/10 to-slate/5",
@@ -32,6 +44,7 @@ const industries = [
   {
     icon: Server,
     title: "Critical Infrastructure",
+    category: "infrastructure",
     items: ["NIS2 for Operators", "OT Security Training", "ISO 27001 for CNI", "Incident Response"],
     href: "https://cyxorlearning.com/complianceskills",
     color: "from-gold/10 to-gold/5",
@@ -41,6 +54,12 @@ const industries = [
 ];
 
 const IndustryRelevance = () => {
+  const [activeCategory, setActiveCategory] = useState("all");
+
+  const filteredIndustries = activeCategory === "all" 
+    ? industries 
+    : industries.filter(ind => ind.category === activeCategory);
+
   return (
     <section id="industries" className="py-20 lg:py-28 relative scroll-mt-24 bg-soft">
       <div className="absolute inset-0 blockchain-grid" />
@@ -59,8 +78,25 @@ const IndustryRelevance = () => {
           </p>
         </AnimatedSection>
 
+        {/* Category Filter Tabs */}
+        <AnimatedSection className="flex flex-wrap justify-center gap-2 mb-10" delay={100}>
+          {categories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setActiveCategory(category.id)}
+              className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
+                activeCategory === category.id
+                  ? "bg-cyan text-white shadow-md"
+                  : "bg-card border border-border text-muted-foreground hover:border-cyan/30 hover:text-foreground"
+              }`}
+            >
+              {category.label}
+            </button>
+          ))}
+        </AnimatedSection>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {industries.map((industry, index) => (
+          {filteredIndustries.map((industry, index) => (
             <AnimatedSection
               key={industry.title}
               delay={index * 100}
