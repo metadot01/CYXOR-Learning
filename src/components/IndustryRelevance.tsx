@@ -86,8 +86,8 @@ const IndustryRelevance = () => {
               onClick={() => setActiveCategory(category.id)}
               className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
                 activeCategory === category.id
-                  ? "bg-cyan text-white shadow-md"
-                  : "bg-card border border-border text-muted-foreground hover:border-cyan/30 hover:text-foreground"
+                  ? "bg-emerald text-white shadow-md"
+                  : "bg-card border border-border text-muted-foreground hover:border-emerald/30 hover:text-foreground"
               }`}
             >
               {category.label}
