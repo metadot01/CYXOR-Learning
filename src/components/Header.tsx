@@ -14,7 +14,6 @@ const navItems = [
       { label: "Enterprise Subscriptions", href: "/solutions#enterprise" },
       { label: "Custom eLearning", href: "/solutions#custom" },
       { label: "LMS Integration", href: "/solutions#integration" },
-      { label: "Blog", href: "/solutions#blog" },
     ],
   },
   {
