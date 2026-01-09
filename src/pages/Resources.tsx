@@ -235,8 +235,8 @@ const Resources = () => {
           <div className="section-container">
             <div className="max-w-2xl mx-auto text-center">
               <GraduationCap className="w-12 h-12 text-emerald mx-auto mb-4" />
-              <h2 className="text-3xl font-bold text-foreground mb-4">
-                Teach With <span className="text-foreground">CYXOR</span> <span className="text-emerald">LEARNING</span>
+              <h2 className="text-3xl font-bold mb-4">
+                Teach With <span className="text-foreground font-extrabold">CYXOR</span> <span className="text-emerald font-extrabold">LEARNING</span>
               </h2>
               <p className="text-muted-foreground mb-6">
                 We collaborate with experienced practitioners, researchers, and instructors who want to teach cutting-edge topics through hands-on, outcome-driven learning.
