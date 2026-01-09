@@ -17,6 +17,16 @@ const navItems = [
     ],
   },
   {
+    label: "Industries",
+    href: "/#industries",
+    items: [
+      { label: "Finance & Banking", href: "/#industries" },
+      { label: "Healthcare", href: "/#industries" },
+      { label: "Government", href: "/#industries" },
+      { label: "Infrastructure", href: "/#industries" },
+    ],
+  },
+  {
     label: "About",
     href: "/resources",
     items: [
@@ -152,7 +162,7 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex">
-            <ContactDialog />
+            <ContactDialog open={contactOpen} onOpenChange={setContactOpen} />
           </div>
 
           {/* Mobile Menu */}
@@ -269,24 +279,11 @@ const Header = () => {
                   ))}
                 </nav>
 
-                {/* Mobile CTA */}
-                <div className="p-6 border-t border-border">
-                  <ContactDialog 
-                    trigger={
-                      <Button variant="hero" size="lg" className="w-full">
-                        Start Conversation
-                      </Button>
-                    }
-                  />
-                </div>
               </div>
             </SheetContent>
           </Sheet>
         </div>
       </div>
-
-      {/* Controlled Contact Dialog */}
-      <ContactDialog open={contactOpen} onOpenChange={setContactOpen} />
     </header>
   );
 };
