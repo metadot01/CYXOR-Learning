@@ -40,11 +40,11 @@ const Hero = () => {
             </h1>
             
             <p className="text-lg sm:text-xl lg:text-2xl text-white/70 max-w-2xl mx-auto leading-relaxed font-light">
-              Interactive, audit-ready learning for{" "}
-              <span className="text-cyan">GDPR</span>,{" "}
-              <span className="text-cyan">ISO 27001</span>,{" "}
-              <span className="text-cyan">NIS2</span>, and{" "}
-              <span className="text-cyan">emerging technologies</span>.
+              Empower your teams with{" "}
+              <span className="text-cyan">enterprise tech training</span>,{" "}
+              <span className="text-cyan">compliance certifications</span>, and{" "}
+              <span className="text-cyan">blockchain-verified credentials</span>{" "}
+              that drive real business results.
             </p>
           </div>
 
