@@ -189,7 +189,8 @@ const Header = () => {
               <img 
                 src={cyxorLogo} 
                 alt="CYXOR Learning" 
-                className="h-10 sm:h-11 lg:h-12 w-auto"
+                className="h-10 sm:h-11 lg:h-12 w-auto mix-blend-multiply dark:mix-blend-screen dark:brightness-0 dark:invert"
+                style={{ backgroundColor: 'transparent' }}
               />
             </Link>
 
@@ -349,7 +350,8 @@ const Header = () => {
                     <img 
                       src={cyxorLogo} 
                       alt="CYXOR Learning" 
-                      className="h-9 w-auto"
+                      className="h-9 w-auto mix-blend-multiply dark:mix-blend-screen dark:brightness-0 dark:invert"
+                      style={{ backgroundColor: 'transparent' }}
                     />
                   </div>
 
