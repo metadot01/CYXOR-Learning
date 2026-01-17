@@ -2,6 +2,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Star, CheckCircle, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import AnimatedBackground from "./AnimatedBackground";
+import defantraLogo from "@/assets/defantra-logo.jpg";
+import xantumLogo from "@/assets/xantum-logo.jpg";
+import srecLogo from "@/assets/srec-logo.jpg";
+import solidarityLogo from "@/assets/solidarity-logo.jpg";
 
 const Hero = () => {
   return (
@@ -30,9 +34,9 @@ const Hero = () => {
           {/* Main Heading */}
           <div className="space-y-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[1.1] tracking-tight">
-              Workforce Learning – Tech &{" "}
+              Upskilling Professionals in AI, Tech, and{" "}
               <span className="relative inline-block text-emerald drop-shadow-[0_0_30px_rgba(0,200,150,0.5)]">
-                Compliance Skills
+                Compliance
                 <svg className="absolute -bottom-2 left-0 w-full h-3 text-emerald/60" viewBox="0 0 100 12" preserveAspectRatio="none">
                   <path d="M0 8 Q25 2 50 8 T100 8" stroke="currentColor" strokeWidth="3" fill="none" strokeLinecap="round" />
                 </svg>
@@ -56,7 +60,7 @@ const Hero = () => {
                   <Star key={i} className="w-5 h-5 fill-gold text-gold" />
                 ))}
               </div>
-              <span className="text-white/80 text-sm font-medium">4.9/5 from 2,300+ learners</span>
+              <span className="text-white/80 text-sm font-medium">4.9/5 from 1,200+ learners</span>
             </div>
             <div className="hidden sm:flex items-center gap-2">
               <CheckCircle className="w-5 h-5 text-emerald" />
@@ -75,21 +79,41 @@ const Hero = () => {
           </div>
 
 
-          {/* Client Trust */}
+          {/* Partner Logos */}
           <div className="pt-12 animate-fade-up" style={{ animationDelay: '0.3s' }}>
-            <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="flex items-center justify-center gap-3 mb-6">
               <div className="h-px w-10 bg-gradient-to-r from-transparent to-white/30" />
               <p className="text-xs text-white/50 uppercase tracking-[0.2em] font-medium">
-                Trusted by teams at
+                Trusted Partners
               </p>
               <div className="h-px w-10 bg-gradient-to-l from-transparent to-white/30" />
             </div>
             
-            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/60 font-medium">
-              <span className="px-4 py-2 rounded-lg bg-white/5 border border-white/10">Financial Services</span>
-              <span className="px-4 py-2 rounded-lg bg-white/5 border border-white/10">Healthcare</span>
-              <span className="px-4 py-2 rounded-lg bg-white/5 border border-white/10">Government</span>
-              <span className="px-4 py-2 rounded-lg bg-white/5 border border-white/10">Infrastructure</span>
+            <div className="flex flex-wrap items-center justify-center gap-8">
+              <div className="flex flex-col items-center gap-2">
+                <div className="w-16 h-16 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 p-2 flex items-center justify-center overflow-hidden">
+                  <img src={srecLogo} alt="Sri Ramakrishna Engineering College" className="w-full h-full object-contain" />
+                </div>
+                <span className="text-xs text-white/60 text-center max-w-[100px] leading-tight">SREC</span>
+              </div>
+              <div className="flex flex-col items-center gap-2">
+                <div className="w-16 h-16 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 p-2 flex items-center justify-center overflow-hidden">
+                  <img src={xantumLogo} alt="Xantum Computing" className="w-full h-full object-contain" />
+                </div>
+                <span className="text-xs text-white/60 text-center max-w-[100px] leading-tight">Xantum Computing</span>
+              </div>
+              <div className="flex flex-col items-center gap-2">
+                <div className="w-16 h-16 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 p-2 flex items-center justify-center overflow-hidden">
+                  <img src={defantraLogo} alt="Defantra" className="w-full h-full object-contain" />
+                </div>
+                <span className="text-xs text-white/60 text-center max-w-[100px] leading-tight">Defantra</span>
+              </div>
+              <div className="flex flex-col items-center gap-2">
+                <div className="w-16 h-16 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 p-2 flex items-center justify-center overflow-hidden">
+                  <img src={solidarityLogo} alt="Solidarity Foundation" className="w-full h-full object-contain" />
+                </div>
+                <span className="text-xs text-white/60 text-center max-w-[100px] leading-tight">Solidarity Foundation</span>
+              </div>
             </div>
           </div>
         </div>
