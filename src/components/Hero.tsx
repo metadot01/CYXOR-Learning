@@ -35,13 +35,14 @@ const Hero = () => {
           <div className="space-y-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[1.1] tracking-tight text-center">
               <span className="block">Future-Proof Your Workforce:</span>
-              <span className="block">Digital &{" "}
+              <span className="block">
                 <span className="relative inline-block text-emerald drop-shadow-[0_0_30px_rgba(0,200,150,0.5)]">
-                  Compliance Upskilling
+                  Upskill
                   <svg className="absolute -bottom-2 left-0 w-full h-3 text-emerald/60" viewBox="0 0 100 12" preserveAspectRatio="none">
                     <path d="M0 8 Q25 2 50 8 T100 8" stroke="currentColor" strokeWidth="3" fill="none" strokeLinecap="round" />
                   </svg>
                 </span>
+                {" "}in AI, Digital & Compliance
               </span>
             </h1>
             
