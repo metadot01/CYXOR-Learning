@@ -44,25 +44,10 @@ const Hero = () => {
               {" "}Workforce You Can Trust
             </h1>
             <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto">
-              Upskill your employees in AI, Digital, and Compliance skills, with every credential securely verified via blockchain. Trusted by 1,200+ learners, 4.9/5 rating, 95% course completion.
+              Upskill your employees in AI, Digital, and Compliance skills, with every credential securely verified via blockchain.
             </p>
           </div>
 
-          {/* Social Proof Indicators */}
-          <div className="flex flex-wrap items-center justify-center gap-6 mt-8 animate-fade-up" style={{ animationDelay: '0.15s' }}>
-            <div className="flex items-center gap-2">
-              <div className="flex">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <Star key={i} className="w-5 h-5 fill-gold text-gold" />
-                ))}
-              </div>
-              <span className="text-white/80 text-sm font-medium">4.9/5 from 1,200+ learners</span>
-            </div>
-            <div className="hidden sm:flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-emerald" />
-              <span className="text-white/80 text-sm font-medium">95% completion rate</span>
-            </div>
-          </div>
 
           {/* CTAs */}
           <div className="flex items-center justify-center mt-10 animate-fade-up" style={{ animationDelay: '0.2s' }}>
