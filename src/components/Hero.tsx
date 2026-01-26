@@ -24,6 +24,13 @@ const Hero = () => {
       <div className="section-container relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Trust Badge - Overline */}
+          <div className="animate-fade-up" style={{ animationDelay: '0.05s' }}>
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-sm text-white/90 font-medium mb-6">
+              <Shield className="w-4 h-4 text-emerald" />
+              Blockchain-verified certificates
+            </span>
+          </div>
+
           {/* Main Heading */}
           <div className="space-y-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[1.1] tracking-tight text-center">
@@ -38,6 +45,9 @@ const Hero = () => {
                 {" "}Workforce
               </span>
             </h1>
+            <p className="text-lg sm:text-xl text-white/70 max-w-2xl mx-auto">
+              Upskill your workforce in AI, Digital, and Compliance — every credential securely verified on blockchain
+            </p>
           </div>
 
           {/* Social Proof Indicators */}
