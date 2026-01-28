@@ -3,11 +3,13 @@ import Hero from "@/components/Hero";
 import StatsBar from "@/components/StatsBar";
 import IndustryRelevance from "@/components/IndustryRelevance";
 import WhyChooseCyxor from "@/components/WhyChooseCyxor";
+import FeaturedCourse from "@/components/FeaturedCourse";
 import Testimonials from "@/components/Testimonials";
-import HowItWorks from "@/components/HowItWorks";
-import DualCTA from "@/components/DualCTA";
 import FeaturedInstructor from "@/components/FeaturedInstructor";
+import TransformCTA from "@/components/TransformCTA";
 import Footer from "@/components/Footer";
+import BackToTop from "@/components/BackToTop";
+
 
 const Index = () => {
   return (
@@ -18,12 +20,13 @@ const Index = () => {
         <StatsBar />
         <IndustryRelevance />
         <WhyChooseCyxor />
+        <FeaturedCourse />
         <Testimonials />
-        <HowItWorks />
-        <DualCTA />
         <FeaturedInstructor />
+        <TransformCTA />
       </main>
       <Footer />
+      <BackToTop />
     </div>
   );
 };
